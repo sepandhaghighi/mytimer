@@ -1,0 +1,7 @@
+include LICENSE
+include *.md
+include *.spec
+include *.txt
+include *.yml
+include *.ini
+include mytimer/sounds/*.wav
