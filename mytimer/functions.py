@@ -10,6 +10,7 @@ MY_TIMER_VERSION = "0.1"
 WRONG_INPUT_ERROR = "[Error] Wrong input"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 
+
 def input_check(func):
     """
     Input check decorator for timer functions.
@@ -107,8 +108,13 @@ def countup_timer(hour, minute, second, alarm):
     timer_hour = 0
     clear_screen()
     while True:
-        print('\n'*5)
-        tprint('\t\t\t\t  %d : %d : %d ' % (timer_hour, timer_minute, timer_second), font="bulbhead")
+        print('\n' * 5)
+        tprint(
+            '\t\t\t\t  %d : %d : %d ' %
+            (timer_hour,
+             timer_minute,
+             timer_second),
+            font="bulbhead")
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             tprint("End!")
             if alarm:
@@ -142,8 +148,9 @@ def countdown_timer(hour, minute, second, alarm):
     """
     clear_screen()
     while True:
-        print('\n'*5)
-        tprint('\t\t\t\t  %d : %d : %d ' % (hour, minute, second), font="bulbhead")
+        print('\n' * 5)
+        tprint('\t\t\t\t  %d : %d : %d ' %
+               (hour, minute, second), font="bulbhead")
         time.sleep(0.98)
         second -= 1
         if second == -1:
@@ -158,6 +165,3 @@ def countdown_timer(hour, minute, second, alarm):
                 play_sound(get_sound_path("alarm.wav"))
             break
         clear_screen()
-
-
-
