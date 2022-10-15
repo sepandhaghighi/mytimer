@@ -85,7 +85,7 @@ def play_sound(sound_path):
     try:
         playsound.playsound(sound_path)
     except Exception:
-        pass
+        return
 
 
 @input_check
