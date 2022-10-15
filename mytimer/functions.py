@@ -21,7 +21,7 @@ def input_check(func):
     """
     def inner_function(hour, minute, second, alarm):
         """
-        Decorator inner function.
+        Inner function.
 
         :param hour: hour
         :type hour: int
