@@ -76,30 +76,32 @@ Simple timer for your terminal!
 
 ## Usage
 
+⚠️ You can use `mytimer` or `python -m mytimer` to run this program
+
 ### Basic
 
-```
-python -m mytimer --minute=7 --second=30
+```console
+mytimer --minute=7 --second=30
 ```
 
 ### Timer Mode
 
 ⚠️ The default mode is `count-up`
 
-```
-python -m mytimer --minute=7 --second=30 --countdown
+```console
+mytimer --minute=7 --second=30 --countdown
 ```	
 
-```
-python -m mytimer --minute=7 --second=30 --countup
+```console
+mytimer --minute=7 --second=30 --countup
 ```		
 
 ### Alarm
 
 ⚠️ This mode may not be supported on all systems
 
-```
-python -m mytimer --minute=7 --second=30 --countdown --alarm
+```console
+mytimer --minute=7 --second=30 --countdown --alarm
 ```		
 
 <div align="center">
