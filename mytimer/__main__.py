@@ -6,7 +6,7 @@ import argparse
 
 def main():
     """
-    Main function.
+    CLI main function.
 
     :return: None
     """
