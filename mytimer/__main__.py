@@ -31,6 +31,6 @@ def main():
     else:
         countup_timer(**params)
 
+
 if __name__ == "__main__":
     main()
-
