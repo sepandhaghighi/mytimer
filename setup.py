@@ -63,4 +63,9 @@ setup(
         'Topic :: Utilities',
     ],
     license='MIT',
+    entry_points={
+            'console_scripts': [
+                'mytimer = mytimer.__main__:main',
+            ]
+    }
 )
