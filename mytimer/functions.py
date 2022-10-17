@@ -8,7 +8,7 @@ from art import tprint
 MY_TIMER_VERSION = "0.1"
 WRONG_INPUT_ERROR = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
-PLAYSOUND_ERROR_MESSAGE = "[Error] This option need playsound library. Please install it using this command: pip install playsound"
+PLAYSOUND_ERROR_MESSAGE = "[Error] Alarm mode need `playsound` library. Please install it using this command: pip install playsound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 
 
