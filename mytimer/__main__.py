@@ -2,6 +2,8 @@
 """mytimer main."""
 from mytimer.functions import countdown_timer, countup_timer
 import argparse
+import logging
+logging.basicConfig(level=logging.ERROR)
 
 
 def main():
