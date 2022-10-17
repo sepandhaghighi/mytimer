@@ -4,7 +4,6 @@ from mytimer.functions import countdown_timer, countup_timer
 import argparse
 
 
-
 def main():
     """
     CLI main function.
