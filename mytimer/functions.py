@@ -3,7 +3,6 @@
 import os
 import sys
 import time
-import playsound
 from art import tprint
 
 MY_TIMER_VERSION = "0.1"
@@ -84,6 +83,7 @@ def play_sound(sound_path):
     :return: None
     """
     try:
+        import playsound
         playsound.playsound(sound_path)
     except Exception:
         print(SOUND_ERROR_MESSAGE)
