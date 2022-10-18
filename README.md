@@ -53,7 +53,10 @@ Simple timer for your terminal!
 
 <table>
 	<tr> 
-		<td align="center">Code Quality</td>	
+		<td align="center">Code Quality</td>
+		<td align="center"><a href="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer"><img src="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer/badge" alt="CodeFactor" /></a></td>
+		<td align="center"><a href="https://www.codacy.com/gh/sepandhaghighi/mytimer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sepandhaghighi/mytimer&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1bf28500431a498998ac79891cd79cda"/></a></td>
+		<td align="center"><a href="https://codebeat.co/projects/github-com-sepandhaghighi-mytimer-main"><img alt="codebeat badge" src="https://codebeat.co/badges/ae1c0ac1-9890-4149-b260-b1f3174ef520" /></a></td>
 	</tr>
 </table>
 
@@ -73,30 +76,32 @@ Simple timer for your terminal!
 
 ## Usage
 
+⚠️ You can use `mytimer` or `python -m mytimer` to run this program
+
 ### Basic
 
-```
-python -m mytimer --minute=7 --second=30
+```console
+mytimer --minute=7 --second=30
 ```
 
 ### Timer Mode
 
 ⚠️ The default mode is `count-up`
 
-```
-python -m mytimer --minute=7 --second=30 --countdown
+```console
+mytimer --minute=7 --second=30 --countdown
 ```	
 
-```
-python -m mytimer --minute=7 --second=30 --countup
+```console
+mytimer --minute=7 --second=30 --countup
 ```		
 
 ### Alarm
 
 ⚠️ This mode may not be supported on all systems
 
-```
-python -m mytimer --minute=7 --second=30 --countdown --alarm
+```console
+mytimer --minute=7 --second=30 --countdown --alarm
 ```		
 
 <div align="center">
@@ -166,3 +171,4 @@ zil1knmz8zj88cf0exr2ry7nav9elehxfcgqu3c5e5
 <a href="http://www.coffeete.ir/opensource">
 <img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
 </a>
+

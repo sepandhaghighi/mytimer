@@ -1,0 +1,7 @@
+art==5.7
+playsound==1.3.0
+setuptools>=40.8.0
+vulture>=1.0
+bandit>=1.5.1
+pydocstyle>=3.0.0
+

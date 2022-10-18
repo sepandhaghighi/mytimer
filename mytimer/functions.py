@@ -3,11 +3,11 @@
 import os
 import sys
 import time
-import playsound
 from art import tprint
 
 MY_TIMER_VERSION = "0.1"
 WRONG_INPUT_ERROR = "[Error] Wrong input"
+SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 
 
@@ -21,7 +21,7 @@ def input_check(func):
     """
     def inner_function(hour, minute, second, alarm):
         """
-        Decorator inner function.
+        Inner function.
 
         :param hour: hour
         :type hour: int
@@ -83,9 +83,10 @@ def play_sound(sound_path):
     :return: None
     """
     try:
+        import playsound
         playsound.playsound(sound_path)
     except Exception:
-        pass
+        print(SOUND_ERROR_MESSAGE)
 
 
 @input_check

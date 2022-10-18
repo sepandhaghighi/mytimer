@@ -3,7 +3,13 @@
 from mytimer.functions import countdown_timer, countup_timer
 import argparse
 
-if __name__ == "__main__":
+
+def main():
+    """
+    CLI main function.
+
+    :return: None
+    """
     params = {"minute": 0, "hour": 0, "second": 0, "alarm": 0}
     parser = argparse.ArgumentParser()
     parser.add_argument('--minute', help='minute', type=float)
@@ -24,3 +30,7 @@ if __name__ == "__main__":
         countdown_timer(**params)
     else:
         countup_timer(**params)
+
+
+if __name__ == "__main__":
+    main()
