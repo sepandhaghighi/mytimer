@@ -54,3 +54,7 @@ jobs:
       run: |
         Measure-Command {mytimer --minute=1}
       if: matrix.os == 'windows-latest'
+    - name: Accuracy (Ubuntu / macOS)
+      run: |
+        time mytimer --minute=1
+      if: matrix.os != 'windows-latest'
