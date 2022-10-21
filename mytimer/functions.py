@@ -148,12 +148,12 @@ def countdown_timer(hour, minute, second, alarm):
     :type alarm: bool
     :return: None
     """
-    clear_screen()
     while True:
+        start = time.time()
+        clear_screen()
         print('\n' * 5)
         tprint('\t\t\t\t  %d : %d : %d ' %
                (hour, minute, second), font="bulbhead")
-        time.sleep(0.98)
         second -= 1
         if second == -1:
             second = 59
@@ -166,4 +166,5 @@ def countdown_timer(hour, minute, second, alarm):
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
-        clear_screen()
+        end = time.time()
+        time.sleep(1 - (end - start))
