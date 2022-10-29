@@ -78,6 +78,13 @@ Simple timer for your terminal!
 
 ⚠️ You can use `mytimer` or `python -m mytimer` to run this program
 
+
+### Version
+
+```console
+mytimer --version
+```
+
 ### Basic
 
 ```console
