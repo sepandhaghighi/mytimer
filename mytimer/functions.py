@@ -130,7 +130,7 @@ def countup_timer(hour, minute, second, alarm):
             timer_minute = 0
             timer_hour += 1
         end = time.perf_counter()
-        time.sleep(1 - (end - start))
+        time.sleep(max(0, 1 - (end - start)))
 
 
 @input_check
@@ -167,4 +167,4 @@ def countdown_timer(hour, minute, second, alarm):
                 play_sound(get_sound_path("alarm.wav"))
             break
         end = time.perf_counter()
-        time.sleep(1 - (end - start))
+        time.sleep(max(0, 1 - (end - start)))
