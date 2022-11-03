@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
-from mytimer.functions import countdown_timer, countup_timer
+from mytimer.functions import countdown_timer, countup_timer, MY_TIMER_VERSION
 import argparse
 
 
@@ -22,15 +22,18 @@ def main():
         const=1)
     parser.add_argument('--countup', help='countup timer', nargs="?", const=1)
     parser.add_argument('--alarm', help='alarm', nargs="?", const=1)
+    parser.add_argument('--version', help='version', nargs="?", const=1)
     args = parser.parse_args()
     for item in params:
         if getattr(args, item) is not None:
             params[item] = getattr(args, item)
-    if args.countdown:
-        countdown_timer(**params)
+    if args.version:
+        print(MY_TIMER_VERSION)
     else:
-        countup_timer(**params)
-
+        if args.countdown:
+            countdown_timer(**params)
+        else:
+            countup_timer(**params)
 
 if __name__ == "__main__":
     main()
