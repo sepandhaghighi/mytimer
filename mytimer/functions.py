@@ -5,7 +5,7 @@ import sys
 import time
 from art import tprint
 
-MY_TIMER_VERSION = "0.1"
+MY_TIMER_VERSION = "0.2"
 WRONG_INPUT_ERROR = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
@@ -107,8 +107,9 @@ def countup_timer(hour, minute, second, alarm):
     timer_second = 0
     timer_minute = 0
     timer_hour = 0
-    clear_screen()
     while True:
+        start = time.perf_counter()
+        clear_screen()
         print('\n' * 5)
         tprint(
             '\t\t\t\t  %d : %d : %d ' %
@@ -121,7 +122,6 @@ def countup_timer(hour, minute, second, alarm):
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
-        time.sleep(0.98)
         timer_second += 1
         if timer_second == 60:
             timer_second = 0
@@ -129,7 +129,8 @@ def countup_timer(hour, minute, second, alarm):
         if timer_minute == 60:
             timer_minute = 0
             timer_hour += 1
-        clear_screen()
+        end = time.perf_counter()
+        time.sleep(max(0, 1 - (end - start)))
 
 
 @input_check
@@ -147,12 +148,12 @@ def countdown_timer(hour, minute, second, alarm):
     :type alarm: bool
     :return: None
     """
-    clear_screen()
     while True:
+        start = time.perf_counter()
+        clear_screen()
         print('\n' * 5)
         tprint('\t\t\t\t  %d : %d : %d ' %
                (hour, minute, second), font="bulbhead")
-        time.sleep(0.98)
         second -= 1
         if second == -1:
             second = 59
@@ -165,4 +166,5 @@ def countdown_timer(hour, minute, second, alarm):
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
-        clear_screen()
+        end = time.perf_counter()
+        time.sleep(max(0, 1 - (end - start)))
