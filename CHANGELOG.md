@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [0.2] - 2022-11-03
 ### Added
 - `--version` flag
 ### Changed
@@ -17,7 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Count-up mode
 - Alarm
 
-[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v0.1...dev
+[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v0.2...dev
+[0.2]: https://github.com/sepandhaghighi/mytimer/compare/v0.1...v0.2
 [0.1]: https://github.com/sepandhaghighi/mytimer/compare/daa2be6...v0.1
 
 

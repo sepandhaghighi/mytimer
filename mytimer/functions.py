@@ -5,7 +5,7 @@ import sys
 import time
 from art import tprint
 
-MY_TIMER_VERSION = "0.1"
+MY_TIMER_VERSION = "0.2"
 WRONG_INPUT_ERROR = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"

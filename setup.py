@@ -29,7 +29,7 @@ def read_description():
 setup(
     name='mytimer',
     packages=['mytimer'],
-    version='0.1',
+    version='0.2',
     description='Simple Timer for Your Terminal',
     long_description=read_description(),
     long_description_content_type='text/markdown',
@@ -37,7 +37,7 @@ setup(
     author='Sepand Haghighi',
     author_email='sepand@pyrgg.ir',
     url='https://github.com/sepandhaghighi/mytimer',
-    download_url='https://github.com/sepandhaghighi/mytimer/tarball/v0.1',
+    download_url='https://github.com/sepandhaghighi/mytimer/tarball/v0.2',
     keywords="python3 python timer terminal stopwatch",
     project_urls={
         'Source': 'https://github.com/sepandhaghighi/mytimer'
@@ -55,6 +55,7 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Intended Audience :: Developers',
         'Intended Audience :: Education',
         'Intended Audience :: End Users/Desktop',
