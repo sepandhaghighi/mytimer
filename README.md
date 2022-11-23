@@ -109,6 +109,13 @@ mytimer --minute=7 --second=30 --countup
 
 ```console
 mytimer --minute=7 --second=30 --countdown --alarm
+```
+
+### Face
+
+
+```console
+mytimer --minute=7 --second=30 --face=3
 ```		
 
 <div align="center">
