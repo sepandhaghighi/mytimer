@@ -15,7 +15,12 @@ def main():
     parser.add_argument('--minute', help='minute', type=float)
     parser.add_argument('--second', help='second', type=float)
     parser.add_argument('--hour', help='hour', type=float)
-    parser.add_argument('--face', help='face', type=int, choices=list(FACES_MAP.keys()))
+    parser.add_argument(
+        '--face',
+        help='face',
+        type=int,
+        choices=list(
+            FACES_MAP.keys()))
     parser.add_argument(
         '--countdown',
         help='countdown timer',
@@ -35,6 +40,7 @@ def main():
             countdown_timer(**params)
         else:
             countup_timer(**params)
+
 
 if __name__ == "__main__":
     main()
