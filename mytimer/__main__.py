@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
-from mytimer.functions import countdown_timer, countup_timer, MY_TIMER_VERSION
+from mytimer.functions import countdown_timer, countup_timer, MY_TIMER_VERSION, FACES_MAP
 import argparse
 
 
@@ -10,11 +10,12 @@ def main():
 
     :return: None
     """
-    params = {"minute": 0, "hour": 0, "second": 0, "alarm": 0}
+    params = {"minute": 0, "hour": 0, "second": 0, "alarm": 0, "face": 1}
     parser = argparse.ArgumentParser()
     parser.add_argument('--minute', help='minute', type=float)
     parser.add_argument('--second', help='second', type=float)
-    parser.add_argument('--hour', help='hour', type=float,)
+    parser.add_argument('--hour', help='hour', type=float)
+    parser.add_argument('--face', help='face', type=int, choices=list(FACES_MAP.keys()))
     parser.add_argument(
         '--countdown',
         help='countdown timer',
