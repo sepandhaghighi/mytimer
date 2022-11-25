@@ -35,7 +35,7 @@ jobs:
         python -m mytimer --minute=0 --second=10 --countdown
     - name: Run3
       run: |
-        mytimer --minute=0 --second=10 --countup --alarm
+        mytimer --minute=0 --second=10 --countup --alarm --face=4
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py

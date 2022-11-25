@@ -1,4 +1,22 @@
 <div align="center">
+<pre>
+ __  __         _____  _                        
+|  \/  | _   _ |_   _|(_) _ __ ___    ___  _ __ 
+| |\/| || | | |  | |  | || '_ ` _ \  / _ \| '__|
+| |  | || |_| |  | |  | || | | | | ||  __/| |   
+|_|  |_| \__, |  |_|  |_||_| |_| |_| \___||_|   
+         |___/                                  
+
+</pre>
+
+<pre>
+ _  ____        _____  _  _         ____    __    
+/ ||___ \   _  |___ / | || |    _  | ___|  / /_   
+| |  __) | (_)   |_ \ | || |_  (_) |___ \ | '_ \  
+| | / __/   _   ___) ||__   _|  _   ___) || (_) | 
+|_||_____| (_) |____/    |_|   (_) |____/  \___/  
+</pre>
+
 <h1>MyTimer</h1>
 
 <a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version" height="18"></a>
@@ -64,14 +82,14 @@ Simple timer for your terminal!
 ## Installation		
 
 ### Source Code
-- Download [Version 0.2](https://github.com/sepandhaghighi/mytimer/archive/v0.2.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
+- Download [Version 0.3](https://github.com/sepandhaghighi/mytimer/archive/v0.3.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
 - `pip install -r requirements.txt` or `pip3 install -r requirements.txt` (Need root access)
 - `python3 setup.py install` or `python setup.py install` (Need root access)				
 
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip install mytimer==0.2` or `pip3 install mytimer==0.2` (Need root access)							
+- `pip install mytimer==0.3` or `pip3 install mytimer==0.3` (Need root access)							
 
 
 ## Usage
@@ -109,7 +127,16 @@ mytimer --minute=7 --second=30 --countup
 
 ```console
 mytimer --minute=7 --second=30 --countdown --alarm
-```		
+```
+
+### Face
+
+
+```console
+mytimer --minute=7 --second=30 --face=3
+```
+* [Faces List](https://github.com/sepandhaghighi/mytimer/blob/main/FACES.md)
+		
 
 <div align="center">
 

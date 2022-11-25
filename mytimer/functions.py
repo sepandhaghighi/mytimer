@@ -5,10 +5,23 @@ import sys
 import time
 from art import tprint
 
-MY_TIMER_VERSION = "0.2"
+MY_TIMER_VERSION = "0.3"
 WRONG_INPUT_ERROR = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
+FACES_MAP = {
+    1: 'bulbhead',
+    2: 'soft',
+    3: '4max',
+    4: '5x7',
+    5: 'charact4',
+    6: 'o8',
+    7: 'alphabet',
+    8: 'shadow',
+    9: 'speed',
+    10: 'rounded',
+    11: 'chartri',
+    12: 'standard'}
 
 
 def input_check(func):
@@ -19,7 +32,7 @@ def input_check(func):
     :type func: function
     :return: inner function
     """
-    def inner_function(hour, minute, second, alarm):
+    def inner_function(hour, minute, second, alarm, face):
         """
         Inner function.
 
@@ -31,8 +44,11 @@ def input_check(func):
         :type second: int
         :param alarm: alarm flag
         :type alarm: bool
+        :param face: face number
+        :type face: int
         :return: None
         """
+        font = FACES_MAP[face]
         items_list = [hour, minute, second]
         if sum(items_list) != 0 and all(map(lambda x: x >= 0, items_list)):
             if second >= 60:
@@ -41,7 +57,7 @@ def input_check(func):
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(hour, minute, second, alarm)
+            func(hour, minute, second, alarm, font)
         else:
             print(WRONG_INPUT_ERROR)
             print(INPUT_EXAMPLE)
@@ -90,7 +106,7 @@ def play_sound(sound_path):
 
 
 @input_check
-def countup_timer(hour, minute, second, alarm):
+def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
     """
     Count-up timer function.
 
@@ -102,6 +118,8 @@ def countup_timer(hour, minute, second, alarm):
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
+    :param font: font name
+    :type font: str
     :return: None
     """
     timer_second = 0
@@ -116,7 +134,7 @@ def countup_timer(hour, minute, second, alarm):
             (timer_hour,
              timer_minute,
              timer_second),
-            font="bulbhead")
+            font=font)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             tprint("End!")
             if alarm:
@@ -134,7 +152,7 @@ def countup_timer(hour, minute, second, alarm):
 
 
 @input_check
-def countdown_timer(hour, minute, second, alarm):
+def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
     """
     Countdown timer function.
 
@@ -146,6 +164,8 @@ def countdown_timer(hour, minute, second, alarm):
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
+    :param font: font name
+    :type font: str
     :return: None
     """
     while True:
@@ -153,7 +173,7 @@ def countdown_timer(hour, minute, second, alarm):
         clear_screen()
         print('\n' * 5)
         tprint('\t\t\t\t  %d : %d : %d ' %
-               (hour, minute, second), font="bulbhead")
+               (hour, minute, second), font=font)
         second -= 1
         if second == -1:
             second = 59
