@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `--face` argument
+- `FACES.md`
+### Changed
+- `README.md` updated
+- Minimum `art` library version changed from `1.8` to `2.9`
 ## [0.2] - 2022-11-03
 ### Added
 - `--version` flag
