@@ -21,7 +21,11 @@ FACES_MAP = {
     9: 'speed',
     10: 'rounded',
     11: 'chartri',
-    12: 'standard'}
+    12: 'standard',
+    13: 'contessa',
+    14: 'avatar',
+    15: 'mini',
+    16: 'twopoint'}
 
 
 def input_check(func):
