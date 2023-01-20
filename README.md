@@ -30,7 +30,6 @@
    * [Installation](https://github.com/sepandhaghighi/mytimer#installation)
    * [Usage](https://github.com/sepandhaghighi/mytimer#usage)
    * [Issues & Bug Reports](https://github.com/sepandhaghighi/mytimer#issues--bug-reports)
-   * [Dependencies](https://github.com/sepandhaghighi/mytimer#dependencies)
    * [Contribution](https://github.com/sepandhaghighi/mytimer/blob/main/.github/CONTRIBUTING.md)
    * [References](https://github.com/sepandhaghighi/mytimer#references)
    * [Authors](https://github.com/sepandhaghighi/mytimer/blob/main/AUTHORS.md)
@@ -151,20 +150,6 @@ mytimer --minute=7 --second=30 --face=3
 Just fill an issue and describe it. We'll check it ASAP!
 
 - Please complete the issue template
-
-
-## Dependencies
-
-<table>
-	<tr> 
-		<td align="center">main</td>	
-		<td align="center">dev</td>	
-	</tr>
-	<tr>
-		<td align="center"><a href="https://requires.io/github/sepandhaghighi/mytimer/requirements/?branch=main"><img src="https://requires.io/github/sepandhaghighi/mytimer/requirements.svg?branch=main" alt="Requirements Status" /></a></td>
-		<td align="center"><a href="https://requires.io/github/sepandhaghighi/mytimer/requirements/?branch=dev"><img src="https://requires.io/github/sepandhaghighi/mytimer/requirements.svg?branch=dev" alt="Requirements Status" /></a></td>
-	</tr>
-</table>
  			
 
 ## References
