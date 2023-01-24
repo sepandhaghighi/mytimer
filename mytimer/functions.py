@@ -28,6 +28,21 @@ FACES_MAP = {
     16: 'twopoint'}
 
 
+def check_null_time(args):
+    """
+    Check that all time elements are null or not.
+
+    :param args: input arguments
+    :type args: argparse.Namespace
+    :return: result as bool
+    """
+    time_elements = ["minute", "second", "hour"]
+    for item in time_elements:
+        if getattr(args, item) is not None:
+            return False
+    return True
+
+
 def input_check(func):
     """
     Input check decorator for timer functions.
