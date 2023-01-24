@@ -6,6 +6,7 @@ import time
 from mytimer.params import *
 from art import tprint
 
+
 def check_null_time(args):
     """
     Check that all time elements are null or not.
