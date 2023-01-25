@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - 4 new faces
+- Infinite timer mode
+### Changed
+- `README.md` updated
+- Parameters moved to `params.py`
 ## [0.3] - 2022-11-25
 ### Added
 - `--face` argument
