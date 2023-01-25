@@ -95,6 +95,7 @@ Simple timer for your terminal!
 
 ⚠️ You can use `mytimer` or `python -m mytimer` to run this program
 
+⚠️ Press `Ctrl + C` to exit
 
 ### Version
 
