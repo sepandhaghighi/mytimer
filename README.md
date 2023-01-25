@@ -105,6 +105,10 @@ mytimer --version
 ### Basic
 
 ```console
+mytimer
+```
+
+```console
 mytimer --minute=7 --second=30
 ```
 
