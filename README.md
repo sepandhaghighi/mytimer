@@ -109,7 +109,7 @@ mytimer --version
 mytimer
 ```
 
-### Time Limits
+### Time Limit
 
 ```console
 mytimer --minute=7 --second=30
