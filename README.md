@@ -95,7 +95,6 @@ Simple timer for your terminal!
 
 ⚠️ You can use `mytimer` or `python -m mytimer` to run this program
 
-
 ### Version
 
 ```console
@@ -104,8 +103,20 @@ mytimer --version
 
 ### Basic
 
+⚠️ Press `Ctrl + C` to exit
+
+```console
+mytimer
+```
+
+### Time Limit
+
 ```console
 mytimer --minute=7 --second=30
+```
+
+```console
+mytimer --hour=2 --minute=20
 ```
 
 ### Timer Mode

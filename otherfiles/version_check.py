@@ -21,7 +21,7 @@ CHANGELOG_ITEMS = [
     "https://github.com/sepandhaghighi/mytimer/compare/v{0}...dev",
     "[{0}]:"]
 
-FUNCTIONS_ITEMS = ['MY_TIMER_VERSION = "{0}"']
+PARAMS_ITEMS = ['MY_TIMER_VERSION = "{0}"']
 
 FILES = {
     "setup.py": SETUP_ITEMS,
@@ -29,7 +29,7 @@ FILES = {
     "CHANGELOG.md": CHANGELOG_ITEMS,
     os.path.join(
         "mytimer",
-        "functions.py"): FUNCTIONS_ITEMS}
+        "params.py"): PARAMS_ITEMS}
 
 TEST_NUMBER = len(FILES.keys()) + 1
 
