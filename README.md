@@ -30,7 +30,6 @@
    * [Installation](https://github.com/sepandhaghighi/mytimer#installation)
    * [Usage](https://github.com/sepandhaghighi/mytimer#usage)
    * [Issues & Bug Reports](https://github.com/sepandhaghighi/mytimer#issues--bug-reports)
-   * [Dependencies](https://github.com/sepandhaghighi/mytimer#dependencies)
    * [Contribution](https://github.com/sepandhaghighi/mytimer/blob/main/.github/CONTRIBUTING.md)
    * [References](https://github.com/sepandhaghighi/mytimer#references)
    * [Authors](https://github.com/sepandhaghighi/mytimer/blob/main/AUTHORS.md)
@@ -82,20 +81,19 @@ Simple timer for your terminal!
 ## Installation		
 
 ### Source Code
-- Download [Version 0.3](https://github.com/sepandhaghighi/mytimer/archive/v0.3.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
+- Download [Version 0.4](https://github.com/sepandhaghighi/mytimer/archive/v0.4.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
 - `pip install -r requirements.txt` or `pip3 install -r requirements.txt` (Need root access)
 - `python3 setup.py install` or `python setup.py install` (Need root access)				
 
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip install mytimer==0.3` or `pip3 install mytimer==0.3` (Need root access)							
+- `pip install mytimer==0.4` or `pip3 install mytimer==0.4` (Need root access)							
 
 
 ## Usage
 
 ⚠️ You can use `mytimer` or `python -m mytimer` to run this program
-
 
 ### Version
 
@@ -105,8 +103,20 @@ mytimer --version
 
 ### Basic
 
+⚠️ Press `Ctrl + C` to exit
+
+```console
+mytimer
+```
+
+### Time Limit
+
 ```console
 mytimer --minute=7 --second=30
+```
+
+```console
+mytimer --hour=2 --minute=20
 ```
 
 ### Timer Mode
@@ -151,20 +161,6 @@ mytimer --minute=7 --second=30 --face=3
 Just fill an issue and describe it. We'll check it ASAP!
 
 - Please complete the issue template
-
-
-## Dependencies
-
-<table>
-	<tr> 
-		<td align="center">main</td>	
-		<td align="center">dev</td>	
-	</tr>
-	<tr>
-		<td align="center"><a href="https://requires.io/github/sepandhaghighi/mytimer/requirements/?branch=main"><img src="https://requires.io/github/sepandhaghighi/mytimer/requirements.svg?branch=main" alt="Requirements Status" /></a></td>
-		<td align="center"><a href="https://requires.io/github/sepandhaghighi/mytimer/requirements/?branch=dev"><img src="https://requires.io/github/sepandhaghighi/mytimer/requirements.svg?branch=dev" alt="Requirements Status" /></a></td>
-	</tr>
-</table>
  			
 
 ## References

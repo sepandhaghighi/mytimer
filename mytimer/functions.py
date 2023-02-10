@@ -3,25 +3,22 @@
 import os
 import sys
 import time
+from mytimer.params import *
 from art import tprint
 
-MY_TIMER_VERSION = "0.3"
-WRONG_INPUT_ERROR = "[Error] Wrong input"
-SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
-INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
-FACES_MAP = {
-    1: 'bulbhead',
-    2: 'soft',
-    3: '4max',
-    4: '5x7',
-    5: 'charact4',
-    6: 'o8',
-    7: 'alphabet',
-    8: 'shadow',
-    9: 'speed',
-    10: 'rounded',
-    11: 'chartri',
-    12: 'standard'}
+
+def check_null_time(args):
+    """
+    Check that all time elements are null or not.
+
+    :param args: input arguments
+    :type args: argparse.Namespace
+    :return: result as bool
+    """
+    for item in TIME_ELEMENTS:
+        if getattr(args, item) is not None:
+            return False
+    return True
 
 
 def input_check(func):
