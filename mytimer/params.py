@@ -22,4 +22,9 @@ FACES_MAP = {
     13: 'contessa',
     14: 'avatar',
     15: 'mini',
-    16: 'twopoint'}
+    16: 'twopoint',
+    17: '3x5',
+    18: 'threepoint',
+    19: 'ascii_new_roman',
+    20: 'serifcap',
+    21: 'lockergnome'}
