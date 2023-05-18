@@ -97,7 +97,7 @@ def play_sound(sound_path):
     """
     try:
         import winsound
-        winsound.PlaySound(sound_path, winsound.SND_ALIAS)
+        winsound.PlaySound(sound_path, winsound.SND_FILENAME)
     except Exception:
         print(SOUND_ERROR_MESSAGE)
 
