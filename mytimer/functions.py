@@ -87,7 +87,7 @@ def get_sound_path(sound_name):
 
 def play_sound(sound_path):
     """
-    Play sound asynchronous in a thread.
+    Play sound.
 
     :param sound_path: sound path
     :type sound_path: str
@@ -96,8 +96,8 @@ def play_sound(sound_path):
     :return: None
     """
     try:
-        import playsound
-        playsound.playsound(sound_path)
+        import winsound
+        winsound.PlaySound(sound_path, winsound.SND_ALIAS)
     except Exception:
         print(SOUND_ERROR_MESSAGE)
 
