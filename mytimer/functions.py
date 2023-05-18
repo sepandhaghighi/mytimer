@@ -91,8 +91,6 @@ def play_sound(sound_path):
 
     :param sound_path: sound path
     :type sound_path: str
-    :param debug: debug mode flag
-    :type debug: bool
     :return: None
     """
     try:
