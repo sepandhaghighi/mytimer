@@ -113,8 +113,9 @@ def play_sound(sound_path):
                                       stderr=subprocess.PIPE,
                                       stdin=subprocess.PIPE,
                                       stdout=subprocess.PIPE)
-    except Exception:
+    except Exception as e:
         print(SOUND_ERROR_MESSAGE)
+        print(str(e))
 
 
 @input_check
