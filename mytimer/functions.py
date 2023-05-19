@@ -100,9 +100,19 @@ def play_sound(sound_path):
             import winsound
             winsound.PlaySound(sound_path, winsound.SND_FILENAME)
         elif sys_platform == "darwin":
-            _ = subprocess.check_call(["afplay", sound_path], shell=False, stderr=subprocess.PIPE, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+            _ = subprocess.check_call(["afplay",
+                                       sound_path],
+                                      shell=False,
+                                      stderr=subprocess.PIPE,
+                                      stdin=subprocess.PIPE,
+                                      stdout=subprocess.PIPE)
         else:
-            _ = subprocess.check_call(["aplay", sound_path], shell=False, stderr=subprocess.PIPE, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+            _ = subprocess.check_call(["aplay",
+                                       sound_path],
+                                      shell=False,
+                                      stderr=subprocess.PIPE,
+                                      stdin=subprocess.PIPE,
+                                      stdout=subprocess.PIPE)
     except Exception:
         print(SOUND_ERROR_MESSAGE)
 
