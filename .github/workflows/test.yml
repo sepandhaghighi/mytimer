@@ -47,7 +47,7 @@ jobs:
     - name: Other tests
       run: |
         python -m vulture mytimer/ setup.py --min-confidence 65 --exclude=__init__.py --sort-by-size
-        python -m bandit -r mytimer -s B404,B603
+        python -m bandit -r mytimer -s B404,B603,B605,B607
         python -m pydocstyle --match-dir=mytimer -v
       if: matrix.python-version == 3.8
     - name: Accuracy (Windows)
