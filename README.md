@@ -82,13 +82,12 @@ Simple timer for your terminal!
 
 ### Source Code
 - Download [Version 0.4](https://github.com/sepandhaghighi/mytimer/archive/v0.4.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
-- `pip install -r requirements.txt` or `pip3 install -r requirements.txt` (Need root access)
-- `python3 setup.py install` or `python setup.py install` (Need root access)				
+- `pip install .`				
 
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip install mytimer==0.4` or `pip3 install mytimer==0.4` (Need root access)							
+- `pip install mytimer==0.4` (Need root access)							
 
 
 ## Usage
