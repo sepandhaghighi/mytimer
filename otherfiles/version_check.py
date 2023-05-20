@@ -9,8 +9,7 @@ VERSION = "0.4"
 
 README_ITEMS = [
     "[Version {0}](https://github.com/sepandhaghighi/mytimer/archive/v{0}.zip)",
-    "pip install mytimer=={0}",
-    "pip3 install mytimer=={0}"]
+    "pip install mytimer=={0}"]
 
 SETUP_ITEMS = [
     "version='{0}'",
