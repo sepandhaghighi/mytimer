@@ -1,3 +1,2 @@
 art>=2.9
-playsound>=1.0.0
 
