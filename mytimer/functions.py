@@ -172,7 +172,13 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=""):
 
 
 @input_check
-def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=""):
+def countdown_timer(
+        hour,
+        minute,
+        second,
+        alarm,
+        font=FACES_MAP[1],
+        message=""):
     """
     Countdown timer function.
 
