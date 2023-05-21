@@ -156,7 +156,7 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=""):
             font=font)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
-            tprint("End!")
+            print("End!")
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
@@ -211,7 +211,7 @@ def countdown_timer(
             minute = 59
             hour -= 1
         if hour == -1:
-            tprint("End!")
+            print("End!")
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
