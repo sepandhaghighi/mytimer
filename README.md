@@ -145,6 +145,14 @@ mytimer --minute=7 --second=30 --countdown --alarm
 mytimer --minute=7 --second=30 --face=3
 ```
 * [Faces List](https://github.com/sepandhaghighi/mytimer/blob/main/FACES.md)
+
+
+### Message
+
+
+```console
+mytimer --minute=7 --second=30 --message="Test message"
+```
 		
 
 <div align="center">
