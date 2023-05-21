@@ -30,7 +30,7 @@ def input_check(func):
     :type func: function
     :return: inner function
     """
-    def inner_function(hour, minute, second, alarm, face):
+    def inner_function(hour, minute, second, alarm, face, message):
         """
         Inner function.
 
@@ -44,6 +44,8 @@ def input_check(func):
         :type alarm: bool
         :param face: face number
         :type face: int
+        :param message: message
+        :type message: str
         :return: None
         """
         font = FACES_MAP[face]
@@ -55,7 +57,7 @@ def input_check(func):
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(hour, minute, second, alarm, font)
+            func(hour, minute, second, alarm, font, message)
         else:
             print(WRONG_INPUT_ERROR)
             print(INPUT_EXAMPLE)
@@ -118,7 +120,7 @@ def play_sound(sound_path):
 
 
 @input_check
-def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
+def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None):
     """
     Count-up timer function.
 
@@ -132,6 +134,8 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
     :type alarm: bool
     :param font: font name
     :type font: str
+    :param message: message
+    :type message: str
     :return: None
     """
     timer_second = 0
@@ -159,12 +163,14 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
         if timer_minute == 60:
             timer_minute = 0
             timer_hour += 1
+        if message is not None:
+            print(message)
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
 
 
 @input_check
-def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
+def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None):
     """
     Countdown timer function.
 
@@ -178,6 +184,8 @@ def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
     :type alarm: bool
     :param font: font name
     :type font: str
+    :param message: message
+    :type message: str
     :return: None
     """
     while True:
@@ -198,5 +206,7 @@ def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1]):
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
+        if message is not None:
+            print(message)
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
