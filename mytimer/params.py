@@ -6,6 +6,7 @@ WRONG_INPUT_ERROR = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
+MESSAGE_TEMPLATE = "Message: {0}"
 FACES_MAP = {
     1: 'bulbhead',
     2: 'soft',

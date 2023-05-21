@@ -48,6 +48,9 @@ def input_check(func):
         :type message: str
         :return: None
         """
+        message = message.strip()
+        if len(message) > 0:
+            message = MESSAGE_TEMPLATE.format(message)
         font = FACES_MAP[face]
         items_list = [hour, minute, second]
         if sum(items_list) != 0 and all(map(lambda x: x >= 0, items_list)):
