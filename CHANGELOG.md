@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - 5 new faces
+- `--message` argument
 ### Changed
 - `play_sound` function modified
 - `playsound` removed from `requirements.txt`
