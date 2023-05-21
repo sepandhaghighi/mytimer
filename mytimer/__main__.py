@@ -11,7 +11,7 @@ def main():
 
     :return: None
     """
-    params = {"minute": 0, "hour": 0, "second": 0, "alarm": 0, "face": 1, "message": None}
+    params = {"minute": 0, "hour": 0, "second": 0, "alarm": 0, "face": 1, "message": ""}
     parser = argparse.ArgumentParser()
     parser.add_argument('--minute', help='minute', type=float)
     parser.add_argument('--second', help='second', type=float)

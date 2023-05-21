@@ -120,7 +120,7 @@ def play_sound(sound_path):
 
 
 @input_check
-def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None):
+def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=""):
     """
     Count-up timer function.
 
@@ -151,6 +151,7 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None):
              timer_minute,
              timer_second),
             font=font)
+        print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             tprint("End!")
             if alarm:
@@ -163,14 +164,12 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None):
         if timer_minute == 60:
             timer_minute = 0
             timer_hour += 1
-        if message is not None:
-            print(message)
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
 
 
 @input_check
-def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None):
+def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=""):
     """
     Countdown timer function.
 
@@ -194,6 +193,7 @@ def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None
         print('\n' * 5)
         tprint('\t\t\t\t  %d : %d : %d ' %
                (hour, minute, second), font=font)
+        print(message)
         second -= 1
         if second == -1:
             second = 59
@@ -206,7 +206,5 @@ def countdown_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=None
             if alarm:
                 play_sound(get_sound_path("alarm.wav"))
             break
-        if message is not None:
-            print(message)
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
