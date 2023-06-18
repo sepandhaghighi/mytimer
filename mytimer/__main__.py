@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
-from mytimer.params import MY_TIMER_VERSION, FACES_MAP
+from mytimer.params import MY_TIMER_VERSION, FACES_MAP, PROGRAMS_MAP
 from mytimer.functions import countdown_timer, countup_timer, check_null_time
 import argparse
 
@@ -30,6 +30,12 @@ def main():
         choices=list(
             FACES_MAP.keys()))
     parser.add_argument(
+        '--program',
+        help='program',
+        type=int,
+        choices=list(
+            PROGRAMS_MAP.keys()))
+    parser.add_argument(
         '--countdown',
         help='countdown timer',
         nargs="?",
@@ -38,6 +44,8 @@ def main():
     parser.add_argument('--alarm', help='alarm', nargs="?", const=1)
     parser.add_argument('--version', help='version', nargs="?", const=1)
     args = parser.parse_args()
+    if args.program:
+        params = PROGRAMS_MAP[args.program]
     for item in params:
         if getattr(args, item) is not None:
             params[item] = getattr(args, item)
@@ -47,7 +55,7 @@ def main():
         if args.countdown:
             countdown_timer(**params)
         else:
-            if check_null_time(args):
+            if check_null_time(params):
                 params["hour"] = 100000000
             countup_timer(**params)
 

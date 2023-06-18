@@ -8,16 +8,16 @@ from mytimer.params import *
 from art import tprint
 
 
-def check_null_time(args):
+def check_null_time(params):
     """
     Check that all time elements are null or not.
 
-    :param args: input arguments
-    :type args: argparse.Namespace
+    :param params: input params
+    :type params: dict
     :return: result as bool
     """
     for item in TIME_ELEMENTS:
-        if getattr(args, item) is not None:
+        if params[item] > 0:
             return False
     return True
 

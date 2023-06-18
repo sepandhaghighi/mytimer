@@ -29,3 +29,20 @@ FACES_MAP = {
     19: 'ascii_new_roman',
     20: 'serifcap',
     21: 'lockergnome'}
+
+PROGRAMS_MAP = {
+    "program1": {
+        "minute": 0,
+        "hour": 0,
+        "second": 30,
+        "alarm": 0,
+        "face": 2,
+        "message": "Program1"},
+    "program2": {
+        "minute": 2,
+        "hour": 0,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Program2"}
+}
