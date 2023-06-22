@@ -31,18 +31,46 @@ FACES_MAP = {
     21: 'lockergnome'}
 
 PROGRAMS_MAP = {
-    "program1": {
-        "minute": 0,
+    "poached-egg": {
         "hour": 0,
+        "minute": 1,
         "second": 30,
         "alarm": 0,
-        "face": 2,
-        "message": "Program1"},
-    "program2": {
-        "minute": 2,
+        "face": 1,
+        "message": "Poached egg (1.5 mins)"},
+    "boiled-egg": {
         "hour": 0,
+        "minute": 3,
         "second": 0,
         "alarm": 0,
         "face": 1,
-        "message": "Program2"}
+        "message": "Boiled egg (3 mins)"},
+    "soft-boiled-egg": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Soft-boiled egg (5 mins)"},
+    "hard-boiled-egg": {
+        "hour": 0,
+        "minute": 10,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Hard-boiled egg (10 mins)"},
+    "pasta": {
+        "hour": 0,
+        "minute": 8,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Pasta (8 mins)"},
+    "quick-rice": {
+        "hour": 0,
+        "minute": 10,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Quick cooking rice (10 mins)"},
 }
