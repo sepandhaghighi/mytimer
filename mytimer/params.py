@@ -73,4 +73,56 @@ PROGRAMS_MAP = {
         "alarm": 0,
         "face": 1,
         "message": "Quick cooking rice (10 mins)"},
+    "japanese-green-tea": {
+        "hour": 0,
+        "minute": 2,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Japanese green tea (2 mins)"},
+    "tea-bag": {
+        "hour": 0,
+        "minute": 2,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Tea bag (2 mins)"},
+    "chinese-green-tea": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Chinese green tea (5 mins)"},
+    "black-tea": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Black tea (5 mins)"},
+    "oolong-tea": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Oolong tea (5 mins)"},
+    "fruit-tea": {
+        "hour": 0,
+        "minute": 8,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "Fruit tea (8 mins)"},
+    "white-tea": {
+        "hour": 0,
+        "minute": 10,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": "White tea (10 mins)"},
+
+
+
 }
