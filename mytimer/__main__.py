@@ -27,13 +27,13 @@ def main():
         '--face',
         help='face',
         type=int,
-        choices=list(
+        choices=sorted(
             FACES_MAP.keys()))
     parser.add_argument(
         '--program',
         help='program',
-        type=int,
-        choices=list(
+        type=str,
+        choices=sorted(
             PROGRAMS_MAP.keys()))
     parser.add_argument(
         '--countdown',
