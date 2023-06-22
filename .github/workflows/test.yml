@@ -29,13 +29,16 @@ jobs:
         python setup.py install
     - name: Run1
       run: |
-        python -m mytimer --minute=1 --second=10 --message="Test Message"
+        python -m mytimer --minute=1 --second=1 --message="Test Message"
     - name: Run2
       run: |
         python -m mytimer --minute=0 --second=10 --countdown
     - name: Run3
       run: |
         mytimer --minute=0 --second=10 --countup --alarm --face=4
+    - name: Run4
+      run: |
+        mytimer --program=test
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py
