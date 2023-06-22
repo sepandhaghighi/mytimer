@@ -8,9 +8,9 @@ from mytimer.params import *
 from art import tprint
 
 
-def check_null_time(params):
+def check_zero_time(params):
     """
-    Check that all time elements are null or not.
+    Check that all time elements are zero or not.
 
     :param params: input params
     :type params: dict

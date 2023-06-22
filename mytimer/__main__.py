@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
 from mytimer.params import MY_TIMER_VERSION, FACES_MAP, PROGRAMS_MAP
-from mytimer.functions import countdown_timer, countup_timer, check_null_time
+from mytimer.functions import countdown_timer, countup_timer, check_zero_time
 import argparse
 
 
@@ -55,7 +55,7 @@ def main():
         if args.countdown:
             countdown_timer(**params)
         else:
-            if check_null_time(params):
+            if check_zero_time(params):
                 params["hour"] = 100000000
             countup_timer(**params)
 
