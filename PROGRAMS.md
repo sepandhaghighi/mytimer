@@ -2,9 +2,9 @@
 
 <table>
 	<tr style="text-align:center;">
-		<td>Title</td>
-		<td>Code</td>
-		<td>Time</td>
+		<td><b>Title</b></td>
+		<td><b>Code</b></td>
+		<td><b>Time</b></td>
 	</tr>
 	<tr style="text-align:center;">
 		<td>Poached egg</td>
