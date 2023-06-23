@@ -147,6 +147,13 @@ mytimer --minute=7 --second=30 --face=3
 * [Faces List](https://github.com/sepandhaghighi/mytimer/blob/main/FACES.md)
 
 
+### Program
+
+```console
+mytimer --program=black-tea
+```
+* [Programs List](https://github.com/sepandhaghighi/mytimer/blob/main/PROGRAMS.md)
+
 ### Message
 
 
