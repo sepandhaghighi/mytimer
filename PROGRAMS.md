@@ -1,5 +1,7 @@
 # Programs List
 
+⚠️ By default, the **alarm** is **active** for all programs
+
 <table>
 	<tr style="text-align:center;">
 		<td><b>Title</b></td>
