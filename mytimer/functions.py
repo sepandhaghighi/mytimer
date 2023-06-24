@@ -8,6 +8,20 @@ from mytimer.params import *
 from art import tprint
 
 
+def check_null_time(args):
+    """
+    Check that all time elements are null or not.
+
+    :param args: input arguments
+    :type args: argparse.Namespace
+    :return: result as bool
+    """
+    for item in TIME_ELEMENTS:
+        if getattr(args, item) is not None:
+            return False
+    return True
+
+
 def load_params(args):
     """
     Load params.
@@ -36,20 +50,6 @@ def load_params(args):
         if check_null_time(args) and not args.program:
             params["hour"] = 100000000
     return params
-
-
-def check_null_time(args):
-    """
-    Check that all time elements are null or not.
-
-    :param args: input arguments
-    :type args: argparse.Namespace
-    :return: result as bool
-    """
-    for item in TIME_ELEMENTS:
-        if getattr(args, item) is not None:
-            return False
-    return True
 
 
 def input_check(func):
