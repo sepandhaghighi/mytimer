@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
-from mytimer.params import MY_TIMER_VERSION, FACES_MAP, PROGRAMS_MAP
+from mytimer.params import MY_TIMER_VERSION, FACES_MAP, PROGRAMS_MAP, TIME_ELEMENTS
 from mytimer.functions import countdown_timer, countup_timer, check_null_time
 import argparse
 
@@ -48,7 +48,11 @@ def main():
         params = PROGRAMS_MAP[args.program]
     for item in params:
         if getattr(args, item) is not None:
-            params[item] = getattr(args, item)
+            if item not in TIME_ELEMENTS:
+                params[item] = getattr(args, item)
+            else:
+                if not args.program:
+                    params[item] = getattr(args, item)
     if args.version:
         print(MY_TIMER_VERSION)
     else:
