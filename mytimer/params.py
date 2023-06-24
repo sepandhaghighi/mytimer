@@ -49,7 +49,7 @@ PROGRAMS_MAP = {
         "hour": 0,
         "minute": 5,
         "second": 0,
-        "alarm": 0,
+        "alarm": 1,
         "face": 1,
         "message": "Soft-boiled egg (5 mins)"},
     "hard-boiled-egg": {
