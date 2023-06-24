@@ -8,6 +8,36 @@ from mytimer.params import *
 from art import tprint
 
 
+def load_params(args):
+    """
+    Load params.
+
+    :param args: input arguments
+    :type args: argparse.Namespace
+    :return: params as dict
+    """
+    params = {
+        "minute": 0,
+        "hour": 0,
+        "second": 0,
+        "alarm": 0,
+        "face": 1,
+        "message": ""}
+    if args.program:
+        params = PROGRAMS_MAP[args.program]
+    for item in params:
+        if getattr(args, item) is not None:
+            if item not in TIME_ELEMENTS:
+                params[item] = getattr(args, item)
+            else:
+                if not args.program:
+                    params[item] = getattr(args, item)
+    if not args.countdown:
+        if check_null_time(args) and not args.program:
+            params["hour"] = 100000000
+    return params
+
+
 def check_null_time(args):
     """
     Check that all time elements are null or not.
