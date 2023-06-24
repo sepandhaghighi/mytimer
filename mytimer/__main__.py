@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
-from mytimer.params import MY_TIMER_VERSION, FACES_MAP
-from mytimer.functions import countdown_timer, countup_timer, check_null_time
+from mytimer.params import MY_TIMER_VERSION, FACES_MAP, PROGRAMS_MAP
+from mytimer.functions import countdown_timer, countup_timer, load_params
 import argparse
 
 
@@ -11,13 +11,6 @@ def main():
 
     :return: None
     """
-    params = {
-        "minute": 0,
-        "hour": 0,
-        "second": 0,
-        "alarm": 0,
-        "face": 1,
-        "message": ""}
     parser = argparse.ArgumentParser()
     parser.add_argument('--minute', help='minute', type=int)
     parser.add_argument('--second', help='second', type=int)
@@ -27,8 +20,14 @@ def main():
         '--face',
         help='face',
         type=int,
-        choices=list(
+        choices=sorted(
             FACES_MAP.keys()))
+    parser.add_argument(
+        '--program',
+        help='program',
+        type=str,
+        choices=sorted(
+            PROGRAMS_MAP.keys()))
     parser.add_argument(
         '--countdown',
         help='countdown timer',
@@ -38,17 +37,13 @@ def main():
     parser.add_argument('--alarm', help='alarm', nargs="?", const=1)
     parser.add_argument('--version', help='version', nargs="?", const=1)
     args = parser.parse_args()
-    for item in params:
-        if getattr(args, item) is not None:
-            params[item] = getattr(args, item)
+    params = load_params(args)
     if args.version:
         print(MY_TIMER_VERSION)
     else:
         if args.countdown:
             countdown_timer(**params)
         else:
-            if check_null_time(args):
-                params["hour"] = 100000000
             countup_timer(**params)
 
 
