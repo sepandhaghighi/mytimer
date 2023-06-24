@@ -3,7 +3,7 @@
 ⚠️ By default, the **alarm** is **active** for all programs
 
 <table style="text-align:center;">
-	<tr style="text-align:center;">
+	<tr align="center">
 		<td><b>Title</b></td>
 		<td><b>Code</b></td>
 		<td><b>Time</b></td>
