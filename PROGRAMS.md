@@ -2,13 +2,13 @@
 
 ⚠️ By default, the **alarm** is **active** for all programs
 
-<table style="text-align:center;">
+<table>
 	<tr align="center">
 		<td><b>Title</b></td>
 		<td><b>Code</b></td>
 		<td><b>Time</b></td>
 	</tr>
-	<tr style="text-align:center;">
+	<tr align="center">
 		<td>Poached egg</td>
 		<td><code>poached-egg</code></td>
 		<td>1.5 mins</td>
