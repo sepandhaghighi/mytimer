@@ -4,7 +4,7 @@ import os
 import sys
 import subprocess
 import time
-from mytimer.params import *
+from mytimer.params import WRONG_INPUT_ERROR, SOUND_ERROR_MESSAGE, INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE, FACES_MAP, PROGRAMS_MAP
 from art import tprint
 
 
