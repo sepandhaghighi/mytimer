@@ -4,7 +4,7 @@ import os
 import sys
 import subprocess
 import time
-from mytimer.params import WRONG_INPUT_ERROR, SOUND_ERROR_MESSAGE
+from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP
 from art import tprint
@@ -94,7 +94,7 @@ def input_check(func):
                 minute %= 60
             func(hour, minute, second, alarm, font, message)
         else:
-            print(WRONG_INPUT_ERROR)
+            print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
     return inner_function
 

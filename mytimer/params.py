@@ -2,7 +2,7 @@
 """mytimer params."""
 
 MY_TIMER_VERSION = "0.5"
-WRONG_INPUT_ERROR = "[Error] Wrong input"
+INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
