@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Inputs type changed to `int`
 - `README.md` updated
+- `WRONG_INPUT_ERROR` renamed to `INPUT_ERROR_MESSAGE`
 ## [0.5] - 2023-05-25
 ### Added
 - 5 new faces
