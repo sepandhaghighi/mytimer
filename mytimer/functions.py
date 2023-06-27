@@ -268,4 +268,3 @@ def run_timer(args):
             countdown_timer(**params)
         else:
             countup_timer(**params)
-
