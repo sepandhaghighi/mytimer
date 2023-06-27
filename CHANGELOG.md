@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - `--program` argument
 - `PROGRAMS.md`
+- `run_timer` function
 ### Changed
 - Inputs type changed to `int`
 - `README.md` updated
