@@ -4,7 +4,10 @@ import os
 import sys
 import subprocess
 import time
-from mytimer.params import *
+from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
+from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
+from mytimer.params import FACES_MAP, PROGRAMS_MAP
+from mytimer.params import MY_TIMER_VERSION
 from art import tprint
 
 
@@ -92,7 +95,7 @@ def input_check(func):
                 minute %= 60
             func(hour, minute, second, alarm, font, message)
         else:
-            print(WRONG_INPUT_ERROR)
+            print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
     return inner_function
 
@@ -247,3 +250,21 @@ def countdown_timer(
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
+
+
+def run_timer(args):
+    """
+    Run timer.
+
+    :param args: input arguments
+    :type args: argparse.Namespace
+    :return: None
+    """
+    params = load_params(args)
+    if args.version:
+        print(MY_TIMER_VERSION)
+    else:
+        if args.countdown:
+            countdown_timer(**params)
+        else:
+            countup_timer(**params)
