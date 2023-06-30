@@ -191,7 +191,7 @@ def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message=""):
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print("End!")
             if alarm:
-                play_sound(get_sound_path("alarm.wav"))
+                play_sound(get_sound_path("1.wav"))
             break
         timer_second += 1
         if timer_second == 60:
@@ -246,7 +246,7 @@ def countdown_timer(
         if hour == -1:
             print("End!")
             if alarm:
-                play_sound(get_sound_path("alarm.wav"))
+                play_sound(get_sound_path("1.wav"))
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
