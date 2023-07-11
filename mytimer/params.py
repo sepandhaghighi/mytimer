@@ -42,6 +42,7 @@ PROGRAMS_MAP = {
         "second": 30,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Poached egg (1.5 mins)"},
     "boiled-egg": {
         "hour": 0,
@@ -49,6 +50,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Boiled egg (3 mins)"},
     "soft-boiled-egg": {
         "hour": 0,
@@ -56,6 +58,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Soft-boiled egg (5 mins)"},
     "hard-boiled-egg": {
         "hour": 0,
@@ -63,6 +66,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Hard-boiled egg (10 mins)"},
     "pasta": {
         "hour": 0,
@@ -70,6 +74,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Pasta (8 mins)"},
     "quick-rice": {
         "hour": 0,
@@ -77,6 +82,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Quick cooking rice (10 mins)"},
     "japanese-green-tea": {
         "hour": 0,
@@ -91,6 +97,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Tea bag (2 mins)"},
     "chinese-green-tea": {
         "hour": 0,
@@ -98,6 +105,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Chinese green tea (5 mins)"},
     "black-tea": {
         "hour": 0,
@@ -105,6 +113,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Black tea (5 mins)"},
     "oolong-tea": {
         "hour": 0,
@@ -112,6 +121,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Oolong tea (5 mins)"},
     "fruit-tea": {
         "hour": 0,
@@ -119,6 +129,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "Fruit tea (8 mins)"},
     "white-tea": {
         "hour": 0,
@@ -126,6 +137,7 @@ PROGRAMS_MAP = {
         "second": 0,
         "alarm": 1,
         "face": 1,
+        "tone": 1,
         "message": "White tea (10 mins)"},
 
 
