@@ -138,6 +138,14 @@ mytimer --minute=7 --second=30 --countup
 mytimer --minute=7 --second=30 --countdown --alarm
 ```
 
+### Tone
+
+
+```console
+mytimer --minute=7 --second=30 --countdown --alarm --tone=2
+```
+* [Tones List](https://github.com/sepandhaghighi/mytimer/blob/main/TONES.md)
+
 ### Face
 
 
