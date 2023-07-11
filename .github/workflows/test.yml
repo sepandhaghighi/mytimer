@@ -39,6 +39,9 @@ jobs:
     - name: Run4
       run: |
         mytimer --program=poached-egg
+    - name: Run5
+      run: |
+        mytimer --minute=0 --second=10 --countup --alarm --face=4 --tone=6
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py
