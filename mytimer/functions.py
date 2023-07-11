@@ -160,7 +160,14 @@ def play_sound(sound_path):
 
 
 @input_check
-def countup_timer(hour, minute, second, alarm, font=FACES_MAP[1], message="", tone=TONES_MAP[1]):
+def countup_timer(
+        hour,
+        minute,
+        second,
+        alarm,
+        font=FACES_MAP[1],
+        message="",
+        tone=TONES_MAP[1]):
     """
     Count-up timer function.
 
