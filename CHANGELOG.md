@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 9 new tones
 ### Changed
 - Test system modified
+- `PROGRAMS.md` updated
 ## [0.6] - 2023-07-04
 ### Added
 - `--program` argument
