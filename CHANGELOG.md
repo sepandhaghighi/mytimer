@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 9 new tones
 ### Changed
 - Test system modified
+- `input_check` decorator renamed to `input_handler`
+- `countup_timer` function inputs modified
+- `countdown_timer` function inputs modified
 - `PROGRAMS.md` updated
 - `FACES.md` updated
 ## [0.6] - 2023-07-04
