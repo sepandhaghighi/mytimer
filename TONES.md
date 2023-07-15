@@ -2,11 +2,11 @@
 
 <table>
 	<tr align="center">
-		<td><b>Tone</b></td>
-		<td><b>Duration</b></td>
-		<td><b>Size</b></td>
-		<td><b>Version</b></td>
-		<td><b>Download</b></td>
+		<th>Tone</th>
+		<th>Duration</th>
+		<th>Size</th>
+		<th>Version</th>
+		<th>Download</th>
 	</tr>
 	<tr align="center">
 		<td>1</td>
