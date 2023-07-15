@@ -38,8 +38,8 @@ def load_params(args):
         "hour": 0,
         "second": 0,
         "alarm": 0,
-        "face": 1,
-        "tone": 1,
+        "face_index": 1,
+        "tone_index": 1,
         "message": ""}
     if args.program:
         params = PROGRAMS_MAP[args.program]
