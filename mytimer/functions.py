@@ -64,7 +64,7 @@ def input_handler(func):
     :type func: function
     :return: inner function
     """
-    def inner_function(hour, minute, second, alarm, face, message, tone):
+    def inner_function(hour, minute, second, alarm, face_index, message, tone_index):
         """
         Inner function.
 
@@ -76,19 +76,19 @@ def input_handler(func):
         :type second: int
         :param alarm: alarm flag
         :type alarm: bool
-        :param face: face number
-        :type face: int
+        :param face_index: face index
+        :type face_index: int
         :param message: message
         :type message: str
-        :param tone: tone number
-        :type tone: int
+        :param tone_index: tone index
+        :type tone_index: int
         :return: None
         """
         message = message.strip()
         if len(message) > 0:
             message = MESSAGE_TEMPLATE.format(message)
-        font = FACES_MAP[face]
-        tone = TONES_MAP[tone]
+        face = FACES_MAP[face_index]
+        tone = TONES_MAP[tone_index]
         items_list = [hour, minute, second]
         if sum(items_list) != 0 and all(map(lambda x: x >= 0, items_list)):
             if second >= 60:
@@ -97,7 +97,7 @@ def input_handler(func):
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(hour, minute, second, alarm, font, message, tone)
+            func(hour, minute, second, alarm, face, message, tone)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
