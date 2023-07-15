@@ -64,7 +64,14 @@ def input_handler(func):
     :type func: function
     :return: inner function
     """
-    def inner_function(hour, minute, second, alarm, face_index, message, tone_index):
+    def inner_function(
+            hour,
+            minute,
+            second,
+            alarm,
+            face_index,
+            message,
+            tone_index):
         """
         Inner function.
 
