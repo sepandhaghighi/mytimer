@@ -38,8 +38,8 @@ def load_params(args):
         "hour": 0,
         "second": 0,
         "alarm": 0,
-        "face_index": 1,
-        "tone_index": 1,
+        "face": 1,
+        "tone": 1,
         "message": ""}
     if args.program:
         params = PROGRAMS_MAP[args.program]
@@ -69,9 +69,9 @@ def input_handler(func):
             minute,
             second,
             alarm,
-            face_index,
+            face,
             message,
-            tone_index):
+            tone):
         """
         Inner function.
 
@@ -83,19 +83,19 @@ def input_handler(func):
         :type second: int
         :param alarm: alarm flag
         :type alarm: bool
-        :param face_index: face index
-        :type face_index: int
+        :param face: face index
+        :type face: int
         :param message: message
         :type message: str
-        :param tone_index: tone index
-        :type tone_index: int
+        :param tone: tone index
+        :type tone: int
         :return: None
         """
         message = message.strip()
         if len(message) > 0:
             message = MESSAGE_TEMPLATE.format(message)
-        face = FACES_MAP[face_index]
-        tone = TONES_MAP[tone_index]
+        face = FACES_MAP[face]
+        tone = TONES_MAP[tone]
         items_list = [hour, minute, second]
         if sum(items_list) != 0 and all(map(lambda x: x >= 0, items_list)):
             if second >= 60:
