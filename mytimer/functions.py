@@ -183,7 +183,7 @@ def countup_timer(
     :type face: str
     :param message: message
     :type message: str
-    :param tone: tone
+    :param tone: tone file name
     :type tone: str
     :return: None
     """
@@ -241,7 +241,7 @@ def countdown_timer(
     :type face: str
     :param message: message
     :type message: str
-    :param tone: tone
+    :param tone: tone file name
     :type tone: str
     :return: None
     """
