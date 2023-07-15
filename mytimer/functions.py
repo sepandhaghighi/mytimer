@@ -56,9 +56,9 @@ def load_params(args):
     return params
 
 
-def input_check(func):
+def input_handler(func):
     """
-    Input check decorator for timer functions.
+    Input handler decorator for timer functions.
 
     :param func: input function
     :type func: function
@@ -159,7 +159,7 @@ def play_sound(sound_path):
         print(SOUND_ERROR_MESSAGE)
 
 
-@input_check
+@input_handler
 def countup_timer(
         hour,
         minute,
@@ -217,7 +217,7 @@ def countup_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-@input_check
+@input_handler
 def countdown_timer(
         hour,
         minute,
