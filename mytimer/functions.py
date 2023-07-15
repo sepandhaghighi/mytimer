@@ -165,7 +165,7 @@ def countup_timer(
         minute,
         second,
         alarm,
-        font=FACES_MAP[1],
+        face=FACES_MAP[1],
         message="",
         tone=TONES_MAP[1]):
     """
@@ -179,8 +179,8 @@ def countup_timer(
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
-    :param font: font name
-    :type font: str
+    :param face: face name
+    :type face: str
     :param message: message
     :type message: str
     :param tone: tone
@@ -199,7 +199,7 @@ def countup_timer(
             (timer_hour,
              timer_minute,
              timer_second),
-            font=font)
+            font=face)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print("End!")
@@ -223,7 +223,7 @@ def countdown_timer(
         minute,
         second,
         alarm,
-        font=FACES_MAP[1],
+        face=FACES_MAP[1],
         message="",
         tone=TONES_MAP[1]):
     """
@@ -237,8 +237,8 @@ def countdown_timer(
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
-    :param font: font name
-    :type font: str
+    :param face: face name
+    :type face: str
     :param message: message
     :type message: str
     :param tone: tone
@@ -250,7 +250,7 @@ def countdown_timer(
         clear_screen()
         print('\n' * 5)
         tprint('\t\t\t\t  %d : %d : %d ' %
-               (hour, minute, second), font=font)
+               (hour, minute, second), font=face)
         print(message)
         second -= 1
         if second == -1:
