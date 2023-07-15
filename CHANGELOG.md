@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Test system modified
 - `PROGRAMS.md` updated
+- `FACES.md` updated
 ## [0.6] - 2023-07-04
 ### Added
 - `--program` argument
