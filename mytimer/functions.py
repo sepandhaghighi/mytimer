@@ -56,15 +56,22 @@ def load_params(args):
     return params
 
 
-def input_check(func):
+def input_handler(func):
     """
-    Input check decorator for timer functions.
+    Input handler decorator for timer functions.
 
     :param func: input function
     :type func: function
     :return: inner function
     """
-    def inner_function(hour, minute, second, alarm, face, message, tone):
+    def inner_function(
+            hour,
+            minute,
+            second,
+            alarm,
+            face,
+            message,
+            tone):
         """
         Inner function.
 
@@ -76,18 +83,18 @@ def input_check(func):
         :type second: int
         :param alarm: alarm flag
         :type alarm: bool
-        :param face: face number
+        :param face: face index
         :type face: int
         :param message: message
         :type message: str
-        :param tone: tone number
+        :param tone: tone index
         :type tone: int
         :return: None
         """
         message = message.strip()
         if len(message) > 0:
             message = MESSAGE_TEMPLATE.format(message)
-        font = FACES_MAP[face]
+        face = FACES_MAP[face]
         tone = TONES_MAP[tone]
         items_list = [hour, minute, second]
         if sum(items_list) != 0 and all(map(lambda x: x >= 0, items_list)):
@@ -97,7 +104,7 @@ def input_check(func):
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(hour, minute, second, alarm, font, message, tone)
+            func(hour, minute, second, alarm, face, message, tone)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -159,13 +166,13 @@ def play_sound(sound_path):
         print(SOUND_ERROR_MESSAGE)
 
 
-@input_check
+@input_handler
 def countup_timer(
         hour,
         minute,
         second,
         alarm,
-        font=FACES_MAP[1],
+        face=FACES_MAP[1],
         message="",
         tone=TONES_MAP[1]):
     """
@@ -179,11 +186,11 @@ def countup_timer(
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
-    :param font: font name
-    :type font: str
+    :param face: face name
+    :type face: str
     :param message: message
     :type message: str
-    :param tone: tone
+    :param tone: tone file name
     :type tone: str
     :return: None
     """
@@ -199,7 +206,7 @@ def countup_timer(
             (timer_hour,
              timer_minute,
              timer_second),
-            font=font)
+            font=face)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print("End!")
@@ -217,13 +224,13 @@ def countup_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-@input_check
+@input_handler
 def countdown_timer(
         hour,
         minute,
         second,
         alarm,
-        font=FACES_MAP[1],
+        face=FACES_MAP[1],
         message="",
         tone=TONES_MAP[1]):
     """
@@ -237,11 +244,11 @@ def countdown_timer(
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
-    :param font: font name
-    :type font: str
+    :param face: face name
+    :type face: str
     :param message: message
     :type message: str
-    :param tone: tone
+    :param tone: tone file name
     :type tone: str
     :return: None
     """
@@ -250,7 +257,7 @@ def countdown_timer(
         clear_screen()
         print('\n' * 5)
         tprint('\t\t\t\t  %d : %d : %d ' %
-               (hour, minute, second), font=font)
+               (hour, minute, second), font=face)
         print(message)
         second -= 1
         if second == -1:
