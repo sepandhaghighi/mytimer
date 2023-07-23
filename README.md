@@ -81,13 +81,13 @@ Simple timer for your terminal!
 ## Installation		
 
 ### Source Code
-- Download [Version 0.6](https://github.com/sepandhaghighi/mytimer/archive/v0.6.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
+- Download [Version 0.7](https://github.com/sepandhaghighi/mytimer/archive/v0.7.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
 - `pip install .`				
 
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip install mytimer==0.6`						
+- `pip install mytimer==0.7`						
 
 
 ## Usage
