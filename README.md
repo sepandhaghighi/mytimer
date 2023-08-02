@@ -1,24 +1,6 @@
 <div align="center">
-<pre>
- __  __         _____  _                        
-|  \/  | _   _ |_   _|(_) _ __ ___    ___  _ __ 
-| |\/| || | | |  | |  | || '_ ` _ \  / _ \| '__|
-| |  | || |_| |  | |  | || | | | | ||  __/| |   
-|_|  |_| \__, |  |_|  |_||_| |_| |_| \___||_|   
-         |___/                                  
-
-</pre>
-
-<pre>
- _  ____        _____  _  _         ____    __    
-/ ||___ \   _  |___ / | || |    _  | ___|  / /_   
-| |  __) | (_)   |_ \ | || |_  (_) |___ \ | '_ \  
-| | / __/   _   ___) ||__   _|  _   ___) || (_) | 
-|_||_____| (_) |____/    |_|   (_) |____/  \___/  
-</pre>
-
-<h1>MyTimer</h1>
-
+<img src="https://github.com/sepandhaghighi/mytimer/raw/logo/otherfiles/logo.png" width="400">
+<br/>
 <a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version" height="18"></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3" /></a>
 
