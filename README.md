@@ -121,7 +121,7 @@ mytimer --minute=7 --second=30 --countup
 ⚠️ This mode may not be supported on all systems
 
 ```console
-mytimer --minute=7 --second=30 --countdown --alarm
+mytimer --minute=7 --second=30 --alarm
 ```
 
 ### Alarm Repeat
@@ -129,7 +129,7 @@ mytimer --minute=7 --second=30 --countdown --alarm
 ⚠️ The default value is `1`
 
 ```console
-mytimer --minute=7 --second=30 --countdown --alarm --alarm-repeat=5
+mytimer --minute=7 --second=30 --alarm --alarm-repeat=5
 ```
 
 ### Tone
@@ -137,7 +137,7 @@ mytimer --minute=7 --second=30 --countdown --alarm --alarm-repeat=5
 ⚠️ The default tone is `1`
 
 ```console
-mytimer --minute=7 --second=30 --countdown --alarm --tone=2
+mytimer --minute=7 --second=30 --alarm --tone=2
 ```
 * [Tones List](https://github.com/sepandhaghighi/mytimer/blob/main/TONES.md)
 
