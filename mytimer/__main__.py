@@ -34,6 +34,7 @@ def main():
         type=str,
         choices=sorted(
             PROGRAMS_MAP.keys()))
+    parser.add_argument('--alarm-repeat', help='alarm repeat', type=int)
     parser.add_argument(
         '--countdown',
         help='countdown timer',
