@@ -86,6 +86,7 @@ PROGRAMS_MAP = {
         "minute": 8,
         "second": 0,
         "alarm": 1,
+        "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
         "message": "Pasta (8 mins)"},
