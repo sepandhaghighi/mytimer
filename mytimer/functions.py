@@ -98,6 +98,8 @@ def input_handler(func):
         message = message.strip()
         if len(message) > 0:
             message = MESSAGE_TEMPLATE.format(message)
+        if alarm_repeat < 1:
+            alarm_repeat = 1
         face = FACES_MAP[face]
         tone = TONES_MAP[tone]
         items_list = [hour, minute, second]
