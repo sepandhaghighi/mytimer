@@ -124,6 +124,14 @@ mytimer --minute=7 --second=30 --countup
 mytimer --minute=7 --second=30 --countdown --alarm
 ```
 
+### Alarm Repeat
+
+⚠️ The default value is `1`
+
+```console
+mytimer --minute=7 --second=30 --countdown --alarm --alarm-repeat=5
+```
+
 ### Tone
 
 ⚠️ The default tone is `1`
