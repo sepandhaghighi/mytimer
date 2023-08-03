@@ -23,14 +23,14 @@ def read_description():
             description += c.read()
         return description
     except Exception:
-        return '''Simple Timer for Your Terminal'''
+        return '''A Geeky Timer for Terminal Enthusiasts'''
 
 
 setup(
     name='mytimer',
     packages=['mytimer'],
     version='0.7',
-    description='Simple Timer for Your Terminal',
+    description='A Geeky Timer for Terminal Enthusiasts',
     long_description=read_description(),
     long_description_content_type='text/markdown',
     include_package_data=True,
@@ -38,7 +38,7 @@ setup(
     author_email='sepand@pyrgg.ir',
     url='https://github.com/sepandhaghighi/mytimer',
     download_url='https://github.com/sepandhaghighi/mytimer/tarball/v0.7',
-    keywords="python3 python timer terminal stopwatch",
+    keywords="python3 python timer terminal stopwatch cli",
     project_urls={
         'Source': 'https://github.com/sepandhaghighi/mytimer'
     },

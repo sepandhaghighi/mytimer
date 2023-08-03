@@ -1,30 +1,11 @@
 <div align="center">
-<pre>
- __  __         _____  _                        
-|  \/  | _   _ |_   _|(_) _ __ ___    ___  _ __ 
-| |\/| || | | |  | |  | || '_ ` _ \  / _ \| '__|
-| |  | || |_| |  | |  | || | | | | ||  __/| |   
-|_|  |_| \__, |  |_|  |_||_| |_| |_| \___||_|   
-         |___/                                  
-
-</pre>
-
-<pre>
- _  ____        _____  _  _         ____    __    
-/ ||___ \   _  |___ / | || |    _  | ___|  / /_   
-| |  __) | (_)   |_ \ | || |_  (_) |___ \ | '_ \  
-| | / __/   _   ___) ||__   _|  _   ___) || (_) | 
-|_||_____| (_) |____/    |_|   (_) |____/  \___/  
-</pre>
-
-<h1>MyTimer</h1>
-
+<img src="https://github.com/sepandhaghighi/mytimer/raw/main/otherfiles/logo.png" width="500">
+<h1>MyTimer: A Geeky Timer for Terminal Enthusiasts</h1>
+<br/>
 <a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version" height="18"></a>
-<a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3" /></a>
-
+<a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
 </div>	
 
-----------
 ## Table of contents					
    * [Overview](https://github.com/sepandhaghighi/mytimer#overview)
    * [Installation](https://github.com/sepandhaghighi/mytimer#installation)
@@ -38,8 +19,13 @@
    * [Changelog](https://github.com/sepandhaghighi/mytimer/blob/main/CHANGELOG.md)
    * [Code of Conduct](https://github.com/sepandhaghighi/mytimer/blob/main/.github/CODE_OF_CONDUCT.md)			
 				
-## Overview						
-Simple timer for your terminal!
+## Overview	
+
+<p align="justify">					
+<strong>MyTimer</strong> is a Python project that aims to provide a simple yet efficient timer for terminal users, particularly targeting the geek community. This project allows users to set timers directly from their command line interface, making it convenient for those who spend a significant amount of time working in the terminal!
+
+The main objective of <strong>MyTimer</strong> is to offer a minimalistic and distraction-free timer experience. It provides a clean and straightforward interface, ensuring that users can focus solely on tracking time without any unnecessary clutter or distractions.
+</p>
 
 <table>
 	<tr>
