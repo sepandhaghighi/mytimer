@@ -40,6 +40,7 @@ def load_params(args):
         "alarm": 0,
         "face": 1,
         "tone": 1,
+        "alarm-repeat": 1,
         "message": ""}
     if args.program:
         params = PROGRAMS_MAP[args.program]
@@ -71,7 +72,8 @@ def input_handler(func):
             alarm,
             face,
             message,
-            tone):
+            tone,
+            alarm_repeat):
         """
         Inner function.
 
@@ -89,6 +91,8 @@ def input_handler(func):
         :type message: str
         :param tone: tone index
         :type tone: int
+        :param alarm_repeat: alarm repeat
+        :type alarm_repeat: int
         :return: None
         """
         message = message.strip()
@@ -104,7 +108,7 @@ def input_handler(func):
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(hour, minute, second, alarm, face, message, tone)
+            func(hour, minute, second, alarm, face, message, tone, alarm_repeat)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -174,7 +178,8 @@ def countup_timer(
         alarm,
         face=FACES_MAP[1],
         message="",
-        tone=TONES_MAP[1]):
+        tone=TONES_MAP[1],
+        alarm_repeat=1):
     """
     Count-up timer function.
 
@@ -192,6 +197,8 @@ def countup_timer(
     :type message: str
     :param tone: tone file name
     :type tone: str
+    :param alarm_repeat: alarm repeat
+    :type alarm_repeat: int
     :return: None
     """
     timer_second = 0
@@ -211,7 +218,8 @@ def countup_timer(
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print("End!")
             if alarm:
-                play_sound(get_sound_path(tone))
+                for _ in range(alarm_repeat):
+                    play_sound(get_sound_path(tone))
             break
         timer_second += 1
         if timer_second == 60:
@@ -232,7 +240,8 @@ def countdown_timer(
         alarm,
         face=FACES_MAP[1],
         message="",
-        tone=TONES_MAP[1]):
+        tone=TONES_MAP[1],
+        alarm_repeat=1):
     """
     Countdown timer function.
 
@@ -250,6 +259,8 @@ def countdown_timer(
     :type message: str
     :param tone: tone file name
     :type tone: str
+    :param alarm_repeat: alarm repeat
+    :type alarm_repeat: int
     :return: None
     """
     while True:
@@ -269,7 +280,8 @@ def countdown_timer(
         if hour == -1:
             print("End!")
             if alarm:
-                play_sound(get_sound_path(tone))
+                for _ in range(alarm_repeat):
+                    play_sound(get_sound_path(tone))
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
