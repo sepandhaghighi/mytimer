@@ -110,7 +110,15 @@ def input_handler(func):
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(hour, minute, second, alarm, face, message, tone, alarm_repeat)
+            func(
+                hour,
+                minute,
+                second,
+                alarm,
+                face,
+                message,
+                tone,
+                alarm_repeat)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
