@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - Logo
+- `--alarm-repeat` argument
 ### Changed
 - alarms' length modified
 - `README.md` updated
