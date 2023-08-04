@@ -67,13 +67,13 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 ## Installation		
 
 ### Source Code
-- Download [Version 0.7](https://github.com/sepandhaghighi/mytimer/archive/v0.7.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
+- Download [Version 0.8](https://github.com/sepandhaghighi/mytimer/archive/v0.8.zip) or [Latest Source ](https://github.com/sepandhaghighi/mytimer/archive/dev.zip)
 - `pip install .`				
 
 ### PyPI
 
 - Check [Python Packaging User Guide](https://packaging.python.org/installing/)     
-- `pip install mytimer==0.7`						
+- `pip install mytimer==0.8`						
 
 
 ## Usage
