@@ -179,5 +179,13 @@ PROGRAMS_MAP = {
         "face": 1,
         "tone": 1,
         "message": "Short Break (10 mins)"},
-
+    "long-break": {
+            "hour": 0,
+            "minute": 30,
+            "second": 0,
+            "alarm": 1,
+            "alarm_repeat": 1,
+            "face": 1,
+            "tone": 1,
+            "message": "Long Break (30 mins)"},
 }

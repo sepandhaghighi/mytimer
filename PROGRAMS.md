@@ -99,6 +99,12 @@
 		<td>10:00</td>
 		<td>>=0.9</td>
 	</tr>
+	<tr align="center">
+		<td>Long break</td>
+		<td><code>long-break</code></td>
+		<td>30:00</td>
+		<td>>=0.9</td>
+	</tr>
 </table>
 
 
