@@ -87,6 +87,12 @@
 		<td>10:00</td>
 		<td>>=0.6</td>
 	</tr>
+	<tr align="center">
+		<td>Work</td>
+		<td><code>work</code></td>
+		<td>25:00</td>
+		<td>>=0.9</td>
+	</tr>
 </table>
 
 

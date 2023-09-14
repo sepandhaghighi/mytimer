@@ -161,7 +161,15 @@ PROGRAMS_MAP = {
         "face": 1,
         "tone": 1,
         "message": "White tea (10 mins)"},
-
+    "work": {
+        "hour": 0,
+        "minute": 25,
+        "second": 0,
+        "alarm": 1,
+        "alarm_repeat": 1,
+        "face": 1,
+        "tone": 1,
+        "message": "Time to Work (25 mins)"}
 
 
 }
