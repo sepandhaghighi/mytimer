@@ -169,7 +169,15 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Time to Work (25 mins)"}
-
+        "message": "Time to Work (25 mins)"},
+    "short-break": {
+        "hour": 0,
+        "minute": 10,
+        "second": 0,
+        "alarm": 1,
+        "alarm_repeat": 1,
+        "face": 1,
+        "tone": 1,
+        "message": "Short Break (10 mins)"},
 
 }
