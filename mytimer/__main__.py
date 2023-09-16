@@ -20,20 +20,17 @@ def main():
         '--face',
         help='face',
         type=int,
-        choices=sorted(
-            FACES_MAP.keys()))
+        choices=sorted(FACES_MAP))
     parser.add_argument(
         '--tone',
         help='alarm tone',
         type=int,
-        choices=sorted(
-            TONES_MAP.keys()))
+        choices=sorted(TONES_MAP))
     parser.add_argument(
         '--program',
         help='program',
         type=str,
-        choices=sorted(
-            PROGRAMS_MAP.keys()))
+        choices=sorted(PROGRAMS_MAP))
     parser.add_argument('--alarm-repeat', help='alarm repeat', type=int)
     parser.add_argument(
         '--countdown',
