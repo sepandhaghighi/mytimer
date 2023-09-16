@@ -188,4 +188,13 @@ PROGRAMS_MAP = {
             "face": 1,
             "tone": 1,
             "message": "Long break (30 mins)"},
+    "noodle": {
+        "hour": 0,
+        "minute": 3,
+        "second": 0,
+        "alarm": 1,
+        "alarm_repeat": 1,
+        "face": 1,
+        "tone": 1,
+        "message": "Instant noodle (3 mins)"}
 }
