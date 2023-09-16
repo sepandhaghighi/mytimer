@@ -169,7 +169,7 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Time to Work (25 mins)"},
+        "message": "Time to work (25 mins)"},
     "short-break": {
         "hour": 0,
         "minute": 10,
@@ -178,7 +178,7 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Short Break (10 mins)"},
+        "message": "Short break (10 mins)"},
     "long-break": {
             "hour": 0,
             "minute": 30,
@@ -187,5 +187,5 @@ PROGRAMS_MAP = {
             "alarm_repeat": 1,
             "face": 1,
             "tone": 1,
-            "message": "Long Break (30 mins)"},
+            "message": "Long break (30 mins)"},
 }
