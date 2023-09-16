@@ -87,6 +87,24 @@
 		<td>10:00</td>
 		<td>>=0.6</td>
 	</tr>
+	<tr align="center">
+		<td>Work</td>
+		<td><code>work</code></td>
+		<td>25:00</td>
+		<td>>=0.9</td>
+	</tr>
+	<tr align="center">
+		<td>Short break</td>
+		<td><code>short-break</code></td>
+		<td>10:00</td>
+		<td>>=0.9</td>
+	</tr>
+	<tr align="center">
+		<td>Long break</td>
+		<td><code>long-break</code></td>
+		<td>30:00</td>
+		<td>>=0.9</td>
+	</tr>
 </table>
 
 

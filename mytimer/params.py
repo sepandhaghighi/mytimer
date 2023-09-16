@@ -161,7 +161,31 @@ PROGRAMS_MAP = {
         "face": 1,
         "tone": 1,
         "message": "White tea (10 mins)"},
-
-
-
+    "work": {
+        "hour": 0,
+        "minute": 25,
+        "second": 0,
+        "alarm": 1,
+        "alarm_repeat": 1,
+        "face": 1,
+        "tone": 1,
+        "message": "Time to work (25 mins)"},
+    "short-break": {
+        "hour": 0,
+        "minute": 10,
+        "second": 0,
+        "alarm": 1,
+        "alarm_repeat": 1,
+        "face": 1,
+        "tone": 1,
+        "message": "Short break (10 mins)"},
+    "long-break": {
+            "hour": 0,
+            "minute": 30,
+            "second": 0,
+            "alarm": 1,
+            "alarm_repeat": 1,
+            "face": 1,
+            "tone": 1,
+            "message": "Long break (30 mins)"},
 }
