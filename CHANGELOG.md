@@ -6,10 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- 3 new programs
+- 4 new programs
 	1. `work`
 	2. `short-break`
 	3. `long-break`
+	4. `noodle`
 ### Changed
 - `PROGRAMS.md` updated
 ## [0.8] - 2023-08-07
