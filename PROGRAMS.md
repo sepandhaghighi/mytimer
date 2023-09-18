@@ -105,6 +105,12 @@
 		<td>30:00</td>
 		<td>>=0.9</td>
 	</tr>
+	<tr align="center">
+		<td>Instant noodle</td>
+		<td><code>noodle</code></td>
+		<td>03:00</td>
+		<td>>=0.9</td>
+	</tr>
 </table>
 
 
