@@ -42,7 +42,12 @@ FACES_MAP = {
     18: 'threepoint',
     19: 'ascii_new_roman',
     20: 'serifcap',
-    21: 'lockergnome'}
+    21: 'lockergnome',
+    22: 'dotmatrix',
+    23: '3-d',
+    24: 'sweet',
+    25: 'epic',
+    }
 
 PROGRAMS_MAP = {
     "poached-egg": {
