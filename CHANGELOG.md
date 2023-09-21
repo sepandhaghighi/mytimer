@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- 4 new faces
 - 4 new programs
 	1. `work`
 	2. `short-break`
