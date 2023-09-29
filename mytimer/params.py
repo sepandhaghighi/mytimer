@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer params."""
 
-MY_TIMER_VERSION = "0.8"
+MY_TIMER_VERSION = "0.9"
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
