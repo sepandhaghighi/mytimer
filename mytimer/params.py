@@ -47,7 +47,7 @@ FACES_MAP = {
     23: '3-d',
     24: 'sweet',
     25: 'epic',
-    }
+}
 
 PROGRAMS_MAP = {
     "poached-egg": {
