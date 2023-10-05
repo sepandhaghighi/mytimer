@@ -111,6 +111,7 @@ PROGRAMS_MAP = {
         "alarm": 1,
         "alarm_repeat": 1,
         "face": 1,
+        "tone": 1,
         "message": "Japanese green tea (2 mins)"},
     "tea-bag": {
         "hour": 0,
