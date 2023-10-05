@@ -11,6 +11,20 @@ from mytimer.params import MY_TIMER_VERSION
 from art import tprint
 
 
+def _show_programs_list():
+    """
+    Show programs list.
+
+    :return: None
+    """
+    for i, program in enumerate(PROGRAMS_MAP, 1):
+        print(
+            PROGRAMS_LIST_TEMPLATE.format(
+                i,
+                program,
+                PROGRAMS_MAP[program]['message']))
+
+
 def check_null_time(args):
     """
     Check that all time elements are null or not.
