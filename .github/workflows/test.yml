@@ -45,6 +45,9 @@ jobs:
     - name: Run6
       run: |
         mytimer --minute=0 --second=5 --countdown --alarm --face=3 --tone=2 --alarm-repeat=5
+    - name: Run7
+      run: |
+        mytimer --programs-list
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py
