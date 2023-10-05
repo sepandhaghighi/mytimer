@@ -11,13 +11,14 @@ from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from art import tprint
 
 
-def _show_programs_list():
+def show_programs_list():
     """
     Show programs list.
 
     :return: None
     """
-    for i, program in enumerate(PROGRAMS_MAP, 1):
+    print("Programs list:\n")
+    for i, program in enumerate(sorted(PROGRAMS_MAP), 1):
         print(
             PROGRAMS_LIST_TEMPLATE.format(
                 i,
@@ -324,7 +325,7 @@ def run_timer(args):
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.programs_list:
-        _show_programs_list()
+        show_programs_list()
     else:
         if args.countdown:
             countdown_timer(**params)
