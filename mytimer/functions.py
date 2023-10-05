@@ -7,7 +7,7 @@ import time
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
-from mytimer.params import MY_TIMER_VERSION
+from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from art import tprint
 
 
@@ -323,6 +323,8 @@ def run_timer(args):
     params = load_params(args)
     if args.version:
         print(MY_TIMER_VERSION)
+    elif args.programs_list:
+        _show_programs_list()
     else:
         if args.countdown:
             countdown_timer(**params)
