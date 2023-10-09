@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--programs-list` argument
 ### Changed
 - `japanese-green-tea` program bug fixed
+- `README.md` updated
 ## [0.9] - 2023-10-04
 ### Added
 - 4 new faces
