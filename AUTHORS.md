@@ -6,3 +6,4 @@
 # Other Contributors
 ----------
 - Amir Boreshnavard ([Instagram](https://www.instagram.com/boreshnavard/))
+- [@ghazalrafiei](https://github.com/ghazalrafiei)

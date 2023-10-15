@@ -298,7 +298,7 @@ def countdown_timer(
 
 
 def print_face_list():
-    """Print all faces sample."""
+    """Print all faces samples."""
     for i, face in FACES_MAP.items():
         print('Face %d' %(i))
         tprint('\t\t\t\t  12 : 34 : 54 ', font=face)
@@ -324,3 +324,4 @@ def run_timer(args):
             countdown_timer(**params)
         else:
             countup_timer(**params)
+            
