@@ -297,6 +297,17 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
+def print_face_list():
+    """
+    Print all faces sample.
+    
+    """
+    for i, face in FACES_MAP.items():
+        print('Face %d' %(i))
+        tprint('\t\t\t\t  12 : 34 : 54 ', font=face)
+        print('='*130)
+
+
 def run_timer(args):
     """
     Run timer.
@@ -308,6 +319,9 @@ def run_timer(args):
     params = load_params(args)
     if args.version:
         print(MY_TIMER_VERSION)
+
+    if args.faces_list:
+        print_face_list()
     else:
         if args.countdown:
             countdown_timer(**params)
