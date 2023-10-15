@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ## [0.10] - 2023-10-15
 - `--face-list` flag
-	1. `print_faces_list()`
+	1. Add `print_faces_list()`
 ## [0.9] - 2023-10-04
 ### Added
 - 4 new faces
