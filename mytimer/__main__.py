@@ -41,6 +41,11 @@ def main():
     parser.add_argument('--alarm', help='alarm', nargs="?", const=1)
     parser.add_argument('--faces-list', help='list of available faces', nargs="?", const=1)
     parser.add_argument('--version', help='version', nargs="?", const=1)
+    parser.add_argument(
+        '--programs-list',
+        help='programs list',
+        nargs="?",
+        const=1)
     args = parser.parse_args()
     run_timer(args)
 

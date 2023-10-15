@@ -5,9 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [0.10] - 2023-10-15
-- `--face-list` flag
-	1. Add `print_faces_list()`
+### Added
+- `--programs-list` argument
+- `--faces-list` argument
+### Changed
+- `japanese-green-tea` program bug fixed
+- `README.md` updated
 ## [0.9] - 2023-10-04
 ### Added
 - 4 new faces

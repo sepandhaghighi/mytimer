@@ -7,8 +7,23 @@ import time
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
-from mytimer.params import MY_TIMER_VERSION
+from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from art import tprint
+
+
+def show_programs_list():
+    """
+    Show programs list.
+
+    :return: None
+    """
+    print("Programs list:\n")
+    for i, program in enumerate(sorted(PROGRAMS_MAP), 1):
+        print(
+            PROGRAMS_LIST_TEMPLATE.format(
+                i,
+                program,
+                PROGRAMS_MAP[program]['message']))
 
 
 def check_null_time(args):
@@ -41,7 +56,8 @@ def load_params(args):
         "face": 1,
         "tone": 1,
         "alarm_repeat": 1,
-        "message": ""}
+        "message": "",
+    }
     if args.program:
         params = PROGRAMS_MAP[args.program]
     for item in params:
@@ -297,7 +313,7 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-def print_face_list():
+def show_faces_list():
     """Print all faces samples."""
     for i, face in FACES_MAP.items():
         print('Face %d' %(i))
@@ -316,12 +332,12 @@ def run_timer(args):
     params = load_params(args)
     if args.version:
         print(MY_TIMER_VERSION)
-
-    if args.faces_list:
-        print_face_list()
+    elif args.faces_list:
+        show_faces_list()
+    elif args.programs_list:
+        show_programs_list()
     else:
         if args.countdown:
             countdown_timer(**params)
         else:
             countup_timer(**params)
-            

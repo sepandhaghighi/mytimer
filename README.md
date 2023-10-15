@@ -156,6 +156,7 @@ mytimer --minute=7 --second=30 --face=3
 mytimer --program=black-tea
 ```
 * [Programs List](https://github.com/sepandhaghighi/mytimer/blob/main/PROGRAMS.md)
+* `mytimer --programs-list`
 
 ### Message
 
