@@ -325,6 +325,7 @@ def countdown_timer(
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
 
+
 def run_timer(args):
     """
     Run timer.
