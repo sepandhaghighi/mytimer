@@ -33,7 +33,8 @@ def show_faces_list():
     
     :return: None
     """
-    for i, face in FACES_MAP.items():
+    print("Faces list:\n")
+    for i, face in sorted(FACES_MAP.items(), key=lambda item: (item[0])):
         print('Face {}\n'.format(i))
         tprint(FACES_LIST_EXAMPLE_MESSAGE, font=face)
         print('=' * 80)
