@@ -36,7 +36,7 @@ def show_faces_list():
     for i, face in FACES_MAP.items():
         print('Face {}\n'.format(i))
         tprint(FACES_LIST_EXAMPLE_MESSAGE, font=face)
-        print('='*130)
+        print('=' * 80)
 
 
 def check_null_time(args):
