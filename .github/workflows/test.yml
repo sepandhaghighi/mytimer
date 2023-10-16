@@ -48,6 +48,9 @@ jobs:
     - name: Run7
       run: |
         mytimer --programs-list
+    - name: Run8
+      run: |
+        mytimer --faces-list
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py
