@@ -30,7 +30,7 @@ def show_programs_list():
 def show_faces_list():
     """
     Show faces list.
-    
+
     :return: None
     """
     print("Faces list:\n")
