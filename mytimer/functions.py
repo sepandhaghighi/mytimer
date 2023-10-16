@@ -8,6 +8,7 @@ from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
+from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE
 from art import tprint
 
 
@@ -24,6 +25,18 @@ def show_programs_list():
                 i,
                 program,
                 PROGRAMS_MAP[program]['message']))
+
+
+def show_faces_list():
+    """
+    Show faces list.
+    
+    :return: None
+    """
+    for i, face in FACES_MAP.items():
+        print('Face {}\n'.format(i))
+        tprint(FACES_LIST_EXAMPLE_MESSAGE, font=face)
+        print('='*130)
 
 
 def check_null_time(args):
@@ -311,15 +324,6 @@ def countdown_timer(
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
-
-
-def show_faces_list():
-    """Print all faces samples."""
-    for i, face in FACES_MAP.items():
-        print('Face %d' %(i))
-        tprint('\t\t\t\t  12 : 34 : 54 ', font=face)
-        print('='*130)
-
 
 def run_timer(args):
     """
