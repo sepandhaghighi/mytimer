@@ -8,7 +8,8 @@ from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
-from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE
+from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
+from mytimer.params import VERTICAL_SHIFT, HORIZONTAL_SHIFT
 from art import tprint
 
 
@@ -71,6 +72,8 @@ def load_params(args):
         "tone": 1,
         "alarm_repeat": 1,
         "message": "",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT,
     }
     if args.program:
         params = PROGRAMS_MAP[args.program]
@@ -103,7 +106,9 @@ def input_handler(func):
             face,
             message,
             tone,
-            alarm_repeat):
+            alarm_repeat,
+            v_shift,
+            h_shift):
         """
         Inner function.
 
@@ -123,6 +128,10 @@ def input_handler(func):
         :type tone: int
         :param alarm_repeat: alarm repeat
         :type alarm_repeat: int
+        :param v_shift: vertical shift
+        :type v_shift: int
+        :param h_shift: horizontal shift
+        :type h_shift: int
         :return: None
         """
         message = message.strip()
@@ -130,6 +139,10 @@ def input_handler(func):
             message = MESSAGE_TEMPLATE.format(message)
         if alarm_repeat < 1:
             alarm_repeat = 1
+        # if h_shift < 0 or not isinstance(h_shift, int):
+        #     h_shift = HORIZONTAL_SHIFT
+        # if v_shift < 0 or not isinstance(v_shift, int):
+        #     v_shift = VERTICAL_SHIFT
         face = FACES_MAP[face]
         tone = TONES_MAP[tone]
         items_list = [hour, minute, second]
@@ -148,7 +161,9 @@ def input_handler(func):
                 face,
                 message,
                 tone,
-                alarm_repeat)
+                alarm_repeat,
+                v_shift,
+                h_shift)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -219,7 +234,9 @@ def countup_timer(
         face=FACES_MAP[1],
         message="",
         tone=TONES_MAP[1],
-        alarm_repeat=1):
+        alarm_repeat=1,
+        v_shift=VERTICAL_SHIFT,
+        h_shift=HORIZONTAL_SHIFT):
     """
     Count-up timer function.
 
@@ -239,20 +256,26 @@ def countup_timer(
     :type tone: str
     :param alarm_repeat: alarm repeat
     :type alarm_repeat: int
+    :param v_shift: vertical shift
+    :type v_shift: int
+    :param h_shift: horizontal shift
+    :type h_shift: int
     :return: None
     """
     timer_second = 0
     timer_minute = 0
     timer_hour = 0
+    prepend = ' ' * h_shift
     while True:
         start = time.perf_counter()
         clear_screen()
-        print('\n' * 5)
+        print('\n' * v_shift, end='')
         tprint(
-            '\t\t\t\t  %d : %d : %d ' %
-            (timer_hour,
-             timer_minute,
-             timer_second),
+            TIME_PRINT_TEMPLATE.format(
+                prepend,
+                timer_hour,
+                timer_minute,
+                timer_second),
             font=face)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
@@ -281,7 +304,9 @@ def countdown_timer(
         face=FACES_MAP[1],
         message="",
         tone=TONES_MAP[1],
-        alarm_repeat=1):
+        alarm_repeat=1,
+        v_shift=VERTICAL_SHIFT,
+        h_shift=HORIZONTAL_SHIFT):
     """
     Countdown timer function.
 
@@ -301,14 +326,24 @@ def countdown_timer(
     :type tone: str
     :param alarm_repeat: alarm repeat
     :type alarm_repeat: int
+    :param v_shift: vertical shift
+    :type v_shift: int
+    :param h_shift: horizontal shift
+    :type h_shift: int
     :return: None
     """
+    prepend = ' ' * h_shift
     while True:
         start = time.perf_counter()
         clear_screen()
-        print('\n' * 5)
-        tprint('\t\t\t\t  %d : %d : %d ' %
-               (hour, minute, second), font=face)
+        print('\n' * v_shift, end='')
+        tprint(
+            TIME_PRINT_TEMPLATE.format(
+                prepend,
+                hour,
+                minute,
+                second),
+            font=face)
         print(message)
         second -= 1
         if second == -1:
