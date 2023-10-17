@@ -151,6 +151,14 @@ mytimer --minute=7 --second=30 --face=3
 * `mytimer --faces-list`
 
 
+### Vertical/Horizontal shift
+
+
+```console
+mytimer --v-shift=20 --h-shift=30
+```
+
+
 ### Program
 
 ```console
