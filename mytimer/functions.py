@@ -334,7 +334,6 @@ def countdown_timer(
     :type h_shift: int
     :return: None
     """
-    prepend = ' ' * h_shift
     while True:
         start = time.perf_counter()
         clear_screen()
