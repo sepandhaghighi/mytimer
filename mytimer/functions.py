@@ -139,9 +139,9 @@ def input_handler(func):
             message = MESSAGE_TEMPLATE.format(message)
         if alarm_repeat < 1:
             alarm_repeat = 1
-        if h_shift < 0 or not isinstance(h_shift, int):
+        if h_shift < 0:
             h_shift = HORIZONTAL_SHIFT
-        if v_shift < 0 or not isinstance(v_shift, int):
+        if v_shift < 0:
             v_shift = VERTICAL_SHIFT
         face = FACES_MAP[face]
         tone = TONES_MAP[tone]
