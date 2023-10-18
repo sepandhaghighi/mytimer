@@ -265,20 +265,22 @@ def countup_timer(
     timer_second = 0
     timer_minute = 0
     timer_hour = 0
-    prepend = ' ' * h_shift
     while True:
         start = time.perf_counter()
         clear_screen()
         print('\n' * v_shift, end='')
+        print(" " * h_shift, end='')
         tprint(
             TIME_PRINT_TEMPLATE.format(
-                prepend,
                 timer_hour,
                 timer_minute,
                 timer_second),
-            font=face)
+            font=face,
+            sep="\n" + " " * h_shift)
+        print(" " * h_shift, end='')
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
+            print(" " * h_shift, end='')
             print("End!")
             if alarm:
                 for _ in range(alarm_repeat):
@@ -337,13 +339,15 @@ def countdown_timer(
         start = time.perf_counter()
         clear_screen()
         print('\n' * v_shift, end='')
+        print(" " * h_shift, end='')
         tprint(
             TIME_PRINT_TEMPLATE.format(
-                prepend,
                 hour,
                 minute,
                 second),
-            font=face)
+            font=face,
+            sep="\n" + " " * h_shift)
+        print(" " * h_shift, end='')
         print(message)
         second -= 1
         if second == -1:
@@ -353,6 +357,7 @@ def countdown_timer(
             minute = 59
             hour -= 1
         if hour == -1:
+            print(" " * h_shift, end='')
             print("End!")
             if alarm:
                 for _ in range(alarm_repeat):
