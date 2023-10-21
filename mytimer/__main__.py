@@ -32,6 +32,8 @@ def main():
         type=str,
         choices=sorted(PROGRAMS_MAP))
     parser.add_argument('--alarm-repeat', help='alarm repeat', type=int)
+    parser.add_argument('--v-shift', help='vertical shift', type=int)
+    parser.add_argument('--h-shift', help='horizontal shift', type=int)
     parser.add_argument(
         '--countdown',
         help='countdown timer',

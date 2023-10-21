@@ -51,6 +51,15 @@ jobs:
     - name: Run8
       run: |
         mytimer --faces-list
+    - name: Run9
+      run: |
+        mytimer --minute=0 --second=5 --countdown --h-shift=10
+    - name: Run10
+      run: |
+        mytimer --minute=0 --second=5 --countdown --v-shift=10
+    - name: Run11
+      run: |
+        mytimer --minute=0 --second=5 --countdown --h-shift=10 --v-shift=10
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py

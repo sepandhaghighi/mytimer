@@ -151,6 +151,15 @@ mytimer --minute=7 --second=30 --face=3
 * `mytimer --faces-list`
 
 
+### Vertical/Horizontal shift
+
+⚠️ The default value for vertical and horizontal shift are respectively `6` and `5`
+
+```console
+mytimer --v-shift=20 --h-shift=30
+```
+
+
 ### Program
 
 ```console

@@ -5,7 +5,10 @@ MY_TIMER_VERSION = "0.9"
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
+TIME_PRINT_TEMPLATE = "{0} : {1} : {2}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
+VERTICAL_SHIFT = 6
+HORIZONTAL_SHIFT = 5
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
@@ -60,7 +63,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Poached egg (1.5 mins)"},
+        "message": "Poached egg (1.5 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "boiled-egg": {
         "hour": 0,
         "minute": 3,
@@ -69,7 +74,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Boiled egg (3 mins)"},
+        "message": "Boiled egg (3 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "soft-boiled-egg": {
         "hour": 0,
         "minute": 5,
@@ -78,7 +85,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Soft-boiled egg (5 mins)"},
+        "message": "Soft-boiled egg (5 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "hard-boiled-egg": {
         "hour": 0,
         "minute": 10,
@@ -87,7 +96,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Hard-boiled egg (10 mins)"},
+        "message": "Hard-boiled egg (10 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "pasta": {
         "hour": 0,
         "minute": 8,
@@ -96,7 +107,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Pasta (8 mins)"},
+        "message": "Pasta (8 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "quick-rice": {
         "hour": 0,
         "minute": 10,
@@ -105,7 +118,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Quick cooking rice (10 mins)"},
+        "message": "Quick cooking rice (10 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "japanese-green-tea": {
         "hour": 0,
         "minute": 2,
@@ -114,7 +129,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Japanese green tea (2 mins)"},
+        "message": "Japanese green tea (2 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "tea-bag": {
         "hour": 0,
         "minute": 2,
@@ -123,7 +140,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Tea bag (2 mins)"},
+        "message": "Tea bag (2 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "chinese-green-tea": {
         "hour": 0,
         "minute": 5,
@@ -132,7 +151,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Chinese green tea (5 mins)"},
+        "message": "Chinese green tea (5 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "black-tea": {
         "hour": 0,
         "minute": 5,
@@ -141,7 +162,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Black tea (5 mins)"},
+        "message": "Black tea (5 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "oolong-tea": {
         "hour": 0,
         "minute": 5,
@@ -150,7 +173,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Oolong tea (5 mins)"},
+        "message": "Oolong tea (5 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "fruit-tea": {
         "hour": 0,
         "minute": 8,
@@ -159,7 +184,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Fruit tea (8 mins)"},
+        "message": "Fruit tea (8 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "white-tea": {
         "hour": 0,
         "minute": 10,
@@ -168,7 +195,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "White tea (10 mins)"},
+        "message": "White tea (10 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "work": {
         "hour": 0,
         "minute": 25,
@@ -177,7 +206,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Time to work (25 mins)"},
+        "message": "Time to work (25 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "short-break": {
         "hour": 0,
         "minute": 10,
@@ -186,7 +217,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Short break (10 mins)"},
+        "message": "Short break (10 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "long-break": {
         "hour": 0,
         "minute": 30,
@@ -195,7 +228,9 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Long break (30 mins)"},
+        "message": "Long break (30 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT},
     "noodle": {
         "hour": 0,
         "minute": 3,
@@ -204,5 +239,7 @@ PROGRAMS_MAP = {
         "alarm_repeat": 1,
         "face": 1,
         "tone": 1,
-        "message": "Instant noodle (3 mins)"}
+        "message": "Instant noodle (3 mins)",
+        "v_shift": VERTICAL_SHIFT,
+        "h_shift": HORIZONTAL_SHIFT}
 }
