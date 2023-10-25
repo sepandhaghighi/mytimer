@@ -10,9 +10,26 @@ from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import VERTICAL_SHIFT, HORIZONTAL_SHIFT
-from mytimer.params import DEFAULT_PARAMS
+from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
 from art import tprint
 
+def load_program_params(program_name):
+    """
+    Load program params.
+
+    :param program_name: program name
+    :type program_name: str
+    :return: program params as dict
+    """
+    program_params = dict()
+    for item in DEFAULT_PARAMS:
+        if item in PROGRAMS_MAP[program_name]:
+            program_params[item] = PROGRAMS_MAP[program_name][item]
+        elif item in PROGRAMS_DEFAULTS:
+            program_params[item] = PROGRAMS_DEFAULTS[item]
+        else:
+            program_params[item] = DEFAULT_PARAMS[item]
+    return program_params
 
 def show_programs_list():
     """
@@ -66,7 +83,7 @@ def load_params(args):
     """
     params = DEFAULT_PARAMS.copy()
     if args.program:
-        params = PROGRAMS_MAP[args.program]
+        params = load_program_params(args.program)
     for item in params:
         if getattr(args, item) is not None:
             if item not in TIME_ELEMENTS:

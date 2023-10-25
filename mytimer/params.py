@@ -54,11 +54,17 @@ FACES_MAP = {
     25: 'epic',
 }
 
+
+PROGRAMS_DEFAULTS = {
+    "alarm": 1
+}
+
+
 DEFAULT_PARAMS = {
     "hour": 0,
     "minute": 0,
     "second": 0,
-    "alarm": 1,
+    "alarm": 0,
     "alarm_repeat": 1,
     "face": 1,
     "tone": 1,
