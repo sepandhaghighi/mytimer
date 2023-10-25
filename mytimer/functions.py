@@ -9,7 +9,6 @@ from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
-from mytimer.params import VERTICAL_SHIFT, HORIZONTAL_SHIFT
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
 from art import tprint
 
@@ -149,9 +148,9 @@ def input_handler(func):
         if alarm_repeat < 1:
             alarm_repeat = 1
         if h_shift < 0:
-            h_shift = HORIZONTAL_SHIFT
+            h_shift = DEFAULT_PARAMS["h_shift"]
         if v_shift < 0:
-            v_shift = VERTICAL_SHIFT
+            v_shift = DEFAULT_PARAMS["v_shift"]
         face = FACES_MAP[face]
         tone = TONES_MAP[tone]
         items_list = [hour, minute, second]
@@ -239,13 +238,13 @@ def countup_timer(
         hour,
         minute,
         second,
-        alarm,
+        alarm=DEFAULT_PARAMS["alarm"],
         face=FACES_MAP[1],
-        message="",
+        message=DEFAULT_PARAMS["message"],
         tone=TONES_MAP[1],
-        alarm_repeat=1,
-        v_shift=VERTICAL_SHIFT,
-        h_shift=HORIZONTAL_SHIFT):
+        alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
+        v_shift=DEFAULT_PARAMS["v_shift"],
+        h_shift=DEFAULT_PARAMS["h_shift"]):
     """
     Count-up timer function.
 
@@ -311,13 +310,13 @@ def countdown_timer(
         hour,
         minute,
         second,
-        alarm,
+        alarm=DEFAULT_PARAMS["alarm"],
         face=FACES_MAP[1],
-        message="",
+        message=DEFAULT_PARAMS["message"],
         tone=TONES_MAP[1],
-        alarm_repeat=1,
-        v_shift=VERTICAL_SHIFT,
-        h_shift=HORIZONTAL_SHIFT):
+        alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
+        v_shift=DEFAULT_PARAMS["v_shift"],
+        h_shift=DEFAULT_PARAMS["h_shift"]):
     """
     Countdown timer function.
 

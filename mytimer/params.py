@@ -7,8 +7,6 @@ SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
 TIME_PRINT_TEMPLATE = "{0} : {1} : {2}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
-VERTICAL_SHIFT = 6
-HORIZONTAL_SHIFT = 5
 INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
@@ -63,8 +61,8 @@ DEFAULT_PARAMS = {
     "face": 1,
     "tone": 1,
     "message": "",
-    "v_shift": VERTICAL_SHIFT,
-    "h_shift": HORIZONTAL_SHIFT,
+    "v_shift": 6,
+    "h_shift": 5,
 }
 
 PROGRAMS_DEFAULTS = {
