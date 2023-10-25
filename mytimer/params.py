@@ -54,12 +54,6 @@ FACES_MAP = {
     25: 'epic',
 }
 
-
-PROGRAMS_DEFAULTS = {
-    "alarm": 1
-}
-
-
 DEFAULT_PARAMS = {
     "hour": 0,
     "minute": 0,
@@ -71,6 +65,10 @@ DEFAULT_PARAMS = {
     "message": "",
     "v_shift": VERTICAL_SHIFT,
     "h_shift": HORIZONTAL_SHIFT,
+}
+
+PROGRAMS_DEFAULTS = {
+    "alarm": 1
 }
 
 PROGRAMS_MAP = {
