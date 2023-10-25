@@ -10,7 +10,7 @@ from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import VERTICAL_SHIFT, HORIZONTAL_SHIFT
-from mytimer.params import DEFAULT_PROGRAM
+from mytimer.params import DEFAULT_PARAMS
 from art import tprint
 
 
@@ -64,7 +64,7 @@ def load_params(args):
     :type args: argparse.Namespace
     :return: params as dict
     """
-    params = DEFAULT_PROGRAM
+    params = DEFAULT_PARAMS.copy()
     if args.program:
         params = PROGRAMS_MAP[args.program]
     for item in params:

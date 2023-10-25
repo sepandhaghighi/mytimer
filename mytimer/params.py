@@ -54,7 +54,7 @@ FACES_MAP = {
     25: 'epic',
 }
 
-DEFAULT_PROGRAM = {
+DEFAULT_PARAMS = {
     "hour": 0,
     "minute": 0,
     "second": 0,
@@ -69,119 +69,102 @@ DEFAULT_PROGRAM = {
 
 PROGRAMS_MAP = {
     "poached-egg": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 1,
         "second": 30,
         "message": "Poached egg (1.5 mins)",
     },
     "boiled-egg": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 3,
         "second": 0,
         "message": "Boiled egg (3 mins)",
     },
     "soft-boiled-egg": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 5,
         "second": 0,
         "message": "Soft-boiled egg (5 mins)",
     },
     "hard-boiled-egg": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 10,
         "second": 0,
         "message": "Hard-boiled egg (10 mins)",
     },
     "pasta": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 8,
         "second": 0,
         "message": "Pasta (8 mins)",
     },
     "quick-rice": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 10,
         "second": 0,
         "message": "Quick cooking rice (10 mins)",
     },
     "japanese-green-tea": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 2,
         "second": 0,
         "message": "Japanese green tea (2 mins)",
     },
     "tea-bag": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 2,
         "second": 0,
         "message": "Tea bag (2 mins)",
     },
     "chinese-green-tea": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 5,
         "second": 0,
         "message": "Chinese green tea (5 mins)",
     },
     "black-tea": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 5,
         "second": 0,
         "message": "Black tea (5 mins)",
     },
     "oolong-tea": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 5,
         "second": 0,
         "message": "Oolong tea (5 mins)",
     },
     "fruit-tea": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 8,
         "second": 0,
         "message": "Fruit tea (8 mins)",
     },
     "white-tea": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 10,
         "second": 0,
         "message": "White tea (10 mins)",
     },
     "work": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 25,
         "second": 0,
         "message": "Time to work (25 mins)",
     },
     "short-break": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 10,
         "second": 0,
         "message": "Short break (10 mins)",
     },
     "long-break": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 30,
         "second": 0,
         "message": "Long break (30 mins)",
     },
     "noodle": {
-        **DEFAULT_PROGRAM,
         "hour": 0,
         "minute": 3,
         "second": 0,
