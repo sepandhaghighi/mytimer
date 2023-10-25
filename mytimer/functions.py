@@ -13,6 +13,7 @@ from mytimer.params import VERTICAL_SHIFT, HORIZONTAL_SHIFT
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
 from art import tprint
 
+
 def load_program_params(program_name):
     """
     Load program params.
@@ -30,6 +31,7 @@ def load_program_params(program_name):
         else:
             program_params[item] = DEFAULT_PARAMS[item]
     return program_params
+
 
 def show_programs_list():
     """
