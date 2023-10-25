@@ -146,7 +146,7 @@ def input_handler(func):
         if len(message) > 0:
             message = MESSAGE_TEMPLATE.format(message)
         if alarm_repeat < 1:
-            alarm_repeat = 1
+            alarm_repeat = DEFAULT_PARAMS["alarm_repeat"]
         if h_shift < 0:
             h_shift = DEFAULT_PARAMS["h_shift"]
         if v_shift < 0:
