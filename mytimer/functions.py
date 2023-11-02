@@ -9,8 +9,27 @@ from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
-from mytimer.params import VERTICAL_SHIFT, HORIZONTAL_SHIFT
+from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
 from art import tprint
+
+
+def load_program_params(program_name):
+    """
+    Load program params.
+
+    :param program_name: program name
+    :type program_name: str
+    :return: program params as dict
+    """
+    program_params = dict()
+    for item in DEFAULT_PARAMS:
+        if item in PROGRAMS_MAP[program_name]:
+            program_params[item] = PROGRAMS_MAP[program_name][item]
+        elif item in PROGRAMS_DEFAULTS:
+            program_params[item] = PROGRAMS_DEFAULTS[item]
+        else:
+            program_params[item] = DEFAULT_PARAMS[item]
+    return program_params
 
 
 def show_programs_list():
@@ -63,20 +82,9 @@ def load_params(args):
     :type args: argparse.Namespace
     :return: params as dict
     """
-    params = {
-        "minute": 0,
-        "hour": 0,
-        "second": 0,
-        "alarm": 0,
-        "face": 1,
-        "tone": 1,
-        "alarm_repeat": 1,
-        "message": "",
-        "v_shift": VERTICAL_SHIFT,
-        "h_shift": HORIZONTAL_SHIFT,
-    }
+    params = DEFAULT_PARAMS.copy()
     if args.program:
-        params = PROGRAMS_MAP[args.program]
+        params = load_program_params(args.program)
     for item in params:
         if getattr(args, item) is not None:
             if item not in TIME_ELEMENTS:
@@ -138,13 +146,11 @@ def input_handler(func):
         if len(message) > 0:
             message = MESSAGE_TEMPLATE.format(message)
         if alarm_repeat < 1:
-            alarm_repeat = 1
+            alarm_repeat = DEFAULT_PARAMS["alarm_repeat"]
         if h_shift < 0:
-            h_shift = HORIZONTAL_SHIFT
+            h_shift = DEFAULT_PARAMS["h_shift"]
         if v_shift < 0:
-            v_shift = VERTICAL_SHIFT
-        face = FACES_MAP[face]
-        tone = TONES_MAP[tone]
+            v_shift = DEFAULT_PARAMS["v_shift"]
         items_list = [hour, minute, second]
         if sum(items_list) != 0 and all(map(lambda x: x >= 0, items_list)):
             if second >= 60:
@@ -230,13 +236,13 @@ def countup_timer(
         hour,
         minute,
         second,
-        alarm,
-        face=FACES_MAP[1],
-        message="",
-        tone=TONES_MAP[1],
-        alarm_repeat=1,
-        v_shift=VERTICAL_SHIFT,
-        h_shift=HORIZONTAL_SHIFT):
+        alarm=DEFAULT_PARAMS["alarm"],
+        face=DEFAULT_PARAMS["face"],
+        message=DEFAULT_PARAMS["message"],
+        tone=DEFAULT_PARAMS["tone"],
+        alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
+        v_shift=DEFAULT_PARAMS["v_shift"],
+        h_shift=DEFAULT_PARAMS["h_shift"]):
     """
     Count-up timer function.
 
@@ -248,12 +254,12 @@ def countup_timer(
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
-    :param face: face name
-    :type face: str
+    :param face: face index
+    :type face: int
     :param message: message
     :type message: str
-    :param tone: tone file name
-    :type tone: str
+    :param tone: tone index
+    :type tone: int
     :param alarm_repeat: alarm repeat
     :type alarm_repeat: int
     :param v_shift: vertical shift
@@ -265,6 +271,8 @@ def countup_timer(
     timer_second = 0
     timer_minute = 0
     timer_hour = 0
+    face = FACES_MAP[face]
+    tone = TONES_MAP[tone]
     while True:
         start = time.perf_counter()
         clear_screen()
@@ -302,13 +310,13 @@ def countdown_timer(
         hour,
         minute,
         second,
-        alarm,
-        face=FACES_MAP[1],
-        message="",
-        tone=TONES_MAP[1],
-        alarm_repeat=1,
-        v_shift=VERTICAL_SHIFT,
-        h_shift=HORIZONTAL_SHIFT):
+        alarm=DEFAULT_PARAMS["alarm"],
+        face=DEFAULT_PARAMS["face"],
+        message=DEFAULT_PARAMS["message"],
+        tone=DEFAULT_PARAMS["tone"],
+        alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
+        v_shift=DEFAULT_PARAMS["v_shift"],
+        h_shift=DEFAULT_PARAMS["h_shift"]):
     """
     Countdown timer function.
 
@@ -320,12 +328,12 @@ def countdown_timer(
     :type second: int
     :param alarm: alarm flag
     :type alarm: bool
-    :param face: face name
-    :type face: str
+    :param face: face index
+    :type face: int
     :param message: message
     :type message: str
-    :param tone: tone file name
-    :type tone: str
+    :param tone: tone index
+    :type tone: int
     :param alarm_repeat: alarm repeat
     :type alarm_repeat: int
     :param v_shift: vertical shift
@@ -334,6 +342,8 @@ def countdown_timer(
     :type h_shift: int
     :return: None
     """
+    face = FACES_MAP[face]
+    tone = TONES_MAP[tone]
     while True:
         start = time.perf_counter()
         clear_screen()

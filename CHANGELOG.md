@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--faces-list` argument
 - `--v-shift` argument
 - `--h-shift` argument
+- `DEFAULT_PARAMS` parameter
+- `PROGRAMS_DEFAULTS` parameter
+- `load_program_params` function
 ### Changed
 - `japanese-green-tea` program bug fixed
 - `README.md` updated
