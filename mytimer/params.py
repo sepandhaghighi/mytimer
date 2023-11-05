@@ -61,8 +61,8 @@ DEFAULT_PARAMS = {
     "face": 1,
     "tone": 1,
     "message": "",
-    "v_shift": 6,
-    "h_shift": 5,
+    "v_shift": 0,
+    "h_shift": 0,
 }
 
 PROGRAMS_DEFAULTS = {
