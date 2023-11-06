@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer params."""
 
-MY_TIMER_VERSION = "0.9"
+MY_TIMER_VERSION = "1.0"
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
