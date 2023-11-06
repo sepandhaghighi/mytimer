@@ -7,7 +7,7 @@ SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
 TIME_PRINT_TEMPLATE = "{0} : {1} : {2}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
-INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
+INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
 
