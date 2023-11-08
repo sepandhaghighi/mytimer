@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """mytimer params."""
 
-MY_TIMER_VERSION = "0.9"
+MY_TIMER_VERSION = "1.0"
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
 TIME_PRINT_TEMPLATE = "{0} : {1} : {2}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
-INPUT_EXAMPLE = "Example: python -m mytimer --hour=1 --minute=1 --second=1"
+INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
 
