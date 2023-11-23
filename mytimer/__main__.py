@@ -55,7 +55,6 @@ def main():
         run_timer(args)
     except KeyboardInterrupt:
         print(MESSAGE_TEMPLATE.format("See you. Bye!"))
-        exit()
 
 
 if __name__ == "__main__":
