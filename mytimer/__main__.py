@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
-from mytimer.params import MESSAGE_TEMPLATE, ADDITIONAL_INFO
+from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO
 from mytimer.functions import run_timer
 import argparse
 
@@ -54,7 +54,7 @@ def main():
     try:
         run_timer(args)
     except KeyboardInterrupt:
-        print(MESSAGE_TEMPLATE.format("See you. Bye!"))
+        print(EXIT_MESSAGE)
 
 
 if __name__ == "__main__":
