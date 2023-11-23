@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
+from mytimer.params import MESSAGE_TEMPLATE, ADDITIONAL_INFO
 from mytimer.functions import run_timer
 import argparse
 
@@ -12,6 +13,7 @@ def main():
     :return: None
     """
     parser = argparse.ArgumentParser()
+    parser.epilog = ADDITIONAL_INFO
     parser.add_argument('--minute', help='minute', type=int)
     parser.add_argument('--second', help='second', type=int)
     parser.add_argument('--hour', help='hour', type=int)
@@ -49,7 +51,11 @@ def main():
         nargs="?",
         const=1)
     args = parser.parse_args()
-    run_timer(args)
+    try:
+        run_timer(args)
+    except KeyboardInterrupt:
+        print(MESSAGE_TEMPLATE.format("See you. Bye!"))
+        exit()
 
 
 if __name__ == "__main__":
