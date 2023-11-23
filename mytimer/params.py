@@ -2,6 +2,7 @@
 """mytimer params."""
 
 MY_TIMER_VERSION = "1.0"
+ADDITIONAL_INFO = "Additional information: Press Ctrl+C to exit."
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
