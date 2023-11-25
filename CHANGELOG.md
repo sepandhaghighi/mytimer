@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `KeyboardInterrupt` exit handling updated
 - `ADDITIONAL_INFO` added to argparser epilog
+- `Python 3.12` added to `test.yml`
 ## [1.0] - 2023-11-08
 ### Added
 - `--programs-list` argument
