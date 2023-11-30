@@ -7,7 +7,7 @@ INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 EXIT_MESSAGE = "See you. Bye!"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
-TIME_PRINT_TEMPLATE = "{0} : {1} : {2}"
+TIME_PRINT_TEMPLATE = "{0:02} : {1:02} : {2:02}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
 INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
