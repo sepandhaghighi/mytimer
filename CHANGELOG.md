@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Changed
+- `TIME_PRINT_TEMPLATE` changed
 - `KeyboardInterrupt` exit handling updated
 - `ADDITIONAL_INFO` added to argparser epilog
 - `Python 3.12` added to `test.yml`
