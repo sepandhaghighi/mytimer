@@ -377,12 +377,12 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-def pomodoro_timer(counter_func, **params):
+def pomodoro_timer(timer_func, **params):
     """
     Pomodoro timer function.
 
-    :param counter_func: counter function
-    :type counter_func: function
+    :param timer_func: timer function
+    :type timer_func: function
     :param params: counter parameters
     :type params: dict
     :return: None
@@ -394,14 +394,14 @@ def pomodoro_timer(counter_func, **params):
     while True:
         work_params = params.copy()
         work_params["message"] += " {0}/{1}".format(counter + 1, 4)
-        counter_func(**work_params)
+        timer_func(**work_params)
         counter += 1
         if counter == 4:
             break_params = load_program_params("long-break")
             break_program_name = "Long break"
             end_flag = True
         _ = input(NEXT_PROGRAM_MESSAGE.format(break_program_name))
-        counter_func(**break_params)
+        timer_func(**break_params)
         if end_flag:
             break
         _ = input(NEXT_PROGRAM_MESSAGE.format(
