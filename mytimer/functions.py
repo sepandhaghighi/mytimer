@@ -390,7 +390,7 @@ def pomodoro_timer(timer_func, **params):
     counter = 0
     end_flag = False
     break_params = load_program_params("short-break")
-    break_program_name = "Short break"
+    break_name = "Short break"
     while True:
         work_params = params.copy()
         work_params["message"] += " {0}/{1}".format(counter + 1, 4)
@@ -398,9 +398,9 @@ def pomodoro_timer(timer_func, **params):
         counter += 1
         if counter == 4:
             break_params = load_program_params("long-break")
-            break_program_name = "Long break"
+            break_name = "Long break"
             end_flag = True
-        _ = input(NEXT_PROGRAM_MESSAGE.format(break_program_name))
+        _ = input(NEXT_PROGRAM_MESSAGE.format(break_name))
         timer_func(**break_params)
         if end_flag:
             break
