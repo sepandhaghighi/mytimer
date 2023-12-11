@@ -422,6 +422,11 @@ def run_timer(args):
         show_faces_list()
     elif args.programs_list:
         show_programs_list()
+    elif args.program == "pomodoro":
+        if args.countdown:
+            pomodoro_timer(countdown_timer, **params)
+        else:
+            pomodoro_timer(countup_timer, **params)
     else:
         if args.countdown:
             countdown_timer(**params)
