@@ -202,7 +202,6 @@ Just fill an issue and describe it. We'll check it ASAP!
 <blockquote>4- <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a></blockquote>
 
 
-
 ## Show your support
 								
 <h3>Star this repo</h3>					
