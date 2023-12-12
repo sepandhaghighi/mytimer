@@ -199,6 +199,9 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>3- <a href="https://www.mediacollege.com/">Media College</a></blockquote>
 
+<blockquote>4- <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a></blockquote>
+
+
 
 ## Show your support
 								
