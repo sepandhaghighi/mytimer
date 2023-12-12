@@ -403,8 +403,6 @@ def pomodoro_timer(timer_func, **params):
     timer_func(**long_break_params)
 
 
-
-
 def run_timer(args):
     """
     Run timer.
