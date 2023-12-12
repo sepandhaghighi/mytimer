@@ -53,7 +53,7 @@ def main():
     args = parser.parse_args()
     try:
         run_timer(args)
-    except KeyboardInterrupt:
+    except (KeyboardInterrupt, EOFError):
         print(EXIT_MESSAGE)
 
 

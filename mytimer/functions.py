@@ -10,6 +10,7 @@ from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
+from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
 
@@ -376,6 +377,37 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
+def pomodoro_timer(timer_func, **params):
+    """
+    Pomodoro timer function.
+
+    :param timer_func: timer function
+    :type timer_func: function
+    :param params: counter parameters
+    :type params: dict
+    :return: None
+    """
+    counter = 0
+    end_flag = False
+    break_params = load_program_params("short-break")
+    break_name = "Short break"
+    while True:
+        work_params = params.copy()
+        work_params["message"] += " {0}/{1}".format(counter + 1, 4)
+        timer_func(**work_params)
+        counter += 1
+        if counter == 4:
+            break_params = load_program_params("long-break")
+            break_name = "Long break"
+            end_flag = True
+        _ = input(NEXT_PROGRAM_MESSAGE.format(break_name))
+        timer_func(**break_params)
+        if end_flag:
+            break
+        _ = input(NEXT_PROGRAM_MESSAGE.format(
+            "Work {0}/{1}".format(counter + 1, 4)))
+
+
 def run_timer(args):
     """
     Run timer.
@@ -391,6 +423,11 @@ def run_timer(args):
         show_faces_list()
     elif args.programs_list:
         show_programs_list()
+    elif args.program == "pomodoro":
+        if args.countdown:
+            pomodoro_timer(countdown_timer, **params)
+        else:
+            pomodoro_timer(countup_timer, **params)
     else:
         if args.countdown:
             countdown_timer(**params)

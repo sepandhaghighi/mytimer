@@ -6,6 +6,7 @@ ADDITIONAL_INFO = "Additional information: Press `Ctrl+C` to exit."
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
 EXIT_MESSAGE = "See you. Bye!"
+NEXT_PROGRAM_MESSAGE = "Press `Enter` to continue (Next: {0})"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
 TIME_PRINT_TEMPLATE = "{0:02} : {1:02} : {2:02}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
@@ -151,6 +152,12 @@ PROGRAMS_MAP = {
         "message": "White tea (10 mins)",
     },
     "work": {
+        "hour": 0,
+        "minute": 25,
+        "second": 0,
+        "message": "Time to work (25 mins)",
+    },
+    "pomodoro": {
         "hour": 0,
         "minute": 25,
         "second": 0,
