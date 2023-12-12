@@ -393,13 +393,13 @@ def pomodoro_timer(timer_func, **params):
         work_params = params.copy()
         work_params["message"] += " {0}/{1}".format(index + 1, 4)
         timer_func(**work_params)
+        if index == 3:
+            break
         _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
         timer_func(**short_break_params)
-        if index == 3:
-            _ = input(NEXT_PROGRAM_MESSAGE.format("Long break"))
-            break
         _ = input(NEXT_PROGRAM_MESSAGE.format(
             "Work {0}/{1}".format(index + 2, 4)))
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Long break"))
     timer_func(**long_break_params)
 
 
