@@ -387,25 +387,20 @@ def pomodoro_timer(timer_func, **params):
     :type params: dict
     :return: None
     """
-    counter = 0
-    end_flag = False
-    break_params = load_program_params("short-break")
-    break_name = "Short break"
-    while True:
+    short_break_params = load_program_params("short-break")
+    long_break_params = load_program_params("long-break")
+    for index in range(4):
         work_params = params.copy()
-        work_params["message"] += " {0}/{1}".format(counter + 1, 4)
+        work_params["message"] += " {0}/{1}".format(index + 1, 4)
         timer_func(**work_params)
-        counter += 1
-        if counter == 4:
-            break_params = load_program_params("long-break")
-            break_name = "Long break"
-            end_flag = True
-        _ = input(NEXT_PROGRAM_MESSAGE.format(break_name))
-        timer_func(**break_params)
-        if end_flag:
+        if index == 3:
             break
+        _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
+        timer_func(**short_break_params)
         _ = input(NEXT_PROGRAM_MESSAGE.format(
-            "Work {0}/{1}".format(counter + 1, 4)))
+            "Work {0}/{1}".format(index + 2, 4)))
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Long break"))
+    timer_func(**long_break_params)
 
 
 def run_timer(args):
