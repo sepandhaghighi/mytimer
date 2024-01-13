@@ -117,6 +117,12 @@
 		<td>02:40:00</td>
 		<td>>=1.1</td>
 	</tr>
+	<tr align="center">
+		<td>52/17</td>
+		<td><code>52_17</code></td>
+		<td>01:09:00</td>
+		<td>>=1.2</td>
+	</tr>
 </table>
 
 
