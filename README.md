@@ -201,6 +201,9 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>4- <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique">Pomodoro Technique</a></blockquote>
 
+<blockquote>5- <a href="https://www.themuse.com/advice/the-rule-of-52-and-17-its-random-but-it-ups-your-productivity">The Rule of 52 and 17: It's Random, But it Ups Your Productivity</a></blockquote>
+
+<blockquote>6- <a href="https://desktime.com/blog/productivity-research">Desktime’s Productivity Research: An Overview of Our Finds Throughout the Years</a></blockquote>
 
 ## Show your support
 								
