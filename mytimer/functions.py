@@ -459,12 +459,12 @@ def run_timer(args):
             pomodoro_timer(countdown_timer, **params)
         else:
             pomodoro_timer(countup_timer, **params)
-    elif args.program == "52_17":
+    elif args.program == "52-17":
         if args.countdown:
             _52_17_timer(countdown_timer, **params)
         else:
             _52_17_timer(countup_timer, **params)
-    elif args.program == "112_26":
+    elif args.program == "112-26":
         if args.countdown:
             _112_26_timer(countdown_timer, **params)
         else:
