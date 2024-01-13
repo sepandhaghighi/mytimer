@@ -6,8 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- 1 new program
+- 2 new program
 	1. `52_17`
+	2. `112_26`
 ## [1.1] - 2023-12-20
 ### Added
 - 1 new program

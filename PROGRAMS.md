@@ -123,6 +123,12 @@
 		<td>01:09:00</td>
 		<td>>=1.2</td>
 	</tr>
+	<tr align="center">
+		<td>112/26</td>
+		<td><code>112_26</code></td>
+		<td>02:18:00</td>
+		<td>>=1.2</td>
+	</tr>
 </table>
 
 
