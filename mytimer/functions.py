@@ -403,6 +403,42 @@ def pomodoro_timer(timer_func, **params):
     timer_func(**long_break_params)
 
 
+def _52_17_timer(timer_func, **params):
+    """
+    52/17 timer function.
+
+    :param timer_func: timer function
+    :type timer_func: function
+    :param params: counter parameters
+    :type params: dict
+    :return: None
+    """
+    short_break_params = load_program_params("short-break")
+    short_break_params['minute'] = 17
+    short_break_params['message'] = "Short break (17 mins)"
+    timer_func(**params)
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
+    timer_func(**short_break_params)
+
+
+def _112_26_timer(timer_func, **params):
+    """
+    112/26 timer function.
+
+    :param timer_func: timer function
+    :type timer_func: function
+    :param params: counter parameters
+    :type params: dict
+    :return: None
+    """
+    short_break_params = load_program_params("short-break")
+    short_break_params['minute'] = 26
+    short_break_params['message'] = "Short break (26 mins)"
+    timer_func(**params)
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
+    timer_func(**short_break_params)
+
+
 def run_timer(args):
     """
     Run timer.
@@ -423,6 +459,16 @@ def run_timer(args):
             pomodoro_timer(countdown_timer, **params)
         else:
             pomodoro_timer(countup_timer, **params)
+    elif args.program == "52-17":
+        if args.countdown:
+            _52_17_timer(countdown_timer, **params)
+        else:
+            _52_17_timer(countup_timer, **params)
+    elif args.program == "112-26":
+        if args.countdown:
+            _112_26_timer(countdown_timer, **params)
+        else:
+            _112_26_timer(countup_timer, **params)
     else:
         if args.countdown:
             countdown_timer(**params)

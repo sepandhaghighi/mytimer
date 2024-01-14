@@ -163,6 +163,18 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Time to work (25 mins)",
     },
+    "52-17": {
+        "hour": 0,
+        "minute": 52,
+        "second": 0,
+        "message": "Time to work (52 mins)",
+    },
+    "112-26": {
+        "hour": 1,
+        "minute": 52,
+        "second": 0,
+        "message": "Time to work (112 mins)",
+    },
     "short-break": {
         "hour": 0,
         "minute": 10,
