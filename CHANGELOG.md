@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 2 new programs
 	1. `52-17`
 	2. `112-26`
+### Changed
+- `run_timer` function modified
 ## [1.1] - 2023-12-20
 ### Added
 - 1 new program
