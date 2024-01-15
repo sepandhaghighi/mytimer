@@ -448,6 +448,9 @@ def run_timer(args):
     :return: None
     """
     params = load_params(args)
+    timer_func = countup_timer
+    if args.countdown:
+        timer_func = countdown_timer
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.faces_list:
@@ -455,22 +458,10 @@ def run_timer(args):
     elif args.programs_list:
         show_programs_list()
     elif args.program == "pomodoro":
-        if args.countdown:
-            pomodoro_timer(countdown_timer, **params)
-        else:
-            pomodoro_timer(countup_timer, **params)
+        pomodoro_timer(timer_func, **params)
     elif args.program == "52-17":
-        if args.countdown:
-            _52_17_timer(countdown_timer, **params)
-        else:
-            _52_17_timer(countup_timer, **params)
+        _52_17_timer(timer_func, **params)
     elif args.program == "112-26":
-        if args.countdown:
-            _112_26_timer(countdown_timer, **params)
-        else:
-            _112_26_timer(countup_timer, **params)
+        _112_26_timer(timer_func, **params)
     else:
-        if args.countdown:
-            countdown_timer(**params)
-        else:
-            countup_timer(**params)
+        timer_func(**params)
