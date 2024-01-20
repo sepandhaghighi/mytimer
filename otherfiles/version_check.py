@@ -21,6 +21,7 @@ CHANGELOG_ITEMS = [
     "[{0}]:"]
 
 PARAMS_ITEMS = ['MY_TIMER_VERSION = "{0}"']
+ISSUE_TEMPLATE_ITEMS = ["- MyTimer {0}"]
 
 FILES = {
     "setup.py": SETUP_ITEMS,
@@ -28,7 +29,12 @@ FILES = {
     "CHANGELOG.md": CHANGELOG_ITEMS,
     os.path.join(
         "mytimer",
-        "params.py"): PARAMS_ITEMS}
+        "params.py"): PARAMS_ITEMS,
+    os.path.join(
+        ".github",
+        "ISSUE_TEMPLATE",
+        "bug_report.yml"): ISSUE_TEMPLATE_ITEMS,
+}
 
 TEST_NUMBER = len(FILES.keys()) + 1
 
