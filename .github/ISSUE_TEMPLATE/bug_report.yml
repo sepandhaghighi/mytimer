@@ -84,6 +84,7 @@ body:
         - MyTimer 1.1
         - MyTimer 1.0
         - MyTimer 0.9
+        - MyTimer 0.8
         - MyTimer 0.7
         - MyTimer 0.6
         - MyTimer 0.5
