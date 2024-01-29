@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- `feature_request.yml` template
+- `config.yml` for issue template
 - 2 new programs
 	1. `52-17`
 	2. `112-26`
 ### Changed
+- Bug report template modified
 - `run_timer` function modified
 ## [1.1] - 2023-12-20
 ### Added
