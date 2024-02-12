@@ -177,15 +177,15 @@ PROGRAMS_MAP = {
     },
     "short-break": {
         "hour": 0,
-        "minute": 10,
+        "minute": 5,
         "second": 0,
-        "message": "Short break (10 mins)",
+        "message": "Short break (5 mins)",
     },
     "long-break": {
         "hour": 0,
-        "minute": 30,
+        "minute": 15,
         "second": 0,
-        "message": "Long break (30 mins)",
+        "message": "Long break (15 mins)",
     },
     "noodle": {
         "hour": 0,
