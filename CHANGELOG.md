@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- `short-break` program changed from `10 minutes` to `5 minutes`
+- `long-break` program changed from `30 minutes` to `15 minutes`
+- `pomodoro` program updated
 ## [1.2] - 2024-02-05
 ### Added
 - `feature_request.yml` template
