@@ -114,7 +114,7 @@
 	<tr align="center">
 		<td>Pomodoro</td>
 		<td><code>pomodoro</code></td>
-		<td>02:40:00</td>
+		<td>02:10:00</td>
 		<td>>=1.1</td>
 	</tr>
 	<tr align="center">
