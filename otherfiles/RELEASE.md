@@ -1,6 +1,6 @@
 # MyTimer Release Instructions
 
-#### Last Update: 2024-01-20
+#### Last Update: 2024-02-13
 
 1. Create the `release` branch under `dev`
 2. Update all version tags
@@ -24,7 +24,7 @@
 	7. Squash and merge
 	8. Delete `release` branch
 6. Merge `dev` branch into `main`
-	1. Checkout to `main`
+	1. `git checkout main`
 	2. `git merge dev`
 	3. `git push origin main`
 	4. Wait for all CI pass
