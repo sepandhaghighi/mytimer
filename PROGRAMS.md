@@ -96,13 +96,13 @@
 	<tr align="center">
 		<td>Short break</td>
 		<td><code>short-break</code></td>
-		<td>00:10:00</td>
+		<td>00:05:00</td>
 		<td>>=0.9</td>
 	</tr>
 	<tr align="center">
 		<td>Long break</td>
 		<td><code>long-break</code></td>
-		<td>00:30:00</td>
+		<td>00:15:00</td>
 		<td>>=0.9</td>
 	</tr>
 	<tr align="center">
@@ -114,7 +114,7 @@
 	<tr align="center">
 		<td>Pomodoro</td>
 		<td><code>pomodoro</code></td>
-		<td>02:40:00</td>
+		<td>02:10:00</td>
 		<td>>=1.1</td>
 	</tr>
 	<tr align="center">
