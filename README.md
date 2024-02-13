@@ -48,8 +48,8 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 	</tr>
 	<tr>
 		<td align="center">CI</td>
-		<td align="center"><img src="https://github.com/sepandhaghighi/mytimer/workflows/CI/badge.svg?branch=main"></td>
-		<td align="center"><img src="https://github.com/sepandhaghighi/mytimer/workflows/CI/badge.svg?branch=dev"></td>
+		<td align="center"><img src="https://github.com/sepandhaghighi/mytimer/actions/workflows/test.yml/badge.svg?branch=main"></td>
+		<td align="center"><img src="https://github.com/sepandhaghighi/mytimer/actions/workflows/test.yml/badge.svg?branch=dev"></td>
 	</tr>
 </table>
 
