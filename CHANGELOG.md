@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- 1 new program
+	1. `animedoro`
 ### Changed
 - `short-break` program duration changed from `10 minutes` to `5 minutes`
 - `long-break` program duration changed from `30 minutes` to `15 minutes`
