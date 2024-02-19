@@ -441,7 +441,7 @@ def _112_26_timer(timer_func, **params):
 
 def animedoro_timer(timer_func, **params):
     """
-    AnimeDoro timer function.
+    Animedoro timer function.
 
     :param timer_func: timer function
     :type timer_func: function
