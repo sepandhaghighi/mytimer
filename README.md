@@ -205,6 +205,8 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>6- <a href="https://desktime.com/blog/productivity-research">Desktime’s Productivity Research: An Overview of Our Finds Throughout the Years</a></blockquote>
 
+<blockquote>7- <a href="https://ankushkun.github.io/animedoro-timer/Animedoro/">AnimeDoro Timer</a></blockquote>
+
 ## Show your support
 								
 <h3>Star this repo</h3>					
