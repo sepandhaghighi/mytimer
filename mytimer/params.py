@@ -175,6 +175,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Time to work (112 mins)",
     },
+    "animedoro": {
+        "hour": 0,
+        "minute": 40,
+        "second": 0,
+        "message": "Time to work (40 mins)",
+    },
     "short-break": {
         "hour": 0,
         "minute": 5,

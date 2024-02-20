@@ -129,6 +129,12 @@
 		<td>02:18:00</td>
 		<td>>=1.2</td>
 	</tr>
+	<tr align="center">
+		<td>AnimeDoro</td>
+		<td><code>animedoro</code></td>
+		<td>01:00:00</td>
+		<td>>=1.3</td>
+	</tr>
 </table>
 
 

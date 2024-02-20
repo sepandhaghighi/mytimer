@@ -439,6 +439,24 @@ def _112_26_timer(timer_func, **params):
     timer_func(**short_break_params)
 
 
+def animedoro_timer(timer_func, **params):
+    """
+    Animedoro timer function.
+
+    :param timer_func: timer function
+    :type timer_func: function
+    :param params: counter parameters
+    :type params: dict
+    :return: None
+    """
+    short_break_params = load_program_params("short-break")
+    short_break_params['minute'] = 20
+    short_break_params['message'] = "Short break (20 mins)"
+    timer_func(**params)
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
+    timer_func(**short_break_params)
+
+
 def run_timer(args):
     """
     Run timer.
@@ -463,5 +481,7 @@ def run_timer(args):
         _52_17_timer(timer_func, **params)
     elif args.program == "112-26":
         _112_26_timer(timer_func, **params)
+    elif args.program == "animedoro":
+        animedoro_timer(timer_func, **params)
     else:
         timer_func(**params)
