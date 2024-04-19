@@ -5,7 +5,7 @@ import sys
 import subprocess
 import time
 from nava import play
-from mytimer.params import INPUT_ERROR_MESSAGE
+from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
@@ -202,6 +202,20 @@ def get_sound_path(sound_name):
     return os.path.join(cd, "sounds", sound_name)
 
 
+def play_sound(sound_path):
+    """
+    Play sound.
+
+    :param sound_path: sound path
+    :type sound_path: str
+    :return: None
+    """
+    try:
+        play(sound_path)
+    except Exception:
+        print(SOUND_ERROR_MESSAGE)
+
+
 @input_handler
 def countup_timer(
         hour,
@@ -263,7 +277,7 @@ def countup_timer(
             print("End!")
             if alarm:
                 for _ in range(alarm_repeat):
-                    play(get_sound_path(tone))
+                    play_sound(get_sound_path(tone))
             break
         timer_second += 1
         if timer_second == 60:
@@ -341,7 +355,7 @@ def countdown_timer(
             print("End!")
             if alarm:
                 for _ in range(alarm_repeat):
-                    play(get_sound_path(tone))
+                    play_sound(get_sound_path(tone))
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
