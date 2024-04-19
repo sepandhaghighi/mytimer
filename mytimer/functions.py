@@ -2,7 +2,6 @@
 """mytimer functions."""
 import os
 import sys
-import subprocess
 import time
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
