@@ -293,7 +293,7 @@ def countup_timer(
             print("End!")
             if alarm:
                 for _ in range(alarm_repeat):
-                    play_sound(get_sound_path(tone))
+                    play(get_sound_path(tone))
             break
         timer_second += 1
         if timer_second == 60:
@@ -371,7 +371,7 @@ def countdown_timer(
             print("End!")
             if alarm:
                 for _ in range(alarm_repeat):
-                    play_sound(get_sound_path(tone))
+                    play(get_sound_path(tone))
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
