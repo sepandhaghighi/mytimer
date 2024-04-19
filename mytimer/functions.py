@@ -4,7 +4,8 @@ import os
 import sys
 import subprocess
 import time
-from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
+from nava import play
+from mytimer.params import INPUT_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
@@ -199,37 +200,6 @@ def get_sound_path(sound_name):
     """
     cd, _ = os.path.split(__file__)
     return os.path.join(cd, "sounds", sound_name)
-
-
-def play_sound(sound_path):
-    """
-    Play sound.
-
-    :param sound_path: sound path
-    :type sound_path: str
-    :return: None
-    """
-    try:
-        sys_platform = sys.platform
-        if sys_platform == "win32":
-            import winsound
-            winsound.PlaySound(sound_path, winsound.SND_FILENAME)
-        elif sys_platform == "darwin":
-            _ = subprocess.check_call(["afplay",
-                                       sound_path],
-                                      shell=False,
-                                      stderr=subprocess.PIPE,
-                                      stdin=subprocess.PIPE,
-                                      stdout=subprocess.PIPE)
-        else:
-            _ = subprocess.check_call(["aplay",
-                                       sound_path],
-                                      shell=False,
-                                      stderr=subprocess.PIPE,
-                                      stdin=subprocess.PIPE,
-                                      stdout=subprocess.PIPE)
-    except Exception:
-        print(SOUND_ERROR_MESSAGE)
 
 
 @input_handler
