@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 1 new program
 	1. `animedoro`
 ### Changed
+- `nava` added to `requirements.txt`
 - Sound playing system updated
 - Python 3.5 dropped
 - `short-break` program duration changed from `10 minutes` to `5 minutes`
