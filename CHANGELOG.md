@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - 1 new program
 	1. `animedoro`
+- `SECURITY.md`
 ### Changed
 - `nava` added to `requirements.txt`
 - Sound playing system updated
