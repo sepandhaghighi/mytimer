@@ -2,8 +2,8 @@
 """mytimer functions."""
 import os
 import sys
-import subprocess
 import time
+from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
@@ -210,24 +210,7 @@ def play_sound(sound_path):
     :return: None
     """
     try:
-        sys_platform = sys.platform
-        if sys_platform == "win32":
-            import winsound
-            winsound.PlaySound(sound_path, winsound.SND_FILENAME)
-        elif sys_platform == "darwin":
-            _ = subprocess.check_call(["afplay",
-                                       sound_path],
-                                      shell=False,
-                                      stderr=subprocess.PIPE,
-                                      stdin=subprocess.PIPE,
-                                      stdout=subprocess.PIPE)
-        else:
-            _ = subprocess.check_call(["aplay",
-                                       sound_path],
-                                      shell=False,
-                                      stderr=subprocess.PIPE,
-                                      stdin=subprocess.PIPE,
-                                      stdout=subprocess.PIPE)
+        play(sound_path)
     except Exception:
         print(SOUND_ERROR_MESSAGE)
 
