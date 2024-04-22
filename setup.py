@@ -35,7 +35,7 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data=True,
     author='Sepand Haghighi',
-    author_email='sepand@pyrgg.ir',
+    author_email='me@sepand.tech',
     url='https://github.com/sepandhaghighi/mytimer',
     download_url='https://github.com/sepandhaghighi/mytimer/tarball/v1.2',
     keywords="python3 python timer terminal stopwatch cli",
