@@ -4,20 +4,7 @@
 <br/>
 <a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version" height="18"></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
-</div>	
-
-## Table of contents					
-   * [Overview](https://github.com/sepandhaghighi/mytimer#overview)
-   * [Installation](https://github.com/sepandhaghighi/mytimer#installation)
-   * [Usage](https://github.com/sepandhaghighi/mytimer#usage)
-   * [Issues & Bug Reports](https://github.com/sepandhaghighi/mytimer#issues--bug-reports)
-   * [Contribution](https://github.com/sepandhaghighi/mytimer/blob/main/.github/CONTRIBUTING.md)
-   * [References](https://github.com/sepandhaghighi/mytimer#references)
-   * [Authors](https://github.com/sepandhaghighi/mytimer/blob/main/AUTHORS.md)
-   * [License](https://github.com/sepandhaghighi/mytimer/blob/main/LICENSE)
-   * [Show Your Support](https://github.com/sepandhaghighi/mytimer#show-your-support)
-   * [Changelog](https://github.com/sepandhaghighi/mytimer/blob/main/CHANGELOG.md)
-   * [Code of Conduct](https://github.com/sepandhaghighi/mytimer/blob/main/.github/CODE_OF_CONDUCT.md)			
+</div>			
 				
 ## Overview	
 
