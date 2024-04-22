@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `short-break` program duration changed from `10 minutes` to `5 minutes`
 - `long-break` program duration changed from `30 minutes` to `15 minutes`
 - `pomodoro` program updated
+- `README.md` updated
 ## [1.2] - 2024-02-05
 ### Added
 - `feature_request.yml` template
