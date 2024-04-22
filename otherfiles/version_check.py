@@ -22,11 +22,13 @@ CHANGELOG_ITEMS = [
 
 PARAMS_ITEMS = ['MY_TIMER_VERSION = "{0}"']
 ISSUE_TEMPLATE_ITEMS = ["- MyTimer {0}"]
+SECURITY_ITEMS = ["| {0}           | :white_check_mark: |", "| < {0}         | :x:                |"]
 
 FILES = {
     "setup.py": SETUP_ITEMS,
     "README.md": README_ITEMS,
     "CHANGELOG.md": CHANGELOG_ITEMS,
+    "SECURITY.md": SECURITY_ITEMS,
     os.path.join(
         "mytimer",
         "params.py"): PARAMS_ITEMS,
