@@ -16,23 +16,25 @@ from art import tprint
 
 def load_program_params(program_name, is_break=False):
     """
-    Load program params.
+    Load program/break params.
 
     :param program_name: program name
     :type program_name: str
-    :return: program params as dict
+    :param is_break: break flag
+    :type is_break: bool
+    :return: program/break params as dict
     """
     program_params = dict()
-    load_map = PROGRAMS_MAP
-    load_defaults = PROGRAMS_DEFAULTS
+    ref_map = PROGRAMS_MAP
+    ref_defaults = PROGRAMS_DEFAULTS
     if is_break:
-        load_map = BREAKS_MAP
-        load_defaults = BREAKS_DEFAULTS
+        ref_map = BREAKS_MAP
+        ref_defaults = BREAKS_DEFAULTS
     for item in DEFAULT_PARAMS:
-        if item in load_map[program_name]:
-            program_params[item] = load_map[program_name][item]
-        elif item in load_defaults:
-            program_params[item] = load_defaults[item]
+        if item in ref_map[program_name]:
+            program_params[item] = ref_map[program_name][item]
+        elif item in ref_defaults:
+            program_params[item] = ref_defaults[item]
         else:
             program_params[item] = DEFAULT_PARAMS[item]
     return program_params
