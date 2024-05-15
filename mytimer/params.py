@@ -210,18 +210,18 @@ BREAKS_MAP = {
         "hour": 0,
         "minute": 17,
         "second": 0,
-        "message": "Break (17 mins)",
+        "message": "52-17 break (17 mins)",
     },
     "112-26": {
         "hour": 1,
         "minute": 26,
         "second": 0,
-        "message": "Break (26 mins)",
+        "message": "112-26 break (26 mins)",
     },
     "animedoro": {
         "hour": 0,
         "minute": 20,
         "second": 0,
-        "message": "Break (20 mins)",
+        "message": "Animedoro break (20 mins)",
     },
 }
