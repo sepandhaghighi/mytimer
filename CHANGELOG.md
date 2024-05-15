@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - 1 new program
 	1. `animedoro`
+- `two_step_timer` function
 - `SECURITY.md`
 ### Changed
 - `nava` added to `requirements.txt`
@@ -17,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `long-break` program duration changed from `30 minutes` to `15 minutes`
 - `pomodoro` program updated
 - `README.md` updated
+### Removed
+- `animedoro_timer` function
+- `_112_26_timer` function
+- `_52_17_timer` function
 ## [1.2] - 2024-02-05
 ### Added
 - `feature_request.yml` template
