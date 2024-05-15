@@ -14,7 +14,7 @@ from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
 
-def load_program_params(program_name):
+def load_program_params(program_name, is_break=False):
     """
     Load program params.
 
@@ -23,11 +23,16 @@ def load_program_params(program_name):
     :return: program params as dict
     """
     program_params = dict()
+    load_map = PROGRAMS_MAP
+    load_defaults = PROGRAMS_DEFAULTS
+    if is_break:
+        load_map = BREAKS_MAP
+        load_defaults = BREAKS_DEFAULTS
     for item in DEFAULT_PARAMS:
-        if item in PROGRAMS_MAP[program_name]:
-            program_params[item] = PROGRAMS_MAP[program_name][item]
-        elif item in PROGRAMS_DEFAULTS:
-            program_params[item] = PROGRAMS_DEFAULTS[item]
+        if item in load_map[program_name]:
+            program_params[item] = load_map[program_name][item]
+        elif item in load_defaults:
+            program_params[item] = load_defaults[item]
         else:
             program_params[item] = DEFAULT_PARAMS[item]
     return program_params
@@ -384,6 +389,10 @@ def pomodoro_timer(timer_func, **params):
             "Work {0}/{1}".format(index + 2, 4)))
     _ = input(NEXT_PROGRAM_MESSAGE.format("Long break"))
     timer_func(**long_break_params)
+
+
+def two_step_timer(timer_func, **params):
+    pass
 
 
 def _52_17_timer(timer_func, **params):
