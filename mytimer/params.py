@@ -213,7 +213,7 @@ BREAKS_MAP = {
         "message": "52-17 break (17 mins)",
     },
     "112-26": {
-        "hour": 1,
+        "hour": 0,
         "minute": 26,
         "second": 0,
         "message": "112-26 break (26 mins)",
