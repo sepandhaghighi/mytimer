@@ -6,28 +6,35 @@ import time
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
-from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
+from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
-from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
+from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
 
-def load_program_params(program_name):
+def load_program_params(program_name, is_break=False):
     """
-    Load program params.
+    Load program/break params.
 
     :param program_name: program name
     :type program_name: str
-    :return: program params as dict
+    :param is_break: break flag
+    :type is_break: bool
+    :return: program/break params as dict
     """
     program_params = dict()
+    ref_map = PROGRAMS_MAP
+    ref_defaults = PROGRAMS_DEFAULTS
+    if is_break:
+        ref_map = BREAKS_MAP
+        ref_defaults = BREAKS_DEFAULTS
     for item in DEFAULT_PARAMS:
-        if item in PROGRAMS_MAP[program_name]:
-            program_params[item] = PROGRAMS_MAP[program_name][item]
-        elif item in PROGRAMS_DEFAULTS:
-            program_params[item] = PROGRAMS_DEFAULTS[item]
+        if item in ref_map[program_name]:
+            program_params[item] = ref_map[program_name][item]
+        elif item in ref_defaults:
+            program_params[item] = ref_defaults[item]
         else:
             program_params[item] = DEFAULT_PARAMS[item]
     return program_params
@@ -386,58 +393,22 @@ def pomodoro_timer(timer_func, **params):
     timer_func(**long_break_params)
 
 
-def _52_17_timer(timer_func, **params):
+def two_step_timer(timer_func, program, **params):
     """
-    52/17 timer function.
+    Two step timer function.
 
     :param timer_func: timer function
     :type timer_func: function
+    :param program: program name
+    :type program: str
     :param params: counter parameters
     :type params: dict
     :return: None
     """
-    short_break_params = load_program_params("short-break")
-    short_break_params['minute'] = 17
-    short_break_params['message'] = "Short break (17 mins)"
+    break_params = load_program_params(program, is_break=True)
     timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
-    timer_func(**short_break_params)
-
-
-def _112_26_timer(timer_func, **params):
-    """
-    112/26 timer function.
-
-    :param timer_func: timer function
-    :type timer_func: function
-    :param params: counter parameters
-    :type params: dict
-    :return: None
-    """
-    short_break_params = load_program_params("short-break")
-    short_break_params['minute'] = 26
-    short_break_params['message'] = "Short break (26 mins)"
-    timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
-    timer_func(**short_break_params)
-
-
-def animedoro_timer(timer_func, **params):
-    """
-    Animedoro timer function.
-
-    :param timer_func: timer function
-    :type timer_func: function
-    :param params: counter parameters
-    :type params: dict
-    :return: None
-    """
-    short_break_params = load_program_params("short-break")
-    short_break_params['minute'] = 20
-    short_break_params['message'] = "Short break (20 mins)"
-    timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
-    timer_func(**short_break_params)
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Break"))
+    timer_func(**break_params)
 
 
 def run_timer(args):
@@ -460,11 +431,7 @@ def run_timer(args):
         show_programs_list()
     elif args.program == "pomodoro":
         pomodoro_timer(timer_func, **params)
-    elif args.program == "52-17":
-        _52_17_timer(timer_func, **params)
-    elif args.program == "112-26":
-        _112_26_timer(timer_func, **params)
-    elif args.program == "animedoro":
-        animedoro_timer(timer_func, **params)
+    elif args.program in ["52-17", "112-26", "animedoro"]:
+        two_step_timer(timer_func, args.program, **params)
     else:
         timer_func(**params)

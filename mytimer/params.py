@@ -72,6 +72,10 @@ PROGRAMS_DEFAULTS = {
     "alarm": 1
 }
 
+BREAKS_DEFAULTS = {
+    "alarm": 1
+}
+
 PROGRAMS_MAP = {
     "poached-egg": {
         "hour": 0,
@@ -199,4 +203,25 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Instant noodle (3 mins)",
     }
+}
+
+BREAKS_MAP = {
+    "52-17": {
+        "hour": 0,
+        "minute": 17,
+        "second": 0,
+        "message": "52-17 break (17 mins)",
+    },
+    "112-26": {
+        "hour": 0,
+        "minute": 26,
+        "second": 0,
+        "message": "112-26 break (26 mins)",
+    },
+    "animedoro": {
+        "hour": 0,
+        "minute": 20,
+        "second": 0,
+        "message": "Animedoro break (20 mins)",
+    },
 }
