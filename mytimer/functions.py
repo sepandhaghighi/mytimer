@@ -6,10 +6,10 @@ import time
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
-from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
+from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
-from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS
+from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
@@ -391,62 +391,12 @@ def pomodoro_timer(timer_func, **params):
     timer_func(**long_break_params)
 
 
-def two_step_timer(timer_func, **params):
-    pass
-
-
-def _52_17_timer(timer_func, **params):
-    """
-    52/17 timer function.
-
-    :param timer_func: timer function
-    :type timer_func: function
-    :param params: counter parameters
-    :type params: dict
-    :return: None
-    """
-    short_break_params = load_program_params("short-break")
-    short_break_params['minute'] = 17
-    short_break_params['message'] = "Short break (17 mins)"
+def two_step_timer(timer_func, program, **params):
+    break_params = load_program_params(program, is_break=True)
     timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
-    timer_func(**short_break_params)
+    _ = input(NEXT_PROGRAM_MESSAGE.format("Break"))
+    timer_func(**break_params)
 
-
-def _112_26_timer(timer_func, **params):
-    """
-    112/26 timer function.
-
-    :param timer_func: timer function
-    :type timer_func: function
-    :param params: counter parameters
-    :type params: dict
-    :return: None
-    """
-    short_break_params = load_program_params("short-break")
-    short_break_params['minute'] = 26
-    short_break_params['message'] = "Short break (26 mins)"
-    timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
-    timer_func(**short_break_params)
-
-
-def animedoro_timer(timer_func, **params):
-    """
-    Animedoro timer function.
-
-    :param timer_func: timer function
-    :type timer_func: function
-    :param params: counter parameters
-    :type params: dict
-    :return: None
-    """
-    short_break_params = load_program_params("short-break")
-    short_break_params['minute'] = 20
-    short_break_params['message'] = "Short break (20 mins)"
-    timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
-    timer_func(**short_break_params)
 
 
 def run_timer(args):
@@ -469,11 +419,7 @@ def run_timer(args):
         show_programs_list()
     elif args.program == "pomodoro":
         pomodoro_timer(timer_func, **params)
-    elif args.program == "52-17":
-        _52_17_timer(timer_func, **params)
-    elif args.program == "112-26":
-        _112_26_timer(timer_func, **params)
-    elif args.program == "animedoro":
-        animedoro_timer(timer_func, **params)
+    elif args.program in ["52-17", "112-26", "animedoro"]:
+        two_step_timer(timer_func,args.program,**params)
     else:
         timer_func(**params)
