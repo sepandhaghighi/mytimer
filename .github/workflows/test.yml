@@ -70,8 +70,8 @@ jobs:
     - name: Accuracy (Windows)
       run: |
         Measure-Command {mytimer --minute=1 --second=40}
-      if: matrix.os == 'windows-latest'
+      if: matrix.os == 'windows-2022'
     - name: Accuracy (Ubuntu / macOS)
       run: |
         time mytimer --minute=1 --second=40
-      if: matrix.os != 'windows-latest'
+      if: matrix.os != 'windows-2022'
