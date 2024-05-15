@@ -411,7 +411,6 @@ def two_step_timer(timer_func, program, **params):
     timer_func(**break_params)
 
 
-
 def run_timer(args):
     """
     Run timer.
@@ -433,6 +432,6 @@ def run_timer(args):
     elif args.program == "pomodoro":
         pomodoro_timer(timer_func, **params)
     elif args.program in ["52-17", "112-26", "animedoro"]:
-        two_step_timer(timer_func,args.program,**params)
+        two_step_timer(timer_func, args.program, **params)
     else:
         timer_func(**params)
