@@ -82,17 +82,23 @@ def check_null_time(args):
     return True
 
 
-def load_params(args):
+def load_params(args, program=None, is_break=False):
     """
     Load params.
 
     :param args: input arguments
     :type args: argparse.Namespace
+    :param program: program name
+    :type program: str
+    :param is_break: break flag
+    :type is_break: bool
     :return: params as dict
     """
     params = DEFAULT_PARAMS.copy()
-    if args.program:
-        params = load_program_params(args.program)
+    if program is not None:
+        params = load_program_params(program, is_break=is_break)
+    elif args.program:
+        params = load_program_params(args.program, is_break=is_break)
     for item in params:
         if getattr(args, item) is not None:
             if item not in TIME_ELEMENTS:
