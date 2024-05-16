@@ -373,7 +373,7 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-def pomodoro_timer(timer_func, **params):
+def pomodoro_timer(timer_func, main_params, long_break_params, short_break_params):
     """
     Pomodoro timer function.
 
@@ -383,10 +383,8 @@ def pomodoro_timer(timer_func, **params):
     :type params: dict
     :return: None
     """
-    short_break_params = load_program_params("short-break")
-    long_break_params = load_program_params("long-break")
     for index in range(4):
-        work_params = params.copy()
+        work_params = main_params.copy()
         work_params["message"] += " {0}/{1}".format(index + 1, 4)
         timer_func(**work_params)
         if index == 3:
@@ -399,7 +397,7 @@ def pomodoro_timer(timer_func, **params):
     timer_func(**long_break_params)
 
 
-def two_step_timer(timer_func, program, **params):
+def two_step_timer(timer_func, main_params, break_params):
     """
     Two step timer function.
 
@@ -411,8 +409,7 @@ def two_step_timer(timer_func, program, **params):
     :type params: dict
     :return: None
     """
-    break_params = load_program_params(program, is_break=True)
-    timer_func(**params)
+    timer_func(**main_params)
     _ = input(NEXT_PROGRAM_MESSAGE.format("Break"))
     timer_func(**break_params)
 
@@ -436,8 +433,11 @@ def run_timer(args):
     elif args.programs_list:
         show_programs_list()
     elif args.program == "pomodoro":
-        pomodoro_timer(timer_func, **params)
+        short_break_params = load_params(args, program="short-break")
+        long_break_params = load_params(args, program="long-break")
+        pomodoro_timer(timer_func, params, long_break_params, short_break_params)
     elif args.program in ["52-17", "112-26", "animedoro"]:
-        two_step_timer(timer_func, args.program, **params)
+        break_params = load_params(args, is_break=True)
+        two_step_timer(timer_func, params, break_params)
     else:
         timer_func(**params)
