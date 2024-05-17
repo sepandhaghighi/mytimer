@@ -13,6 +13,26 @@ from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
+def print_message(message, v_shift=0, h_shift=0, confirm=False):
+    """
+    Print message.
+
+    :param message: message text
+    :type message: str
+    :param v_shift: vertical shift
+    :type v_shift: int
+    :param h_shift: horizontal shift
+    :type h_shift: int
+    :param confirm: confirm flag
+    :type confirm: bool
+    :return: None
+    """
+    func = print
+    if confirm:
+        func = input
+    print('\n' * v_shift, end='')
+    func(h_shift * " " + message)
+
 
 def load_program_params(program_name, is_break=False):
     """
