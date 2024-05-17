@@ -73,7 +73,8 @@ PROGRAMS_DEFAULTS = {
 }
 
 BREAKS_DEFAULTS = {
-    "alarm": 1
+    "alarm": 1,
+    "tone": 2
 }
 
 PROGRAMS_MAP = {
