@@ -429,9 +429,9 @@ def two_step_timer(timer_func, params1, params2):
 
     :param timer_func: timer function
     :type timer_func: function
-    :param params1: program params 1
+    :param params1: program-1 params
     :type params1: dict
-    :param params2: program params 2
+    :param params2: program-2 params
     :type params2: dict
     :return: None
     """
