@@ -224,4 +224,16 @@ BREAKS_MAP = {
         "second": 0,
         "message": "Animedoro break (20 mins)",
     },
+    "pomodoro-short-break": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "message": "Pomodoro short break (5 mins)",
+    },
+    "pomodoro-long-break": {
+        "hour": 0,
+        "minute": 15,
+        "second": 0,
+        "message": "Pomodoro long break (15 mins)",
+    },
 }
