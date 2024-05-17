@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 1 new program
 	1. `animedoro`
 - `two_step_timer` function
+- `print_message` function
 - `SECURITY.md`
 ### Changed
 - `nava` added to `requirements.txt`
