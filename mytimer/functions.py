@@ -397,21 +397,21 @@ def pomodoro_timer(timer_func, main_params, long_break_params, short_break_param
     timer_func(**long_break_params)
 
 
-def two_step_timer(timer_func, main_params, break_params):
+def two_step_timer(timer_func, params1, params2):
     """
     Two step timer function.
 
     :param timer_func: timer function
     :type timer_func: function
-    :param program: program name
-    :type program: str
-    :param params: counter parameters
-    :type params: dict
+    :param params1: program params 1
+    :type params1: dict
+    :param params2: program params 2
+    :type params2: dict
     :return: None
     """
-    timer_func(**main_params)
+    timer_func(**params1)
     _ = input(NEXT_PROGRAM_MESSAGE.format("Break"))
-    timer_func(**break_params)
+    timer_func(**params2)
 
 
 def run_timer(args):
