@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `short-break` program duration changed from `10 minutes` to `5 minutes`
 - `long-break` program duration changed from `30 minutes` to `15 minutes`
 - `pomodoro` program updated
+- `pomodoro_timer` function modified
+- `load_params` function modified
 - `README.md` updated
 ### Removed
 - `animedoro_timer` function
