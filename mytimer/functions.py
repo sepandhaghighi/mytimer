@@ -407,16 +407,16 @@ def pomodoro_timer(timer_func, work_params, long_break_params, short_break_param
     :type short_break_params: dict
     :return: None
     """
+    h_shift = work_params["h_shift"]
     for index in range(4):
         work_params["message"] += " {0}/{1}".format(index + 1, 4)
         timer_func(**work_params)
         if index == 3:
             break
-        _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
+        print_message(message=NEXT_PROGRAM_MESSAGE.format("Short break"), h_shift=h_shift, confirm=True)
         timer_func(**short_break_params)
-        _ = input(NEXT_PROGRAM_MESSAGE.format(
-            "Work {0}/{1}".format(index + 2, 4)))
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Long break"))
+        print_message(message=NEXT_PROGRAM_MESSAGE.format("Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format("Long break"), h_shift=h_shift, confirm=True)
     timer_func(**long_break_params)
 
 
