@@ -438,7 +438,11 @@ def run_timer(args):
     elif args.program == "pomodoro":
         short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
         long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
-        pomodoro_timer(timer_func, work_params=params, long_break_params=long_break_params, short_break_params=short_break_params)
+        pomodoro_timer(
+            timer_func,
+            work_params=params,
+            long_break_params=long_break_params,
+            short_break_params=short_break_params)
     elif args.program in ["52-17", "112-26", "animedoro"]:
         break_params = load_params(args, is_break=True)
         two_step_timer(timer_func, params1=params, params2=break_params)
