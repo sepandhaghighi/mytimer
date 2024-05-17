@@ -13,6 +13,7 @@ from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
+
 def print_message(message, v_shift=0, h_shift=0, confirm=False):
     """
     Print message.
@@ -416,7 +417,8 @@ def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
             break
         print_message(message=NEXT_PROGRAM_MESSAGE.format("Short break"), h_shift=h_shift, confirm=True)
         timer_func(**short_break_params)
-        print_message(message=NEXT_PROGRAM_MESSAGE.format("Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
+        print_message(message=NEXT_PROGRAM_MESSAGE.format(
+            "Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
     print_message(message=NEXT_PROGRAM_MESSAGE.format("Long break"), h_shift=h_shift, confirm=True)
     timer_func(**long_break_params)
 
