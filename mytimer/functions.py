@@ -432,8 +432,9 @@ def two_step_timer(timer_func, params1, params2):
     :type params2: dict
     :return: None
     """
+    h_shift = params1["h_shift"]
     timer_func(**params1)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Break"))
+    print_message(message=NEXT_PROGRAM_MESSAGE.format("Break"), h_shift=h_shift, confirm=True)
     timer_func(**params2)
 
 
