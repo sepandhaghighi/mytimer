@@ -14,6 +14,27 @@ from mytimer.params import NEXT_PROGRAM_MESSAGE
 from art import tprint
 
 
+def print_message(message, v_shift=0, h_shift=0, confirm=False):
+    """
+    Print message.
+
+    :param message: message text
+    :type message: str
+    :param v_shift: vertical shift
+    :type v_shift: int
+    :param h_shift: horizontal shift
+    :type h_shift: int
+    :param confirm: confirm flag
+    :type confirm: bool
+    :return: None
+    """
+    func = print
+    if confirm:
+        func = input
+    print('\n' * v_shift, end='')
+    func(h_shift * " " + message)
+
+
 def load_program_params(program_name, is_break=False):
     """
     Load program/break params.
@@ -82,17 +103,23 @@ def check_null_time(args):
     return True
 
 
-def load_params(args):
+def load_params(args, program=None, is_break=False):
     """
     Load params.
 
     :param args: input arguments
     :type args: argparse.Namespace
+    :param program: program name
+    :type program: str
+    :param is_break: break flag
+    :type is_break: bool
     :return: params as dict
     """
     params = DEFAULT_PARAMS.copy()
-    if args.program:
-        params = load_program_params(args.program)
+    if program is not None:
+        params = load_program_params(program, is_break=is_break)
+    elif args.program:
+        params = load_program_params(args.program, is_break=is_break)
     for item in params:
         if getattr(args, item) is not None:
             if item not in TIME_ELEMENTS:
@@ -367,48 +394,51 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-def pomodoro_timer(timer_func, **params):
+def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
     """
     Pomodoro timer function.
 
     :param timer_func: timer function
     :type timer_func: function
-    :param params: counter parameters
+    :param params: program params
     :type params: dict
+    :param long_break_params: long break params
+    :type long_break_params: dict
+    :param short_break_params: short break params
+    :type short_break_params: dict
     :return: None
     """
-    short_break_params = load_program_params("short-break")
-    long_break_params = load_program_params("long-break")
+    h_shift = params["h_shift"]
     for index in range(4):
         work_params = params.copy()
         work_params["message"] += " {0}/{1}".format(index + 1, 4)
         timer_func(**work_params)
         if index == 3:
             break
-        _ = input(NEXT_PROGRAM_MESSAGE.format("Short break"))
+        print_message(message=NEXT_PROGRAM_MESSAGE.format("Short break"), h_shift=h_shift, confirm=True)
         timer_func(**short_break_params)
-        _ = input(NEXT_PROGRAM_MESSAGE.format(
-            "Work {0}/{1}".format(index + 2, 4)))
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Long break"))
+        print_message(message=NEXT_PROGRAM_MESSAGE.format(
+            "Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format("Long break"), h_shift=h_shift, confirm=True)
     timer_func(**long_break_params)
 
 
-def two_step_timer(timer_func, program, **params):
+def two_step_timer(timer_func, params1, params2):
     """
     Two step timer function.
 
     :param timer_func: timer function
     :type timer_func: function
-    :param program: program name
-    :type program: str
-    :param params: counter parameters
-    :type params: dict
+    :param params1: program-1 params
+    :type params1: dict
+    :param params2: program-2 params
+    :type params2: dict
     :return: None
     """
-    break_params = load_program_params(program, is_break=True)
-    timer_func(**params)
-    _ = input(NEXT_PROGRAM_MESSAGE.format("Break"))
-    timer_func(**break_params)
+    h_shift = params1["h_shift"]
+    timer_func(**params1)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format("Break"), h_shift=h_shift, confirm=True)
+    timer_func(**params2)
 
 
 def run_timer(args):
@@ -430,8 +460,15 @@ def run_timer(args):
     elif args.programs_list:
         show_programs_list()
     elif args.program == "pomodoro":
-        pomodoro_timer(timer_func, **params)
+        short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
+        long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
+        pomodoro_timer(
+            timer_func,
+            params=params,
+            long_break_params=long_break_params,
+            short_break_params=short_break_params)
     elif args.program in ["52-17", "112-26", "animedoro"]:
-        two_step_timer(timer_func, args.program, **params)
+        break_params = load_params(args, is_break=True)
+        two_step_timer(timer_func, params1=params, params2=break_params)
     else:
         timer_func(**params)
