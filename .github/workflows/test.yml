@@ -31,19 +31,19 @@ jobs:
         python -m mytimer --minute=1 --second=1 --message="Test Message"
     - name: Run2
       run: |
-        python -m mytimer --minute=0 --second=10 --countdown
+        python -m mytimer --minute=0 --second=3 --countdown
     - name: Run3
       run: |
-        mytimer --minute=0 --second=10 --countup --alarm --face=4
+        mytimer --minute=0 --second=3 --countup --alarm --face=4
     - name: Run4
       run: |
         mytimer --program=poached-egg
     - name: Run5
       run: |
-        mytimer --minute=0 --second=10 --countup --alarm --face=4 --tone=6
+        mytimer --minute=0 --second=3 --countup --alarm --face=4 --tone=6
     - name: Run6
       run: |
-        mytimer --minute=0 --second=5 --countdown --alarm --face=3 --tone=2 --alarm-repeat=5
+        mytimer --minute=0 --second=3 --countdown --alarm --face=3 --tone=2 --alarm-repeat=5
     - name: Run7
       run: |
         mytimer --programs-list
@@ -52,7 +52,7 @@ jobs:
         mytimer --faces-list
     - name: Run9
       run: |
-        mytimer --minute=0 --second=5 --countdown --h-shift=10 --v-shift=12
+        mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12
     - name: Install dev-requirements
       run: |
         python otherfiles/requirements-splitter.py
@@ -69,9 +69,9 @@ jobs:
       if: matrix.python-version == 3.8
     - name: Accuracy (Windows)
       run: |
-        Measure-Command {mytimer --minute=1 --second=40}
+        Measure-Command {mytimer --minute=0 --second=40}
       if: matrix.os == 'windows-2022'
     - name: Accuracy (Ubuntu / macOS)
       run: |
-        time mytimer --minute=1 --second=40
+        time mytimer --minute=0 --second=40
       if: matrix.os != 'windows-2022'
