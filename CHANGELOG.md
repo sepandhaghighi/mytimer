@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `print_message` function
 - `SECURITY.md`
 ### Changed
+- Test system modified
 - `nava` added to `requirements.txt`
 - Sound playing system updated
 - Python 3.5 dropped
