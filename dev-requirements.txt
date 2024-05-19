@@ -1,5 +1,5 @@
 nava==0.5
-art==6.1
+art==6.2
 setuptools>=40.8.0
 vulture>=1.0
 bandit>=1.5.1
