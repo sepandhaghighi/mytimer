@@ -36,6 +36,7 @@ def main():
     parser.add_argument('--alarm-repeat', help='alarm repeat', type=int)
     parser.add_argument('--v-shift', help='vertical shift', type=int)
     parser.add_argument('--h-shift', help='horizontal shift', type=int)
+    parser.add_argument('--repeat', help='number of repeats', type=int, default=1)
     parser.add_argument(
         '--countdown',
         help='countdown timer',
