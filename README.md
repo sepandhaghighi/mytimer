@@ -165,9 +165,9 @@ mytimer --minute=7 --second=30 --message="Test message"
 ### Repeat
 
 ```console
-mytimer --repeat 3 --second 4
+mytimer --repeat=3 --second=4
 ```
-* Use `--repeat -1` for infinite loop
+* Use `--repeat=-1` for infinite loop
 
 <div align="center">
 
