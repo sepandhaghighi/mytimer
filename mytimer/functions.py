@@ -476,11 +476,12 @@ def run_timer(args):
             else:
                 timer_func(**params)
 
-            end_round_message = END_ROUND_MESSAGE.format(f'{timer_round + 1}/{args.repeat}')
+            end_round_message = END_ROUND_MESSAGE.format("{}/{}".format(timer_round + 1, args.repeat))
             if args.repeat == -1:
-                end_round_message = END_ROUND_MESSAGE.format(f'{timer_round + 1}')
-            print_message(
-                message=end_round_message,
-                h_shift=params["h_shift"],
-                confirm=True)
+                end_round_message = END_ROUND_MESSAGE.format(timer_round + 1)
+            if timer_round < args.repeat - 1 or args.repeat == -1:
+                print_message(
+                    message=end_round_message,
+                    h_shift=params["h_shift"],
+                    confirm=True)
             timer_round += 1
