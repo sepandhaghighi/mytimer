@@ -10,7 +10,7 @@ from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
-from mytimer.params import NEXT_PROGRAM_MESSAGE
+from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from art import tprint
 
 
@@ -459,16 +459,31 @@ def run_timer(args):
         show_faces_list()
     elif args.programs_list:
         show_programs_list()
-    elif args.program == "pomodoro":
-        short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
-        long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
-        pomodoro_timer(
-            timer_func,
-            params=params,
-            long_break_params=long_break_params,
-            short_break_params=short_break_params)
-    elif args.program in ["52-17", "112-26", "animedoro"]:
-        break_params = load_params(args, is_break=True)
-        two_step_timer(timer_func, params1=params, params2=break_params)
     else:
-        timer_func(**params)
+        timer_round = 0
+        while timer_round < args.repeat or args.repeat == -1:
+            if args.program == "pomodoro":
+                short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
+                long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
+                pomodoro_timer(
+                    timer_func,
+                    params=params,
+                    long_break_params=long_break_params,
+                    short_break_params=short_break_params)
+            elif args.program in ["52-17", "112-26", "animedoro"]:
+                break_params = load_params(args, is_break=True)
+                two_step_timer(timer_func, params1=params, params2=break_params)
+            else:
+                timer_func(**params)
+
+            if timer_round < args.repeat - 1:
+                print_message(
+                    message=END_ROUND_MESSAGE.format(timer_round + 1, args.repeat),
+                    h_shift=params["h_shift"],
+                    confirm=True)
+            elif args.repeat == -1:
+                print_message(
+                    message="",
+                    h_shift=params["h_shift"],
+                    confirm=True)
+            timer_round += 1
