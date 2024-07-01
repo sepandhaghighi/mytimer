@@ -100,9 +100,15 @@
 		<td>>=0.9</td>
 	</tr>
 	<tr align="center">
+		<td>Medium break</td>
+		<td><code>mid-break</code></td>
+		<td>00:15:00</td>
+		<td>>=1.4</td>
+	</tr>
+	<tr align="center">
 		<td>Long break</td>
 		<td><code>long-break</code></td>
-		<td>00:15:00</td>
+		<td>00:30:00</td>
 		<td>>=0.9</td>
 	</tr>
 	<tr align="center">

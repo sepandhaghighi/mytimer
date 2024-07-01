@@ -1,6 +1,6 @@
 # MyTimer Release Instructions
 
-#### Last Update: 2024-04-22
+**Last Update: 2024-04-22**
 
 1. Create the `release` branch under `dev`
 2. Update all version tags
