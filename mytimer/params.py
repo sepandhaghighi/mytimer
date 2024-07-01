@@ -193,11 +193,17 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Short break (5 mins)",
     },
-    "long-break": {
+    "mid-break": {
         "hour": 0,
         "minute": 15,
         "second": 0,
-        "message": "Long break (15 mins)",
+        "message": "Medium break (15 mins)",
+    },
+    "long-break": {
+        "hour": 0,
+        "minute": 30,
+        "second": 0,
+        "message": "Long break (30 mins)",
     },
     "noodle": {
         "hour": 0,
