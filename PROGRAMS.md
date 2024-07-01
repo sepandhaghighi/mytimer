@@ -99,7 +99,7 @@
 		<td>00:05:00</td>
 		<td>>=0.9</td>
 	</tr>
-    <tr align="center">
+	<tr align="center">
 		<td>Medium break</td>
 		<td><code>mid-break</code></td>
 		<td>00:15:00</td>
