@@ -477,7 +477,7 @@ def run_timer(args):
                 timer_func(**params)
             end_round_message = END_ROUND_MESSAGE.format("{0}/{1}".format(timer_round, args.repeat))
             if args.repeat == -1:
-                end_round_message = END_ROUND_MESSAGE.format.format(timer_round)
+                end_round_message = END_ROUND_MESSAGE.format(timer_round)
             if timer_round < args.repeat or args.repeat == -1:
                 print_message(
                     message=end_round_message,
