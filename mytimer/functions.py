@@ -475,15 +475,12 @@ def run_timer(args):
                 two_step_timer(timer_func, params1=params, params2=break_params)
             else:
                 timer_func(**params)
-
-            if timer_round < args.repeat - 1:
+            end_round_message = END_ROUND_MESSAGE.format("{0}/{1}".format(timer_round + 1, args.repeat))
+            if args.repeat == -1:
+                end_round_message = END_ROUND_MESSAGE.format.format(timer_round + 1)
+            if timer_round < args.repeat - 1 or args.repeat == -1:
                 print_message(
-                    message=END_ROUND_MESSAGE.format(timer_round + 1, args.repeat),
-                    h_shift=params["h_shift"],
-                    confirm=True)
-            elif args.repeat == -1:
-                print_message(
-                    message="",
+                    message=end_round_message,
                     h_shift=params["h_shift"],
                     confirm=True)
             timer_round += 1
