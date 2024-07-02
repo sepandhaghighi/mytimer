@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--repeat` argument
 ### Changed
 - `long-break` program duration changed from `15 minutes` to `30 minutes`
+- `README.md` updated
 ## [1.3] - 2024-05-23
 ### Added
 - 1 new program

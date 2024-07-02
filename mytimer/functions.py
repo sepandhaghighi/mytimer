@@ -460,8 +460,8 @@ def run_timer(args):
     elif args.programs_list:
         show_programs_list()
     else:
-        timer_round = 0
-        while timer_round < args.repeat or args.repeat == -1:
+        timer_round = 1
+        while timer_round <= args.repeat or args.repeat == -1:
             if args.program == "pomodoro":
                 short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
                 long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
@@ -475,15 +475,12 @@ def run_timer(args):
                 two_step_timer(timer_func, params1=params, params2=break_params)
             else:
                 timer_func(**params)
-
-            if timer_round < args.repeat - 1:
+            end_round_message = END_ROUND_MESSAGE.format("{0}/{1}".format(timer_round, args.repeat))
+            if args.repeat == -1:
+                end_round_message = END_ROUND_MESSAGE.format(timer_round)
+            if timer_round < args.repeat or args.repeat == -1:
                 print_message(
-                    message=END_ROUND_MESSAGE.format(timer_round + 1, args.repeat),
-                    h_shift=params["h_shift"],
-                    confirm=True)
-            elif args.repeat == -1:
-                print_message(
-                    message="",
+                    message=end_round_message,
                     h_shift=params["h_shift"],
                     confirm=True)
             timer_round += 1

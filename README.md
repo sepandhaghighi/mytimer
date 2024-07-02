@@ -101,7 +101,16 @@ mytimer --minute=7 --second=30 --countdown
 
 ```console
 mytimer --minute=7 --second=30 --countup
-```		
+```	
+
+### Repeat
+
+⚠️ The default value is `1`
+
+```console
+mytimer --repeat=3 --second=4
+```
+* Use `--repeat=-1` for infinite loop
 
 ### Alarm
 
@@ -161,15 +170,6 @@ mytimer --program=black-tea
 ```console
 mytimer --minute=7 --second=30 --message="Test message"
 ```
-
-### Repeat
-
-⚠️ The default value is `1`
-
-```console
-mytimer --repeat=3 --second=4
-```
-* Use `--repeat=-1` for infinite loop
 
 <div align="center">
 
