@@ -151,7 +151,8 @@ def input_handler(func):
             tone,
             alarm_repeat,
             v_shift,
-            h_shift):
+            h_shift,
+            sign):
         """
         Inner function.
 
@@ -175,6 +176,8 @@ def input_handler(func):
         :type v_shift: int
         :param h_shift: horizontal shift
         :type h_shift: int
+        :param sign: timer sign
+        :type sign: str
         :return: None
         """
         message = message.strip()
@@ -204,7 +207,8 @@ def input_handler(func):
                 tone,
                 alarm_repeat,
                 v_shift,
-                h_shift)
+                h_shift,
+                sign)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
