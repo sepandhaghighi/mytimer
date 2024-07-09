@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, TONES_MAP
-from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO
+from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO, SIGNS_LIST
 from mytimer.functions import run_timer
 import argparse
 
@@ -33,6 +33,11 @@ def main():
         help='program',
         type=str,
         choices=sorted(PROGRAMS_MAP))
+    parser.add_argument(
+        '--sign',
+        help='timer sign',
+        type=str,
+        choices=SIGNS_LIST)
     parser.add_argument('--alarm-repeat', help='alarm repeat', type=int)
     parser.add_argument('--v-shift', help='vertical shift', type=int)
     parser.add_argument('--h-shift', help='horizontal shift', type=int)
