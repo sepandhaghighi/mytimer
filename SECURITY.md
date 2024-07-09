@@ -1,13 +1,13 @@
-# Security policy
+# Security Policy
 
-## Supported versions
+## Supported Versions
 
 | Version       | Supported          |
 | ------------- | ------------------ |
 | 1.3           | :white_check_mark: |
 | < 1.3         | :x:                |
 
-## Reporting a vulnerability
+## Reporting a Vulnerability
 
 Please report security vulnerabilities by email to [me@sepand.tech](mailto:me@sepand.tech "me@sepand.tech").
 
