@@ -155,6 +155,14 @@ mytimer --minute=7 --second=30 --face=3
 mytimer --v-shift=20 --h-shift=30
 ```
 
+### Timer Sign
+
+⚠️ Valid choices: [`""`, `"+"`, `"-"`]
+
+```console
+mytimer --sign="+"
+```
+
 
 ### Program
 
