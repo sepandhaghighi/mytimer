@@ -9,11 +9,13 @@ EXIT_MESSAGE = "See you. Bye!"
 END_ROUND_MESSAGE = "Round {0} done! Press `Enter` to continue..."
 NEXT_PROGRAM_MESSAGE = "Press `Enter` to continue (Next: {0})"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
-TIME_PRINT_TEMPLATE = "{0:02} : {1:02} : {2:02}"
+TIME_PRINT_TEMPLATE = "{0}{1:02} : {2:02} : {3:02}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
 INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
+
+SIGNS_LIST = ["", "+", "-"]
 
 TONES_MAP = {
     1: '1.wav',
@@ -67,6 +69,7 @@ DEFAULT_PARAMS = {
     "message": "",
     "v_shift": 0,
     "h_shift": 0,
+    "sign": ""
 }
 
 PROGRAMS_DEFAULTS = {

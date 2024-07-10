@@ -147,12 +147,20 @@ mytimer --minute=7 --second=30 --face=3
 * `mytimer --faces-list`
 
 
-### Vertical/Horizontal shift
+### Vertical/Horizontal Shift
 
 ⚠️ The vertical and horizontal shift both have default values of `0`
 
 ```console
 mytimer --v-shift=20 --h-shift=30
+```
+
+### Timer Sign
+
+⚠️ Valid choices: [`""`, `"+"`, `"-"`]
+
+```console
+mytimer --sign="+"
 ```
 
 
@@ -202,13 +210,13 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>7- <a href="https://ankushkun.github.io/animedoro-timer/Animedoro/">AnimeDoro Timer</a></blockquote>
 
-## Show your support
+## Show Your Support
 								
-<h3>Star this repo</h3>					
+<h3>Star This Repo</h3>					
 
 Give a ⭐️ if this project helped you!
 
-<h3>Donate to our project</h3>	
+<h3>Donate to Our Project</h3>	
 
 <h4>Bitcoin</h4>
 1KtNLEEeUbTEK9PdN6Ya3ZAKXaqoKUuxCy

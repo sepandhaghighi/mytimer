@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 1 new program
 	1. `mid-break`
 - `--repeat` argument
+- `--sign` argument
 ### Changed
 - `long-break` program duration changed from `15 minutes` to `30 minutes`
 - `README.md` updated

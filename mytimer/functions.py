@@ -151,7 +151,8 @@ def input_handler(func):
             tone,
             alarm_repeat,
             v_shift,
-            h_shift):
+            h_shift,
+            sign):
         """
         Inner function.
 
@@ -175,6 +176,8 @@ def input_handler(func):
         :type v_shift: int
         :param h_shift: horizontal shift
         :type h_shift: int
+        :param sign: timer sign
+        :type sign: str
         :return: None
         """
         message = message.strip()
@@ -204,7 +207,8 @@ def input_handler(func):
                 tone,
                 alarm_repeat,
                 v_shift,
-                h_shift)
+                h_shift,
+                sign)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -260,7 +264,8 @@ def countup_timer(
         tone=DEFAULT_PARAMS["tone"],
         alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
         v_shift=DEFAULT_PARAMS["v_shift"],
-        h_shift=DEFAULT_PARAMS["h_shift"]):
+        h_shift=DEFAULT_PARAMS["h_shift"],
+        sign=DEFAULT_PARAMS["sign"]):
     """
     Count-up timer function.
 
@@ -284,6 +289,8 @@ def countup_timer(
     :type v_shift: int
     :param h_shift: horizontal shift
     :type h_shift: int
+    :param sign: timer sign
+    :type sign: str
     :return: None
     """
     timer_second = 0
@@ -298,6 +305,7 @@ def countup_timer(
         print(" " * h_shift, end='')
         tprint(
             TIME_PRINT_TEMPLATE.format(
+                sign,
                 timer_hour,
                 timer_minute,
                 timer_second),
@@ -334,7 +342,8 @@ def countdown_timer(
         tone=DEFAULT_PARAMS["tone"],
         alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
         v_shift=DEFAULT_PARAMS["v_shift"],
-        h_shift=DEFAULT_PARAMS["h_shift"]):
+        h_shift=DEFAULT_PARAMS["h_shift"],
+        sign=DEFAULT_PARAMS["sign"]):
     """
     Countdown timer function.
 
@@ -358,6 +367,8 @@ def countdown_timer(
     :type v_shift: int
     :param h_shift: horizontal shift
     :type h_shift: int
+    :param sign: timer sign
+    :type sign: str
     :return: None
     """
     face = FACES_MAP[face]
@@ -369,6 +380,7 @@ def countdown_timer(
         print(" " * h_shift, end='')
         tprint(
             TIME_PRINT_TEMPLATE.format(
+                sign,
                 hour,
                 minute,
                 second),
