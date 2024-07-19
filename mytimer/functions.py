@@ -514,5 +514,5 @@ def run_timer(args):
                     h_shift=params["h_shift"],
                     confirm=True)
             timer_round += 1
-        if args.keep-on:
+        if args.keep_on:
             keep_on_timer(params)
