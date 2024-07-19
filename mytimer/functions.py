@@ -467,7 +467,7 @@ def keep_on_timer(params):
         params["sign"] = "-"
     else:
         params["sign"] = "+"
-    countdown_timer(**params)
+    countup_timer(**params)
 
 
 
