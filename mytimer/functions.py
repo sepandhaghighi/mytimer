@@ -470,7 +470,6 @@ def keep_on_timer(params):
     countup_timer(**params)
 
 
-
 def run_timer(args):
     """
     Run timer.
