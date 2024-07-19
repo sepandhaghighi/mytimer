@@ -453,6 +453,24 @@ def two_step_timer(timer_func, params1, params2):
     timer_func(**params2)
 
 
+def keep_on_timer(params):
+    """
+    Keep-on timer.
+
+    :param params: timer params
+    :type params: dict
+    :return: None
+    """
+    params["hour"] = 10000000
+    params["message"] += " (Timeout!)"
+    if params["sign"] in ["+", ""]:
+        params["sign"] = "-"
+    else:
+        params["sign"] = "+"
+    countdown_timer(**params)
+
+
+
 def run_timer(args):
     """
     Run timer.
@@ -496,3 +514,5 @@ def run_timer(args):
                     h_shift=params["h_shift"],
                     confirm=True)
             timer_round += 1
+        if args.keep-on:
+            keep_on_timer(params)
