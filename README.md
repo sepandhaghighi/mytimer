@@ -163,6 +163,14 @@ mytimer --v-shift=20 --h-shift=30
 mytimer --sign="+"
 ```
 
+### Keep on
+
+In this mode, the timer will continue running after it times out
+
+```console
+mytimer --minute=5 --keep-on
+```
+
 
 ### Program
 
