@@ -462,7 +462,7 @@ def keep_on_timer(params):
     :return: None
     """
     params["hour"] = 10000000
-    params["message"] += " (Timeout!)"
+    params["message"] += " **Timeout!"
     if params["sign"] in ["+", ""]:
         params["sign"] = "-"
     else:
