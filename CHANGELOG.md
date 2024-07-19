@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `--keep-on` argument
+### Changed
+- `README.md` updated
 ## [1.4] - 2024-07-15
 ### Added
 - 1 new program
