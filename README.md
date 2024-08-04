@@ -218,6 +218,8 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>7- <a href="https://ankushkun.github.io/animedoro-timer/Animedoro/">AnimeDoro Timer</a></blockquote>
 
+<blockquote>8- <a href="https://worldteadirectory.com/know-tea-guide-tea-steeping-time/">Know Your Tea: Your Guide to Tea Steeping Time</a></blockquote>
+
 ## Show Your Support
 								
 <h3>Star This Repo</h3>					
