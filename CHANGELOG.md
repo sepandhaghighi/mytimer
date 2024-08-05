@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
+- 2 new programs
+	1. `rooibos-tea`
+	2. `yellow-tea`
 - `--keep-on` argument
 ### Changed
 - `README.md` updated

@@ -88,6 +88,18 @@
 		<td>>=0.6</td>
 	</tr>
 	<tr align="center">
+		<td>Rooibos tea</td>
+		<td><code>rooibos-tea</code></td>
+		<td>00:06:00</td>
+		<td>>=1.5</td>
+	</tr>
+	<tr align="center">
+		<td>Yellow tea</td>
+		<td><code>yellow-tea</code></td>
+		<td>00:02:00</td>
+		<td>>=1.5</td>
+	</tr>
+	<tr align="center">
 		<td>Work</td>
 		<td><code>work</code></td>
 		<td>00:25:00</td>

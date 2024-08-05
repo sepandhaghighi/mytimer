@@ -160,6 +160,18 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "White tea (10 mins)",
     },
+    "rooibos-tea": {
+        "hour": 0,
+        "minute": 6,
+        "second": 0,
+        "message": "Rooibos tea (6 mins)",
+    },
+    "yellow-tea": {
+        "hour": 0,
+        "minute": 2,
+        "second": 0,
+        "message": "Yellow tea (2 mins)",
+    },
     "work": {
         "hour": 0,
         "minute": 25,
