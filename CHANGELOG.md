@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.5] - 2024-08-12
 ### Added
 - 2 new programs
 	1. `rooibos-tea`
@@ -149,7 +150,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Count-up mode
 - Alarm
 
-[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v1.4...dev
+[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v1.5...dev
+[1.5]: https://github.com/sepandhaghighi/mytimer/compare/v1.4...v1.5
 [1.4]: https://github.com/sepandhaghighi/mytimer/compare/v1.3...v1.4
 [1.3]: https://github.com/sepandhaghighi/mytimer/compare/v1.2...v1.3
 [1.2]: https://github.com/sepandhaghighi/mytimer/compare/v1.1...v1.2
