@@ -100,6 +100,18 @@
 		<td>>=1.5</td>
 	</tr>
 	<tr align="center">
+		<td>Purple tea</td>
+		<td><code>purple-tea</code></td>
+		<td>00:03:00</td>
+		<td>>=1.6</td>
+	</tr>
+	<tr align="center">
+		<td>Pu-erh tea</td>
+		<td><code>puer-tea</code></td>
+		<td>00:05:00</td>
+		<td>>=1.6</td>
+	</tr>
+	<tr align="center">
 		<td>Work</td>
 		<td><code>work</code></td>
 		<td>00:25:00</td>

@@ -176,7 +176,7 @@ PROGRAMS_MAP = {
         "hour": 0,
         "minute": 5,
         "second": 0,
-        "message": "Yellow tea (5 mins, 85-100 C)",
+        "message": "Pu-erh tea (5 mins, 85-100 C)",
     },
     "purple-tea": {
         "hour": 0,
