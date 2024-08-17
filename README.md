@@ -220,6 +220,9 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>8- <a href="https://worldteadirectory.com/know-tea-guide-tea-steeping-time/">Know Your Tea: Your Guide to Tea Steeping Time</a></blockquote>
 
+<blockquote>9- <a href="https://artfultea.com/blogs/101/loose-leaf-tea-steep-time">How Long to Steep Tea: A Complete Guide</a></blockquote>
+
+
 ## Show Your Support
 								
 <h3>Star This Repo</h3>					

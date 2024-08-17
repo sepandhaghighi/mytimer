@@ -172,6 +172,18 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Yellow tea (2 mins, 70-85 C)",
     },
+    "puer-tea": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "message": "Pu-erh tea (5 mins, 85-100 C)",
+    },
+    "purple-tea": {
+        "hour": 0,
+        "minute": 3,
+        "second": 0,
+        "message": "Purple tea (3 mins, 80-85 C)",
+    },
     "work": {
         "hour": 0,
         "minute": 25,
