@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import datetime
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
@@ -11,6 +12,7 @@ from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
+from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from art import tprint
 
 
@@ -470,6 +472,33 @@ def keep_on_timer(params):
     countup_timer(**params)
 
 
+def set_on_timer(params):
+    """
+    Set-on timer.
+
+    :param params: timer params
+    :type params: dict
+    :return: None
+    """
+    if params["message"] == "":
+        params["message"] = SET_ON_MESSAGE.format(params["hour"], params["minute"], params["second"])
+    time_now = datetime.datetime.now()
+    time_then = datetime.datetime(
+        time_now.year,
+        time_now.month,
+        time_now.day,
+        params["hour"],
+        params["minute"],
+        params["second"])
+    if time_then < time_now:
+        time_then += datetime.timedelta(days=1)
+    time_diff = time_then - time_now
+    params["hour"] = time_diff.seconds // 3600
+    params["minute"] = time_diff.seconds % 3600 // 60
+    params["second"] = time_diff.seconds % 60
+    return params, countdown_timer
+
+
 def run_timer(args):
     """
     Run timer.
@@ -482,6 +511,8 @@ def run_timer(args):
     timer_func = countup_timer
     if args.countdown:
         timer_func = countdown_timer
+    if args.set_on:
+        params, timer_func = set_on_timer(params)
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.faces_list:
