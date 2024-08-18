@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 2 new programs
 	1. `puer-tea`
 	2. `purple-tea`
+- `--set-on` argument
 ## [1.5] - 2024-08-12
 ### Added
 - 2 new programs
