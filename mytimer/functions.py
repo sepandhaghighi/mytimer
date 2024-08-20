@@ -472,13 +472,13 @@ def keep_on_timer(params):
     countup_timer(**params)
 
 
-def set_on_timer(params):
+def update_set_on_params(params):
     """
-    Set-on timer.
+    Update set-on mode params.
 
     :param params: timer params
     :type params: dict
-    :return: None
+    :return: timer params as dict
     """
     if params["message"] == "":
         params["message"] = SET_ON_MESSAGE.format(params["hour"], params["minute"], params["second"])
@@ -496,7 +496,7 @@ def set_on_timer(params):
     params["hour"] = time_diff.seconds // 3600
     params["minute"] = time_diff.seconds % 3600 // 60
     params["second"] = time_diff.seconds % 60
-    return params, countdown_timer
+    return params
 
 
 def run_timer(args):
@@ -509,10 +509,13 @@ def run_timer(args):
     """
     params = load_params(args)
     timer_func = countup_timer
+    if args.set_on:
+        timer_func = countdown_timer
+        params = update_set_on_params(params)
     if args.countdown:
         timer_func = countdown_timer
-    if args.set_on:
-        params, timer_func = set_on_timer(params)
+    if args.countup:
+        timer_func = countup_timer
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.faces_list:
