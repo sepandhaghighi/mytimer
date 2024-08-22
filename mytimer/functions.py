@@ -129,9 +129,6 @@ def load_params(args, program=None, is_break=False):
             else:
                 if not args.program:
                     params[item] = getattr(args, item)
-    if not args.countdown:
-        if check_null_time(args) and not args.program:
-            params["hour"] = 100000000
     return params
 
 
@@ -499,6 +496,27 @@ def update_set_on_params(params):
     return params
 
 
+def select_timer_func(args, params):
+    """
+    Select timer function.
+
+    :param args: input arguments
+    :type args: argparse.Namespace
+    :param params: timer params
+    :type params: dict
+    :return: timer function, timer params
+    """
+    timer_func = countdown_timer
+    if args.countup:
+        timer_func = countup_timer
+    if args.countdown:
+        timer_func = countdown_timer
+    if not args.countdown:
+        if check_null_time(args) and not args.program:
+            params["hour"] = 100000000
+    return timer_func, params
+
+
 def run_timer(args):
     """
     Run timer.
@@ -508,14 +526,9 @@ def run_timer(args):
     :return: None
     """
     params = load_params(args)
-    timer_func = countup_timer
+    timer_func, params = select_timer_func(args, params)
     if args.set_on:
-        timer_func = countdown_timer
         params = update_set_on_params(params)
-    if args.countdown:
-        timer_func = countdown_timer
-    if args.countup:
-        timer_func = countup_timer
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.faces_list:
