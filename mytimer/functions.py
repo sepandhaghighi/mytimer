@@ -3,6 +3,7 @@
 import os
 import sys
 import time
+import datetime
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
@@ -11,6 +12,7 @@ from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
 from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
+from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from art import tprint
 
 
@@ -462,12 +464,39 @@ def keep_on_timer(params):
     :return: None
     """
     params["hour"] = 10000000
-    params["message"] += " **Timeout!"
+    params["message"] += KEEP_ON_MESSAGE
     if params["sign"] in ["+", ""]:
         params["sign"] = "-"
     else:
         params["sign"] = "+"
     countup_timer(**params)
+
+
+def update_set_on_params(params):
+    """
+    Update set-on mode params.
+
+    :param params: timer params
+    :type params: dict
+    :return: timer params as dict
+    """
+    if params["message"] == "":
+        params["message"] = SET_ON_MESSAGE.format(params["hour"], params["minute"], params["second"])
+    time_now = datetime.datetime.now()
+    time_then = datetime.datetime(
+        time_now.year,
+        time_now.month,
+        time_now.day,
+        params["hour"],
+        params["minute"],
+        params["second"])
+    if time_then < time_now:
+        time_then += datetime.timedelta(days=1)
+    time_diff = time_then - time_now
+    params["hour"] = time_diff.seconds // 3600
+    params["minute"] = time_diff.seconds % 3600 // 60
+    params["second"] = time_diff.seconds % 60
+    return params
 
 
 def run_timer(args):
@@ -480,8 +509,13 @@ def run_timer(args):
     """
     params = load_params(args)
     timer_func = countup_timer
+    if args.set_on:
+        timer_func = countdown_timer
+        params = update_set_on_params(params)
     if args.countdown:
         timer_func = countdown_timer
+    if args.countup:
+        timer_func = countup_timer
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.faces_list:

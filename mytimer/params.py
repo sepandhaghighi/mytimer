@@ -14,6 +14,8 @@ FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
 INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
+KEEP_ON_MESSAGE = " **Timeout!"
+SET_ON_MESSAGE = "Timer set for {0:02d}:{1:02d}:{2:02d}"
 
 SIGNS_LIST = ["", "+", "-"]
 
