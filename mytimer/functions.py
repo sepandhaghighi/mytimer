@@ -13,6 +13,7 @@ from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
+from mytimer.params import KEEP_ON_MAX
 from art import tprint
 
 
@@ -460,7 +461,7 @@ def keep_on_timer(params):
     :type params: dict
     :return: None
     """
-    params["hour"] = 10000000
+    params["hour"] = KEEP_ON_MAX
     params["message"] += KEEP_ON_MESSAGE
     if params["sign"] in ["+", ""]:
         params["sign"] = "-"

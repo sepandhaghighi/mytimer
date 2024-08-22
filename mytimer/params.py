@@ -16,6 +16,7 @@ TIME_ELEMENTS = ["minute", "second", "hour"]
 MESSAGE_TEMPLATE = "Message: {0}"
 KEEP_ON_MESSAGE = " **Timeout!"
 SET_ON_MESSAGE = "Timer set for {0:02d}:{1:02d}:{2:02d}"
+KEEP_ON_MAX = 10000000
 
 SIGNS_LIST = ["", "+", "-"]
 
