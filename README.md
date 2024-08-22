@@ -173,7 +173,9 @@ mytimer --minute=5 --keep-on
 
 ### Set on
 
-In this mode, the timer sets on the given time. For example, here you set a timer for `15:05`.
+⚠️ Local time
+
+In this mode, the timer sets on the given time. For example, here we set a timer for `15:05`.
 
 ```console
 mytimer --hour=15 --minute=5 --set-on
