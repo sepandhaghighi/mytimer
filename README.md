@@ -93,7 +93,7 @@ mytimer --hour=2 --minute=20
 
 ### Timer Mode
 
-⚠️ The default mode is `count-up`
+⚠️ The default mode is `countdown`
 
 ```console
 mytimer --minute=7 --second=30 --countdown
