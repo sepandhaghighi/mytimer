@@ -514,7 +514,7 @@ def select_timer_func(args, params):
         timer_func = countdown_timer
     else:
         if check_null_time(args) and not args.program:
-            params["hour"] = 100000000
+            params["hour"] = KEEP_ON_MAX
             timer_func = countup_timer
     return timer_func, params
 
