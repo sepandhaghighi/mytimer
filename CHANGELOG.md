@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 	2. `purple-tea`
 - `--set-on` argument
 ### Changed
-- Default timer mode changed from `count-up` to `countdown`
+- Default mode changed from `count-up` to `countdown`
 ## [1.5] - 2024-08-12
 ### Added
 - 2 new programs
