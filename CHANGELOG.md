@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--set-on` argument
 ### Changed
 - Default mode changed from `count-up` to `countdown`
+- `white-tea` program duration changed from `10 minutes` to `3 minutes`
 ## [1.5] - 2024-08-12
 ### Added
 - 2 new programs
