@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--set-on` argument
 ### Changed
 - Default mode changed from `count-up` to `countdown`
-- `white-tea` program duration changed from `10 minutes` to `3 minutes`
+- `white-tea` program duration changed from `10` minutes to `3` minutes
 ## [1.5] - 2024-08-12
 ### Added
 - 2 new programs
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--repeat` argument
 - `--sign` argument
 ### Changed
-- `long-break` program duration changed from `15 minutes` to `30 minutes`
+- `long-break` program duration changed from `15` minutes to `30` minutes
 - `README.md` updated
 ## [1.3] - 2024-05-23
 ### Added
@@ -43,8 +43,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `nava` added to `requirements.txt`
 - Sound playing system updated
 - Python 3.5 dropped
-- `short-break` program duration changed from `10 minutes` to `5 minutes`
-- `long-break` program duration changed from `30 minutes` to `15 minutes`
+- `short-break` program duration changed from `10` minutes to `5` minutes
+- `long-break` program duration changed from `30` minutes to `15` minutes
 - `pomodoro` program updated
 - `pomodoro_timer` function modified
 - `load_params` function modified
