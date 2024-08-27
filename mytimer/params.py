@@ -159,9 +159,9 @@ PROGRAMS_MAP = {
     },
     "white-tea": {
         "hour": 0,
-        "minute": 10,
+        "minute": 3,
         "second": 0,
-        "message": "White tea (10 mins, 70-80 C)",
+        "message": "White tea (3 mins, 70-80 C)",
     },
     "rooibos-tea": {
         "hour": 0,

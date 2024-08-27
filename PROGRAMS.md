@@ -84,7 +84,7 @@
 	<tr align="center">
 		<td>White tea</td>
 		<td><code>white-tea</code></td>
-		<td>00:10:00</td>
+		<td>00:03:00</td>
 		<td>>=0.6</td>
 	</tr>
 	<tr align="center">
