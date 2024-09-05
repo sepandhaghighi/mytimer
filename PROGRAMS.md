@@ -112,6 +112,12 @@
 		<td>>=1.6</td>
 	</tr>
 	<tr align="center">
+		<td>French press</td>
+		<td><code>french-press</code></td>
+		<td>00:04:00</td>
+		<td>>=1.7</td>
+	</tr>
+	<tr align="center">
 		<td>Work</td>
 		<td><code>work</code></td>
 		<td>00:25:00</td>
