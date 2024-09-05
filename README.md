@@ -231,6 +231,8 @@ Just fill an issue and describe it. We'll check it ASAP!
 
 <blockquote>9- <a href="https://artfultea.com/blogs/101/loose-leaf-tea-steep-time">How Long to Steep Tea: A Complete Guide</a></blockquote>
 
+<blockquote>10- <a href="https://majestycoffee.com/blogs/posts/how-long-to-steep">How Long to Steep French Press: Mastering the Perfect Brew</a></blockquote>
+
 
 ## Show Your Support
 								
