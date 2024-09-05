@@ -187,6 +187,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Purple tea (3 mins, 80-85 C)",
     },
+    "mate": {
+        "hour": 0,
+        "minute": 5,
+        "second": 0,
+        "message": "Mate (5 mins, 65-70 C)",
+    },
     "french-press": {
         "hour": 0,
         "minute": 4,
