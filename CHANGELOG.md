@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 2 new programs
 	1. `mate`
 	2. `french-press`
-- 3 new tones
+- 9 new tones
 ### Changed
 - `README.md` updated
 ## [1.6] - 2024-08-30
