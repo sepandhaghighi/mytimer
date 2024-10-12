@@ -227,6 +227,7 @@ def clear_screen():
     else:
         os.system('clear')
 
+
 def get_face(index):
     """
     Return face name.
@@ -238,7 +239,6 @@ def get_face(index):
     if index == -1:
         index = random.choice(sorted(FACES_MAP)[1:])
     return FACES_MAP[index]
-
 
 
 def get_sound_path(sound_name):
