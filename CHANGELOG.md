@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Face random mode
+- `get_face` function
+### Changed
+- `show_faces_list` function updated
+- `README.md` updated
 ## [1.7] - 2024-10-09
 ### Added
 - 2 new programs
