@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import datetime
+import random
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
@@ -226,6 +227,19 @@ def clear_screen():
     else:
         os.system('clear')
 
+def get_face(index):
+    """
+    Return face name.
+
+    :param index: face index
+    :type index: int
+    :return: face name as str
+    """
+    if index == -1:
+        index = random.choice(sorted(FACES_MAP)[1:])
+    return FACES_MAP[index]
+
+
 
 def get_sound_path(sound_name):
     """
@@ -296,7 +310,7 @@ def countup_timer(
     timer_second = 0
     timer_minute = 0
     timer_hour = 0
-    face = FACES_MAP[face]
+    face = get_face(face)
     tone = TONES_MAP[tone]
     while True:
         start = time.perf_counter()
@@ -371,7 +385,7 @@ def countdown_timer(
     :type sign: str
     :return: None
     """
-    face = FACES_MAP[face]
+    face = get_face(face)
     tone = TONES_MAP[tone]
     while True:
         start = time.perf_counter()
