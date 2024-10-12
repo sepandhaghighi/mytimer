@@ -297,4 +297,4 @@ BREAKS_MAP = {
     },
 }
 
-FACE_CHOICES = [-1] + sorted(FACES_MAP)
+FACES_LIST = [-1] + sorted(FACES_MAP)
