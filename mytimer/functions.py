@@ -87,7 +87,7 @@ def show_faces_list():
     :return: None
     """
     print("Faces list:\n")
-    for i in sorted(FACES_MAP)[1:]:
+    for i in sorted(FACES_MAP):
         print('Face {}\n'.format(i))
         tprint(FACES_LIST_EXAMPLE_MESSAGE, font=get_face(i))
         print('=' * 80)
@@ -237,7 +237,7 @@ def get_face(index):
     :return: face name as str
     """
     if index == -1:
-        index = random.choice(sorted(FACES_MAP)[1:])
+        index = random.choice(sorted(FACES_MAP))
     return FACES_MAP[index]
 
 

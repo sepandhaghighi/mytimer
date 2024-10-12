@@ -43,7 +43,6 @@ TONES_MAP = {
     20: '20.wav'}
 
 FACES_MAP = {
-    -1: 'random',
     1: 'bulbhead',
     2: 'soft',
     3: '4max',
@@ -297,3 +296,5 @@ BREAKS_MAP = {
         "message": "Pomodoro long break (15 mins)",
     },
 }
+
+FACE_CHOICES = [-1] + sorted(FACES_MAP)
