@@ -143,6 +143,7 @@ mytimer --minute=7 --second=30 --alarm --tone=2
 ```console
 mytimer --minute=7 --second=30 --face=3
 ```
+* Use `--face=-1` for random mode
 * [Faces List](https://github.com/sepandhaghighi/mytimer/blob/main/FACES.md)
 * `mytimer --faces-list`
 
