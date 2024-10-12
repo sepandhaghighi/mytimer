@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `show_faces_list` function updated
 - `README.md` updated
+- Test system modified
 ## [1.7] - 2024-10-09
 ### Added
 - 2 new programs
