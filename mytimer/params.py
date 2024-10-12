@@ -43,6 +43,7 @@ TONES_MAP = {
     20: '20.wav'}
 
 FACES_MAP = {
+    -1: 'random',
     1: 'bulbhead',
     2: 'soft',
     3: '4max',

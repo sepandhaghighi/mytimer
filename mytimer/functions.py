@@ -87,9 +87,12 @@ def show_faces_list():
     :return: None
     """
     print("Faces list:\n")
-    for i, face in sorted(FACES_MAP.items(), key=lambda item: (item[0])):
-        print('Face {}\n'.format(i))
-        tprint(FACES_LIST_EXAMPLE_MESSAGE, font=face)
+    for i in sorted(FACES_MAP):
+        if i == -1:
+            print('Face -1(random mode)\n')
+        else:
+            print('Face {}\n'.format(i))
+        tprint(FACES_LIST_EXAMPLE_MESSAGE, font=get_face(i))
         print('=' * 80)
 
 
