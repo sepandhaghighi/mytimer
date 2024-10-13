@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer main."""
-from mytimer.params import FACES_LIST, PROGRAMS_MAP, TONES_MAP
+from mytimer.params import FACES_LIST, PROGRAMS_MAP, TONES_LIST
 from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO, SIGNS_LIST
 from mytimer.functions import run_timer
 import argparse
@@ -27,7 +27,7 @@ def main():
         '--tone',
         help='alarm tone',
         type=int,
-        choices=sorted(TONES_MAP))
+        choices=TONES_LIST)
     parser.add_argument(
         '--program',
         help='program',
