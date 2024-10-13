@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - Face random mode
 - `get_face` function
+- `get_tone` function
 ### Changed
 - `show_faces_list` function updated
 - `README.md` updated
