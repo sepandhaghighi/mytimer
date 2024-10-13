@@ -296,3 +296,5 @@ BREAKS_MAP = {
         "message": "Pomodoro long break (15 mins)",
     },
 }
+
+FACES_LIST = [-1] + sorted(FACES_MAP)
