@@ -241,6 +241,19 @@ def get_face(index):
     return FACES_MAP[index]
 
 
+def get_tone(index):
+    """
+    Return tone file name.
+
+    :param index: tone index
+    :type index: int
+    :return: tone file name as str
+    """
+    if index == -1:
+        index = random.choice(sorted(TONES_MAP))
+    return TONES_MAP[index]
+
+
 def get_sound_path(sound_name):
     """
     Return sound path.
@@ -311,7 +324,7 @@ def countup_timer(
     timer_minute = 0
     timer_hour = 0
     face = get_face(face)
-    tone = TONES_MAP[tone]
+    tone = get_tone(tone)
     while True:
         start = time.perf_counter()
         clear_screen()
@@ -386,7 +399,7 @@ def countdown_timer(
     :return: None
     """
     face = get_face(face)
-    tone = TONES_MAP[tone]
+    tone = get_tone(tone)
     while True:
         start = time.perf_counter()
         clear_screen()
