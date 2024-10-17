@@ -40,7 +40,12 @@ TONES_MAP = {
     17: '17.wav',
     18: '18.wav',
     19: '19.wav',
-    20: '20.wav'}
+    20: '20.wav',
+    21: '21.wav',
+    22: '22.wav',
+    23: '23.wav',
+    24: '24.wav',
+    25: '25.wav'}
 
 FACES_MAP = {
     1: 'bulbhead',
