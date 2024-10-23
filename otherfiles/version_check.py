@@ -5,7 +5,7 @@ import sys
 import codecs
 
 Failed = 0
-VERSION = "1.7"
+VERSION = "1.8"
 
 README_ITEMS = [
     "[Version {0}](https://github.com/sepandhaghighi/mytimer/archive/v{0}.zip)",
