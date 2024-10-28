@@ -1,4 +1,4 @@
-nava==0.6
+nava==0.7
 art==6.3
 setuptools>=40.8.0
 vulture>=1.0
