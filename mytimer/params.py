@@ -20,6 +20,15 @@ KEEP_ON_MAX = 10000000
 
 SIGNS_LIST = ["", "+", "-"]
 
+MY_TIMER_OVERVIEW = '''
+MyTimer is a Python project that aims to provide a simple yet efficient timer for terminal users,
+particularly targeting the geek community.
+This project allows users to set timers directly from their command line interface,
+making it convenient for those who spend a significant amount of time working in the terminal!
+'''
+
+MY_TIMER_REPO = "Repo : https://github.com/sepandhaghighi/mytimer"
+
 TONES_MAP = {
     1: '1.wav',
     2: '2.wav',

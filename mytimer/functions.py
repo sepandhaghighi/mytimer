@@ -15,6 +15,7 @@ from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
+from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
 from art import tprint
 
 
@@ -37,6 +38,18 @@ def print_message(message, v_shift=0, h_shift=0, confirm=False):
         func = input
     print('\n' * v_shift, end='')
     func(h_shift * " " + message)
+
+
+def mytimer_info():
+    """
+    Print mytimer details.
+
+    :return: None
+    """
+    tprint("MyTimer")
+    tprint("V:" + MY_TIMER_VERSION)
+    print(MY_TIMER_OVERVIEW)
+    print(MY_TIMER_REPO)
 
 
 def load_program_params(program_name, is_break=False):
@@ -560,6 +573,8 @@ def run_timer(args):
         params = update_set_on_params(params)
     if args.version:
         print(MY_TIMER_VERSION)
+    elif args.info:
+        mytimer_info()
     elif args.faces_list:
         show_faces_list()
     elif args.programs_list:
