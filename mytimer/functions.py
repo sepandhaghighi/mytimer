@@ -46,7 +46,7 @@ def mytimer_info():
 
     :return: None
     """
-    tprint("mytimer")
+    tprint("MyTimer")
     tprint("V:" + MY_TIMER_VERSION)
     print(MY_TIMER_OVERVIEW)
     print(MY_TIMER_REPO)
