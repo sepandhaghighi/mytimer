@@ -53,6 +53,7 @@ def main():
     parser.add_argument('--set-on', help='set-on', nargs="?", const=1)
     parser.add_argument('--faces-list', help='faces list', nargs="?", const=1)
     parser.add_argument('--version', help='version', nargs="?", const=1)
+    parser.add_argument('--info', help='info', nargs="?", const=1)
     parser.add_argument(
         '--programs-list',
         help='programs list',
