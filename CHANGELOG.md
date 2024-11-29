@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--info` argument
 ### Changed
 - GitHub actions are limited to the `dev` and `main` branches
+- `README.md` updated
 ## [1.8] - 2024-10-23
 ### Added
 - 5 new tones
