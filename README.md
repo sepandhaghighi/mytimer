@@ -2,7 +2,7 @@
 <img src="https://github.com/sepandhaghighi/mytimer/raw/main/otherfiles/logo.png" width="500">
 <h1>MyTimer: A Geeky Timer for Terminal Enthusiasts</h1>
 <br/>
-<a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version" height="18"></a>
+<a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version"></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
 </div>			
 				
