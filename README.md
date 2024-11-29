@@ -65,7 +65,7 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 
 ## Usage
 
-⚠️ You can use `mytimer` or `python -m mytimer` to run this program
+ℹ️ You can use `mytimer` or `python -m mytimer` to run this program
 
 ### Version
 
@@ -75,7 +75,7 @@ mytimer --version
 
 ### Basic
 
-⚠️ Press `Ctrl + C` to exit
+ℹ️ Press `Ctrl + C` to exit
 
 ```console
 mytimer
@@ -93,7 +93,7 @@ mytimer --hour=2 --minute=20
 
 ### Timer Mode
 
-⚠️ The default mode is `countdown`
+ℹ️ The default mode is `countdown`
 
 ```console
 mytimer --minute=7 --second=30 --countdown
@@ -105,7 +105,7 @@ mytimer --minute=7 --second=30 --countup
 
 ### Repeat
 
-⚠️ The default value is `1`
+ℹ️ The default value is `1`
 
 ```console
 mytimer --repeat=3 --second=4
@@ -122,7 +122,7 @@ mytimer --minute=7 --second=30 --alarm
 
 ### Alarm Repeat
 
-⚠️ The default value is `1`
+ℹ️ The default value is `1`
 
 ```console
 mytimer --minute=7 --second=30 --alarm --alarm-repeat=5
@@ -130,7 +130,7 @@ mytimer --minute=7 --second=30 --alarm --alarm-repeat=5
 
 ### Tone
 
-⚠️ The default tone is `1`
+ℹ️ The default tone is `1`
 
 ```console
 mytimer --minute=7 --second=30 --alarm --tone=2
@@ -151,7 +151,7 @@ mytimer --minute=7 --second=30 --face=3
 
 ### Vertical/Horizontal Shift
 
-⚠️ The vertical and horizontal shift both have default values of `0`
+ℹ️ The vertical and horizontal shift both have default values of `0`
 
 ```console
 mytimer --v-shift=20 --h-shift=30
@@ -159,7 +159,7 @@ mytimer --v-shift=20 --h-shift=30
 
 ### Timer Sign
 
-⚠️ Valid choices: [`""`, `"+"`, `"-"`]
+ℹ️ Valid choices: [`""`, `"+"`, `"-"`]
 
 ```console
 mytimer --sign="+"
