@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `--info` argument
+- `--hide-second` argument
 ### Changed
 - GitHub actions are limited to the `dev` and `main` branches
 - `README.md` updated
