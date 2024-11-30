@@ -10,7 +10,7 @@ from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
-from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
+from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_HMS_TEMPLATE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
@@ -346,14 +346,23 @@ def countup_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        tprint(
-            TIME_PRINT_TEMPLATE.format(
-                sign,
-                timer_hour,
-                timer_minute,
-                timer_second),
-            font=face,
-            sep="\n" + " " * h_shift)
+        if hide_second:
+            tprint(
+                TIME_HM_TEMPLATE.format(
+                    sign,
+                    timer_hour,
+                    timer_minute),
+                font=face,
+                sep="\n" + " " * h_shift)
+        else:
+            tprint(
+                TIME_HMS_TEMPLATE.format(
+                    sign,
+                    timer_hour,
+                    timer_minute,
+                    timer_second),
+                font=face,
+                sep="\n" + " " * h_shift)
         print(" " * h_shift, end='')
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
@@ -425,7 +434,7 @@ def countdown_timer(
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
         tprint(
-            TIME_PRINT_TEMPLATE.format(
+            TIME_HMS_TEMPLATE.format(
                 sign,
                 hour,
                 minute,
