@@ -89,6 +89,7 @@ DEFAULT_PARAMS = {
     "minute": 0,
     "second": 0,
     "alarm": 0,
+    "hide_second": 0,
     "alarm_repeat": 1,
     "face": 1,
     "tone": 1,
