@@ -10,12 +10,13 @@ from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
-from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_PRINT_TEMPLATE
+from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
 from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
+from mytimer.params import TIME_HMS_TEMPLATE, TIME_HM_TEMPLATE
 from art import tprint
 
 
@@ -166,7 +167,8 @@ def input_handler(func):
             alarm_repeat,
             v_shift,
             h_shift,
-            sign):
+            sign,
+            hide_second):
         """
         Inner function.
 
@@ -192,6 +194,8 @@ def input_handler(func):
         :type h_shift: int
         :param sign: timer sign
         :type sign: str
+        :param hide_second: hide second flag
+        :type hide_second: bool
         :return: None
         """
         message = message.strip()
@@ -222,7 +226,8 @@ def input_handler(func):
                 alarm_repeat,
                 v_shift,
                 h_shift,
-                sign)
+                sign,
+                hide_second)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -305,7 +310,8 @@ def countup_timer(
         alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
         v_shift=DEFAULT_PARAMS["v_shift"],
         h_shift=DEFAULT_PARAMS["h_shift"],
-        sign=DEFAULT_PARAMS["sign"]):
+        sign=DEFAULT_PARAMS["sign"],
+        hide_second=DEFAULT_PARAMS["hide_second"]):
     """
     Count-up timer function.
 
@@ -331,6 +337,8 @@ def countup_timer(
     :type h_shift: int
     :param sign: timer sign
     :type sign: str
+    :param hide_second: hide second flag
+    :type hide_second: bool
     :return: None
     """
     timer_second = 0
@@ -343,14 +351,23 @@ def countup_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        tprint(
-            TIME_PRINT_TEMPLATE.format(
-                sign,
-                timer_hour,
-                timer_minute,
-                timer_second),
-            font=face,
-            sep="\n" + " " * h_shift)
+        if hide_second:
+            tprint(
+                TIME_HM_TEMPLATE.format(
+                    sign,
+                    timer_hour,
+                    timer_minute),
+                font=face,
+                sep="\n" + " " * h_shift)
+        else:
+            tprint(
+                TIME_HMS_TEMPLATE.format(
+                    sign,
+                    timer_hour,
+                    timer_minute,
+                    timer_second),
+                font=face,
+                sep="\n" + " " * h_shift)
         print(" " * h_shift, end='')
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
@@ -383,7 +400,8 @@ def countdown_timer(
         alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
         v_shift=DEFAULT_PARAMS["v_shift"],
         h_shift=DEFAULT_PARAMS["h_shift"],
-        sign=DEFAULT_PARAMS["sign"]):
+        sign=DEFAULT_PARAMS["sign"],
+        hide_second=DEFAULT_PARAMS["hide_second"]):
     """
     Countdown timer function.
 
@@ -409,6 +427,8 @@ def countdown_timer(
     :type h_shift: int
     :param sign: timer sign
     :type sign: str
+    :param hide_second: hide second flag
+    :type hide_second: bool
     :return: None
     """
     face = get_face(face)
@@ -418,14 +438,23 @@ def countdown_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        tprint(
-            TIME_PRINT_TEMPLATE.format(
-                sign,
-                hour,
-                minute,
-                second),
-            font=face,
-            sep="\n" + " " * h_shift)
+        if hide_second:
+            tprint(
+                TIME_HM_TEMPLATE.format(
+                    sign,
+                    hour,
+                    minute),
+                font=face,
+                sep="\n" + " " * h_shift)
+        else:
+            tprint(
+                TIME_HMS_TEMPLATE.format(
+                    sign,
+                    hour,
+                    minute,
+                    second),
+                font=face,
+                sep="\n" + " " * h_shift)
         print(" " * h_shift, end='')
         print(message)
         second -= 1

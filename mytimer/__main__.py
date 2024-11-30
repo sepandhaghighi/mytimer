@@ -54,6 +54,7 @@ def main():
     parser.add_argument('--faces-list', help='faces list', nargs="?", const=1)
     parser.add_argument('--version', help='version', nargs="?", const=1)
     parser.add_argument('--info', help='info', nargs="?", const=1)
+    parser.add_argument('--hide-second', help='hide second', nargs="?", const=1)
     parser.add_argument(
         '--programs-list',
         help='programs list',
