@@ -10,12 +10,13 @@ from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
 from mytimer.params import MY_TIMER_VERSION, PROGRAMS_LIST_TEMPLATE
-from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE, TIME_HMS_TEMPLATE
+from mytimer.params import FACES_LIST_EXAMPLE_MESSAGE
 from mytimer.params import DEFAULT_PARAMS, PROGRAMS_DEFAULTS, BREAKS_DEFAULTS
 from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
 from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
+from mytimer.params import TIME_HMS_TEMPLATE, TIME_HM_TEMPLATE
 from art import tprint
 
 
@@ -439,7 +440,7 @@ def countdown_timer(
         print(" " * h_shift, end='')
         if hide_second:
             tprint(
-                TIME_HMS_TEMPLATE.format(
+                TIME_HM_TEMPLATE.format(
                     sign,
                     hour,
                     minute),
