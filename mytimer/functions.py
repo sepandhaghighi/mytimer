@@ -433,14 +433,23 @@ def countdown_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        tprint(
-            TIME_HMS_TEMPLATE.format(
-                sign,
-                hour,
-                minute,
-                second),
-            font=face,
-            sep="\n" + " " * h_shift)
+        if hide_second:
+            tprint(
+                TIME_HMS_TEMPLATE.format(
+                    sign,
+                    hour,
+                    minute),
+                font=face,
+                sep="\n" + " " * h_shift)
+        else:
+            tprint(
+                TIME_HMS_TEMPLATE.format(
+                    sign,
+                    hour,
+                    minute,
+                    second),
+                font=face,
+                sep="\n" + " " * h_shift)
         print(" " * h_shift, end='')
         print(message)
         second -= 1
