@@ -166,7 +166,8 @@ def input_handler(func):
             alarm_repeat,
             v_shift,
             h_shift,
-            sign):
+            sign,
+            hide_second):
         """
         Inner function.
 
@@ -192,6 +193,8 @@ def input_handler(func):
         :type h_shift: int
         :param sign: timer sign
         :type sign: str
+        :param hide_second: hide second flag
+        :type hide_second: bool
         :return: None
         """
         message = message.strip()
@@ -222,7 +225,8 @@ def input_handler(func):
                 alarm_repeat,
                 v_shift,
                 h_shift,
-                sign)
+                sign,
+                hide_second)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
