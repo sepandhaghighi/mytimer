@@ -305,7 +305,8 @@ def countup_timer(
         alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
         v_shift=DEFAULT_PARAMS["v_shift"],
         h_shift=DEFAULT_PARAMS["h_shift"],
-        sign=DEFAULT_PARAMS["sign"]):
+        sign=DEFAULT_PARAMS["sign"],
+        hide_second=DEFAULT_PARAMS["hide_second"]):
     """
     Count-up timer function.
 
@@ -331,6 +332,8 @@ def countup_timer(
     :type h_shift: int
     :param sign: timer sign
     :type sign: str
+    :param hide_second: hide second flag
+    :type hide_second: bool
     :return: None
     """
     timer_second = 0
@@ -383,7 +386,8 @@ def countdown_timer(
         alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
         v_shift=DEFAULT_PARAMS["v_shift"],
         h_shift=DEFAULT_PARAMS["h_shift"],
-        sign=DEFAULT_PARAMS["sign"]):
+        sign=DEFAULT_PARAMS["sign"],
+        hide_second=DEFAULT_PARAMS["hide_second"]):
     """
     Countdown timer function.
 
@@ -409,6 +413,8 @@ def countdown_timer(
     :type h_shift: int
     :param sign: timer sign
     :type sign: str
+    :param hide_second: hide second flag
+    :type hide_second: bool
     :return: None
     """
     face = get_face(face)
