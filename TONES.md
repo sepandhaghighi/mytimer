@@ -148,4 +148,39 @@
 		<td>>=1.7</td>
 		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/20.wav">20.wav</a></td>
 	</tr>
+	<tr align="center">
+		<td>21</td>
+		<td>00:04</td>
+		<td>713 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/21.wav">21.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>22</td>
+		<td>00:02</td>
+		<td>206 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/22.wav">22.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>23</td>
+		<td>00:02</td>
+		<td>382 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/23.wav">23.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>24</td>
+		<td>00:02</td>
+		<td>180 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/24.wav">24.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>25</td>
+		<td>00:02</td>
+		<td>493 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/25.wav">25.wav</a></td>
+	</tr>
 </table>
