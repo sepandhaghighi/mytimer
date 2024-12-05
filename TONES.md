@@ -1,5 +1,7 @@
 # Tones List
 
+**Last Update: 2024-12-05**
+
 <table>
 	<tr align="center">
 		<th>Tone</th>
@@ -84,5 +86,138 @@
 		<td>34 KB</td>
 		<td>>=0.7</td>
 		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/11.wav">11.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>12</td>
+		<td>00:02</td>
+		<td>376 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/12.wav">12.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>13</td>
+		<td>00:02</td>
+		<td>195 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/13.wav">13.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>14</td>
+		<td>00:02</td>
+		<td>172 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/14.wav">14.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>15</td>
+		<td>00:02</td>
+		<td>250 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/15.wav">15.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>16</td>
+		<td>00:04</td>
+		<td>344 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/16.wav">16.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>17</td>
+		<td>00:02</td>
+		<td>274 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/17.wav">17.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>18</td>
+		<td>00:03</td>
+		<td>849 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/18.wav">18.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>19</td>
+		<td>00:02</td>
+		<td>376 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/19.wav">19.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>20</td>
+		<td>00:03</td>
+		<td>642 KB</td>
+		<td>>=1.7</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/20.wav">20.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>21</td>
+		<td>00:04</td>
+		<td>713 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/21.wav">21.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>22</td>
+		<td>00:02</td>
+		<td>206 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/22.wav">22.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>23</td>
+		<td>00:02</td>
+		<td>382 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/23.wav">23.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>24</td>
+		<td>00:02</td>
+		<td>180 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/24.wav">24.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>25</td>
+		<td>00:02</td>
+		<td>493 KB</td>
+		<td>>=1.8</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/25.wav">25.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>26</td>
+		<td>00:06</td>
+		<td>517 KB</td>
+		<td>>=1.9</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/26.wav">26.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>27</td>
+		<td>00:02</td>
+		<td>811 KB</td>
+		<td>>=1.9</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/27.wav">27.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>28</td>
+		<td>00:02</td>
+		<td>409 KB</td>
+		<td>>=1.9</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/28.wav">28.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>29</td>
+		<td>00:02</td>
+		<td>346 KB</td>
+		<td>>=1.9</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/29.wav">29.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>30</td>
+		<td>00:04</td>
+		<td>344 KB</td>
+		<td>>=1.9</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/30.wav">30.wav</a></td>
 	</tr>
 </table>
