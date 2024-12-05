@@ -1,5 +1,7 @@
 # Tones List
 
+**Last Update: 2024-12-05**
+
 <table>
 	<tr align="center">
 		<th>Tone</th>
