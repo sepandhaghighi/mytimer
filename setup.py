@@ -38,7 +38,7 @@ setup(
     author_email='me@sepand.tech',
     url='https://github.com/sepandhaghighi/mytimer',
     download_url='https://github.com/sepandhaghighi/mytimer/tarball/v1.8',
-    keywords="python3 python timer terminal stopwatch cli",
+    keywords="timer time clock terminal stopwatch cli geek",
     project_urls={
         'Source': 'https://github.com/sepandhaghighi/mytimer'
     },
