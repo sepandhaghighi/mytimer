@@ -180,7 +180,7 @@ In this mode, the timer will continue running after it times out
 mytimer --minute=5 --keep-on
 ```
 
-### Hide second
+### Hide Second
 
 In this mode, the timer seconds counter will not be shown
 
