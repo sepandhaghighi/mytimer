@@ -74,6 +74,12 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 mytimer --version
 ```
 
+### Info
+
+```console
+mytimer --info
+```
+
 ### Basic
 
 ℹ️ Press `Ctrl + C` to exit
@@ -172,6 +178,14 @@ In this mode, the timer will continue running after it times out
 
 ```console
 mytimer --minute=5 --keep-on
+```
+
+### Hide second
+
+In this mode, the timer seconds counter will not be shown
+
+```console
+mytimer --minute=6 --hide-second
 ```
 
 ### Set on
