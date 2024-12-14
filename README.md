@@ -4,7 +4,7 @@
 <br/>
 <a href="https://badge.fury.io/py/mytimer"><img src="https://badge.fury.io/py/mytimer.svg" alt="PyPI version"></a>
 <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
-<a href="https://github.com/sepandhaghighi/mytimer"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sepandhaghighi/mytimer?logo=Time"></a>
+<a href="https://github.com/sepandhaghighi/mytimer"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/sepandhaghighi/mytimer"></a>
 </div>			
 				
 ## Overview	
@@ -72,6 +72,12 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 
 ```console
 mytimer --version
+```
+
+### Info
+
+```console
+mytimer --info
 ```
 
 ### Basic
@@ -172,6 +178,14 @@ In this mode, the timer will continue running after it times out
 
 ```console
 mytimer --minute=5 --keep-on
+```
+
+### Hide Second
+
+In this mode, the timer seconds counter will not be shown
+
+```console
+mytimer --minute=6 --hide-second
 ```
 
 ### Set on
