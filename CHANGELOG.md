@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.9] - 2024-12-18
 ### Added
 - 5 new tones
 - `--info` argument
@@ -188,7 +189,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Count-up mode
 - Alarm
 
-[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v1.8...dev
+[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v1.9...dev
+[1.9]: https://github.com/sepandhaghighi/mytimer/compare/v1.8...v1.9
 [1.8]: https://github.com/sepandhaghighi/mytimer/compare/v1.7...v1.8
 [1.7]: https://github.com/sepandhaghighi/mytimer/compare/v1.6...v1.7
 [1.6]: https://github.com/sepandhaghighi/mytimer/compare/v1.5...v1.6
