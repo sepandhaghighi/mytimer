@@ -265,6 +265,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Short break (5 mins)",
     },
+    "coffee-break": {
+        "hour": 0,
+        "minute": 10,
+        "second": 0,
+        "message": "Coffee break (10 mins)",
+    },
     "mid-break": {
         "hour": 0,
         "minute": 15,
