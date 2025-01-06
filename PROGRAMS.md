@@ -1,6 +1,6 @@
 # Programs List
 
-**Last Update: 2024-12-06**
+**Last Update: 2025-01-06**
 
 ⚠️ By default, the **alarm** is **active** for all programs
 
@@ -136,6 +136,12 @@
 		<td><code>short-break</code></td>
 		<td>00:05:00</td>
 		<td>>=0.9</td>
+	</tr>
+	<tr align="center">
+		<td>Coffee break</td>
+		<td><code>coffee-break</code></td>
+		<td>00:10:00</td>
+		<td>>=2.0</td>
 	</tr>
 	<tr align="center">
 		<td>Medium break</td>
