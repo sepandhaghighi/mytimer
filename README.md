@@ -213,10 +213,11 @@ mytimer --program=black-tea
 mytimer --minute=7 --second=30 --message="Test message"
 ```
 
+## Screen Record
+
 <div align="center">
 
 <img src="https://github.com/sepandhaghighi/mytimer/raw/main/otherfiles/help.gif">
-<p>Screen Record</p>
 
 </div>
 
