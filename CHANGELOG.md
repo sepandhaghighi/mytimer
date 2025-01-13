@@ -8,6 +8,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - 1 new program
 	1. `coffee-break`
+### Changed
+- `README.md` updated
 ## [1.9] - 2024-12-18
 ### Added
 - 5 new tones
