@@ -435,6 +435,7 @@ def countdown_timer(
     tone = get_tone(tone)
     while True:
         start = time.perf_counter()
+        datetime_now = datetime.datetime.now()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
@@ -455,6 +456,12 @@ def countdown_timer(
                     second),
                 font=face,
                 sep="\n" + " " * h_shift)
+        current_time = datetime_now.strftime(TIME_FORMAT)
+        current_date = datetime_now.strftime(DATE_FORMAT)
+        print(" " * h_shift, end='')
+        print(current_time)
+        print(" " * h_shift, end='')
+        print(current_date)
         print(" " * h_shift, end='')
         print(message)
         second -= 1
