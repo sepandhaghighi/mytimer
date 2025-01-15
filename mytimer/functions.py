@@ -17,7 +17,7 @@ from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
 from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
 from mytimer.params import TIME_HMS_TEMPLATE, TIME_HM_TEMPLATE
-from mytimer.params import TIME_FORMAT, DATE_FORMAT
+from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
 from art import tprint
 
 
@@ -370,7 +370,7 @@ def countup_timer(
                     timer_second),
                 font=face,
                 sep="\n" + " " * h_shift)
-        current_time = datetime_now.strftime(TIME_FORMAT)
+        current_time = datetime_now.strftime(CLOCK_FORMAT)
         current_date = datetime_now.strftime(DATE_FORMAT)
         print(" " * h_shift, end='')
         print(current_time)
@@ -464,7 +464,7 @@ def countdown_timer(
                     second),
                 font=face,
                 sep="\n" + " " * h_shift)
-        current_time = datetime_now.strftime(TIME_FORMAT)
+        current_time = datetime_now.strftime(CLOCK_FORMAT)
         current_date = datetime_now.strftime(DATE_FORMAT)
         print(" " * h_shift, end='')
         print(current_time)
