@@ -8,8 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 - 1 new program
 	1. `coffee-break`
+- Clock and date
 ### Changed
 - `README.md` updated
+- `countdown_timer` and `countup_timer` functions updated
 ## [1.9] - 2024-12-18
 ### Added
 - 5 new tones
