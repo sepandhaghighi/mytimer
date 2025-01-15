@@ -17,6 +17,7 @@ from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
 from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
 from mytimer.params import TIME_HMS_TEMPLATE, TIME_HM_TEMPLATE
+from mytimer.params import TIME_FORMAT, DATE_FORMAT
 from art import tprint
 
 
@@ -348,6 +349,7 @@ def countup_timer(
     tone = get_tone(tone)
     while True:
         start = time.perf_counter()
+        datetime_now = datetime.datetime.now()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
@@ -368,6 +370,12 @@ def countup_timer(
                     timer_second),
                 font=face,
                 sep="\n" + " " * h_shift)
+        current_time = datetime_now.strftime(TIME_FORMAT)
+        current_date = datetime_now.strftime(DATE_FORMAT)
+        print(" " * h_shift, end='')
+        print(current_time)
+        print(" " * h_shift, end='')
+        print(current_date)
         print(" " * h_shift, end='')
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
