@@ -376,7 +376,7 @@ def countup_timer(
         print(current_time)
         print(" " * h_shift, end='')
         print(current_date)
-        print("\n")
+        print("")
         print(" " * h_shift, end='')
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
@@ -471,7 +471,7 @@ def countdown_timer(
         print(current_time)
         print(" " * h_shift, end='')
         print(current_date)
-        print("\n")
+        print("")
         print(" " * h_shift, end='')
         print(message)
         second -= 1
