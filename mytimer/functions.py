@@ -299,6 +299,25 @@ def play_sound(sound_path):
         print(SOUND_ERROR_MESSAGE)
 
 
+def print_date_time(h_shift):
+    """
+    Print date and time.
+
+    :param h_shift: horizontal shift
+    :type h_shift: int
+    :return: None
+    """
+    datetime_now = datetime.datetime.now()
+    current_time = datetime_now.strftime(CLOCK_FORMAT)
+    current_date = datetime_now.strftime(DATE_FORMAT)
+    print(" " * h_shift, end='')
+    print(current_time)
+    print(" " * h_shift, end='')
+    print(current_date)
+    print("")
+    print(" " * h_shift, end='')
+
+
 @input_handler
 def countup_timer(
         hour,
@@ -370,14 +389,7 @@ def countup_timer(
                     timer_second),
                 font=face,
                 sep="\n" + " " * h_shift)
-        current_time = datetime_now.strftime(CLOCK_FORMAT)
-        current_date = datetime_now.strftime(DATE_FORMAT)
-        print(" " * h_shift, end='')
-        print(current_time)
-        print(" " * h_shift, end='')
-        print(current_date)
-        print("")
-        print(" " * h_shift, end='')
+        print_date_time(h_shift)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print(" " * h_shift, end='')
@@ -465,14 +477,7 @@ def countdown_timer(
                     second),
                 font=face,
                 sep="\n" + " " * h_shift)
-        current_time = datetime_now.strftime(CLOCK_FORMAT)
-        current_date = datetime_now.strftime(DATE_FORMAT)
-        print(" " * h_shift, end='')
-        print(current_time)
-        print(" " * h_shift, end='')
-        print(current_date)
-        print("")
-        print(" " * h_shift, end='')
+        print_date_time(h_shift)
         print(message)
         second -= 1
         if second == -1:
