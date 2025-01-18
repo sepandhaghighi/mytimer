@@ -368,7 +368,6 @@ def countup_timer(
     tone = get_tone(tone)
     while True:
         start = time.perf_counter()
-        datetime_now = datetime.datetime.now()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
@@ -456,7 +455,6 @@ def countdown_timer(
     tone = get_tone(tone)
     while True:
         start = time.perf_counter()
-        datetime_now = datetime.datetime.now()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
