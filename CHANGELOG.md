@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 1 new program
 	1. `coffee-break`
 - Clock and date
+- `--hide-datetime` argument
 ### Changed
 - `README.md` updated
 - `countdown_timer` and `countup_timer` functions updated
