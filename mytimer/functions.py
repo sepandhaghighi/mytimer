@@ -331,7 +331,8 @@ def countup_timer(
         v_shift=DEFAULT_PARAMS["v_shift"],
         h_shift=DEFAULT_PARAMS["h_shift"],
         sign=DEFAULT_PARAMS["sign"],
-        hide_second=DEFAULT_PARAMS["hide_second"]):
+        hide_second=DEFAULT_PARAMS["hide_second"],
+        hide_datetime=DEFAULT_PARAMS["hide_datetime"]):
     """
     Count-up timer function.
 
@@ -359,6 +360,8 @@ def countup_timer(
     :type sign: str
     :param hide_second: hide second flag
     :type hide_second: bool
+    :param hide_datetime: hide date/time
+    :type hide_datetime: bool
     :return: None
     """
     timer_second = 0
@@ -388,7 +391,8 @@ def countup_timer(
                     timer_second),
                 font=face,
                 sep="\n" + " " * h_shift)
-        print_date_time(h_shift)
+        if not hide_datetime:
+            print_date_time(h_shift)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print(" " * h_shift, end='')
@@ -421,7 +425,8 @@ def countdown_timer(
         v_shift=DEFAULT_PARAMS["v_shift"],
         h_shift=DEFAULT_PARAMS["h_shift"],
         sign=DEFAULT_PARAMS["sign"],
-        hide_second=DEFAULT_PARAMS["hide_second"]):
+        hide_second=DEFAULT_PARAMS["hide_second"],
+        hide_datetime=DEFAULT_PARAMS["hide_datetime"]):
     """
     Countdown timer function.
 
@@ -449,6 +454,8 @@ def countdown_timer(
     :type sign: str
     :param hide_second: hide second flag
     :type hide_second: bool
+    :param hide_datetime: hide date/time
+    :type hide_datetime: bool
     :return: None
     """
     face = get_face(face)
@@ -475,7 +482,8 @@ def countdown_timer(
                     second),
                 font=face,
                 sep="\n" + " " * h_shift)
-        print_date_time(h_shift)
+        if not hide_datetime:
+            print_date_time(h_shift)
         print(message)
         second -= 1
         if second == -1:
