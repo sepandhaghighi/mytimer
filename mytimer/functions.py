@@ -169,7 +169,8 @@ def input_handler(func):
             v_shift,
             h_shift,
             sign,
-            hide_second):
+            hide_second,
+            hide_datetime):
         """
         Inner function.
 
@@ -197,6 +198,8 @@ def input_handler(func):
         :type sign: str
         :param hide_second: hide second flag
         :type hide_second: bool
+        :param hide_datetime: hide date/time
+        :type hide_datetime: bool
         :return: None
         """
         message = message.strip()
@@ -228,7 +231,8 @@ def input_handler(func):
                 v_shift,
                 h_shift,
                 sign,
-                hide_second)
+                hide_second,
+                hide_datetime)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
