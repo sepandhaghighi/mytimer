@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `--hide-datetime` argument
 ### Changed
 - `README.md` updated
+- Test system modified
 - `countdown_timer` and `countup_timer` functions updated
 ## [1.9] - 2024-12-18
 ### Added
