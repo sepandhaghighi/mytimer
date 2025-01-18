@@ -198,7 +198,7 @@ def input_handler(func):
         :type sign: str
         :param hide_second: hide second flag
         :type hide_second: bool
-        :param hide_datetime: hide date/time
+        :param hide_datetime: hide date/time flag
         :type hide_datetime: bool
         :return: None
         """
@@ -364,7 +364,7 @@ def countup_timer(
     :type sign: str
     :param hide_second: hide second flag
     :type hide_second: bool
-    :param hide_datetime: hide date/time
+    :param hide_datetime: hide date/time flag
     :type hide_datetime: bool
     :return: None
     """
@@ -458,7 +458,7 @@ def countdown_timer(
     :type sign: str
     :param hide_second: hide second flag
     :type hide_second: bool
-    :param hide_datetime: hide date/time
+    :param hide_datetime: hide date/time flag
     :type hide_datetime: bool
     :return: None
     """
