@@ -188,6 +188,14 @@ In this mode, the timer seconds counter will not be shown
 mytimer --minute=6 --hide-second
 ```
 
+### Hide Date/Time
+
+In this mode, the date/time will not be shown
+
+```console
+mytimer --minute=20 --hide-datetime
+```
+
 ### Set on
 
 ⚠️ Local time
