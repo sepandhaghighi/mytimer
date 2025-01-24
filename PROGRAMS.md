@@ -1,6 +1,6 @@
 # Programs List
 
-**Last Update: 2025-01-06**
+**Last Update: 2025-01-25**
 
 ⚠️ By default, the **alarm** is **active** for all programs
 
@@ -154,6 +154,12 @@
 		<td><code>long-break</code></td>
 		<td>00:30:00</td>
 		<td>>=0.9</td>
+	</tr>
+	<tr align="center">
+		<td>Meditation</td>
+		<td><code>meditation</code></td>
+		<td>00:20:00</td>
+		<td>>=2.0</td>
 	</tr>
 	<tr align="center">
 		<td>Instant noodle</td>
