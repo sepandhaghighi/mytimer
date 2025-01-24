@@ -232,6 +232,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "French press (4 mins, 93-96 C)",
     },
+    "meditation": {
+        "hour": 0,
+        "minute": 20,
+        "second": 0,
+        "message": "Meditation (20 mins)",
+    },
     "work": {
         "hour": 0,
         "minute": 25,
