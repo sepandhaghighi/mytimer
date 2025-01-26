@@ -6,8 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- 1 new program
+- 2 new programs
 	1. `coffee-break`
+	2. `meditation`
 - Clock and date
 - `--hide-datetime` argument
 ### Changed
