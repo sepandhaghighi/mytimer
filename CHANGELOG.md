@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [2.0] - 2025-01-30
 ### Added
 - 2 new programs
 	1. `coffee-break`
@@ -199,7 +200,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Count-up mode
 - Alarm
 
-[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v1.9...dev
+[Unreleased]: https://github.com/sepandhaghighi/mytimer/compare/v2.0...dev
+[2.0]: https://github.com/sepandhaghighi/mytimer/compare/v1.9...v2.0
 [1.9]: https://github.com/sepandhaghighi/mytimer/compare/v1.8...v1.9
 [1.8]: https://github.com/sepandhaghighi/mytimer/compare/v1.7...v1.8
 [1.7]: https://github.com/sepandhaghighi/mytimer/compare/v1.6...v1.7
