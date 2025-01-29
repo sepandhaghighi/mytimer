@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-## [2.0] - 2025-01-29
+## [2.0] - 2025-01-30
 ### Added
 - 2 new programs
 	1. `coffee-break`
