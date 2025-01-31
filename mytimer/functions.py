@@ -16,7 +16,8 @@ from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
 from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
-from mytimer.params import TIME_HMS_TEMPLATE, TIME_HM_TEMPLATE
+from mytimer.params import TIME_HMS_TEMPLATE_HORIZONTAL, TIME_HM_TEMPLATE_HORIZONTAL
+from mytimer.params import TIME_HMS_TEMPLATE_VERTICAL, TIME_HM_TEMPLATE_VERTICAL
 from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
 from art import tprint
 
@@ -380,7 +381,7 @@ def countup_timer(
         print(" " * h_shift, end='')
         if hide_second:
             tprint(
-                TIME_HM_TEMPLATE.format(
+                TIME_HM_TEMPLATE_HORIZONTAL.format(
                     sign,
                     timer_hour,
                     timer_minute),
@@ -388,7 +389,7 @@ def countup_timer(
                 sep="\n" + " " * h_shift)
         else:
             tprint(
-                TIME_HMS_TEMPLATE.format(
+                TIME_HMS_TEMPLATE_HORIZONTAL.format(
                     sign,
                     timer_hour,
                     timer_minute,
@@ -471,7 +472,7 @@ def countdown_timer(
         print(" " * h_shift, end='')
         if hide_second:
             tprint(
-                TIME_HM_TEMPLATE.format(
+                TIME_HM_TEMPLATE_HORIZONTAL.format(
                     sign,
                     hour,
                     minute),
@@ -479,7 +480,7 @@ def countdown_timer(
                 sep="\n" + " " * h_shift)
         else:
             tprint(
-                TIME_HMS_TEMPLATE.format(
+                TIME_HMS_TEMPLATE_HORIZONTAL.format(
                     sign,
                     hour,
                     minute,
