@@ -44,26 +44,32 @@ jobs:
         python -m mytimer --minute=0 --second=3 --countdown
     - name: Run3
       run: |
-        mytimer --minute=0 --second=3 --countup --alarm --face=4
+        python -m mytimer --minute=0 --second=3 --countdown --vertical
     - name: Run4
       run: |
-        mytimer --program=poached-egg
+        mytimer --minute=0 --second=3 --countup --alarm --face=4
     - name: Run5
       run: |
-        mytimer --minute=0 --second=3 --countup --alarm --face=4 --tone=6 --hide-datetime
+        mytimer --program=poached-egg
     - name: Run6
       run: |
-        mytimer --minute=0 --second=3 --countdown --alarm --face=3 --tone=2 --alarm-repeat=5
+        mytimer --minute=0 --second=3 --countup --alarm --face=4 --tone=6 --hide-datetime
     - name: Run7
       run: |
-        mytimer --programs-list
+        mytimer --minute=0 --second=3 --countdown --alarm --face=3 --tone=2 --alarm-repeat=5
     - name: Run8
       run: |
-        mytimer --faces-list
+        mytimer --programs-list
     - name: Run9
       run: |
-        mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second
+        mytimer --faces-list
     - name: Run10
+      run: |
+        mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second
+    - name: Run11
+      run: |
+        mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second --vertical
+    - name: Run12
       run: |
         mytimer --info
     - name: Install dev-requirements

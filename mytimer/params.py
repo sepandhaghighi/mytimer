@@ -9,8 +9,10 @@ EXIT_MESSAGE = "See you. Bye!"
 END_ROUND_MESSAGE = "Round {0} done! Press `Enter` to continue..."
 NEXT_PROGRAM_MESSAGE = "Press `Enter` to continue (Next: {0})"
 PROGRAMS_LIST_TEMPLATE = "{0}. `{1}` - {2}"
-TIME_HMS_TEMPLATE = "{0}{1:02} : {2:02} : {3:02}"
-TIME_HM_TEMPLATE = "{0}{1:02} : {2:02}"
+TIME_HMS_TEMPLATE_HORIZONTAL = "{0}{1:02} : {2:02} : {3:02}"
+TIME_HM_TEMPLATE_HORIZONTAL = "{0}{1:02} : {2:02}"
+TIME_HMS_TEMPLATE_VERTICAL = "{0}\n{1:02}\n{2:02}\n{3:02}"
+TIME_HM_TEMPLATE_VERTICAL = "{0}\n{1:02}\n{2:02}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
 INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
@@ -99,6 +101,7 @@ DEFAULT_PARAMS = {
     "alarm": 0,
     "hide_second": 0,
     "hide_datetime": 0,
+    "vertical": 0,
     "alarm_repeat": 1,
     "face": 1,
     "tone": 1,

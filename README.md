@@ -196,6 +196,12 @@ In this mode, the date/time will not be shown
 mytimer --minute=20 --hide-datetime
 ```
 
+### Vertical Mode
+
+```console
+mytimer --minute=5 --vertical
+```
+
 ### Set on
 
 ⚠️ Local time
