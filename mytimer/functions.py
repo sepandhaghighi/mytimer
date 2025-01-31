@@ -392,7 +392,7 @@ def countup_timer(
         timer_params = [sign, timer_hour, timer_minute, timer_second]
         if hide_second:
             timer_params = [sign, timer_hour, timer_minute]
-        tprint(timer_template.format(*timer_params),font=face,sep="\n" + " " * h_shift)
+        tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
         print(message)
