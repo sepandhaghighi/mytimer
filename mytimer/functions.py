@@ -391,7 +391,7 @@ def countup_timer(
         print(" " * h_shift, end='')
         timer_params = [sign, timer_hour, timer_minute, timer_second]
         if hide_second:
-            timer_params = [sign, timer_hour, timer_minute]
+            timer_params = timer_params[:-1]
         tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
@@ -475,7 +475,7 @@ def countdown_timer(
         print(" " * h_shift, end='')
         timer_params = [sign, hour, minute, second]
         if hide_second:
-            timer_params = [sign, hour, minute]
+            timer_params = timer_params[:-1]
         tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
