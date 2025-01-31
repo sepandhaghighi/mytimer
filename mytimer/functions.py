@@ -171,7 +171,8 @@ def input_handler(func):
             h_shift,
             sign,
             hide_second,
-            hide_datetime):
+            hide_datetime,
+            vertical):
         """
         Inner function.
 
@@ -201,6 +202,8 @@ def input_handler(func):
         :type hide_second: bool
         :param hide_datetime: hide date/time flag
         :type hide_datetime: bool
+        :param vertical: vertical mode flag
+        :type vertical: bool
         :return: None
         """
         message = message.strip()
@@ -233,7 +236,8 @@ def input_handler(func):
                 h_shift,
                 sign,
                 hide_second,
-                hide_datetime)
+                hide_datetime,
+                vertical)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -337,7 +341,8 @@ def countup_timer(
         h_shift=DEFAULT_PARAMS["h_shift"],
         sign=DEFAULT_PARAMS["sign"],
         hide_second=DEFAULT_PARAMS["hide_second"],
-        hide_datetime=DEFAULT_PARAMS["hide_datetime"]):
+        hide_datetime=DEFAULT_PARAMS["hide_datetime"],
+        vertical=DEFAULT_PARAMS["vertical"]):
     """
     Count-up timer function.
 
@@ -367,6 +372,8 @@ def countup_timer(
     :type hide_second: bool
     :param hide_datetime: hide date/time flag
     :type hide_datetime: bool
+    :param vertical: vertical mode flag
+    :type vertical: bool
     :return: None
     """
     timer_second = 0
@@ -374,9 +381,9 @@ def countup_timer(
     timer_hour = 0
     face = get_face(face)
     tone = get_tone(tone)
-    timer_template = TIME_HMS_TEMPLATE_HORIZONTAL
+    timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
-        timer_template = TIME_HM_TEMPLATE_HORIZONTAL
+        timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
     while True:
         start = time.perf_counter()
         clear_screen()
@@ -421,7 +428,8 @@ def countdown_timer(
         h_shift=DEFAULT_PARAMS["h_shift"],
         sign=DEFAULT_PARAMS["sign"],
         hide_second=DEFAULT_PARAMS["hide_second"],
-        hide_datetime=DEFAULT_PARAMS["hide_datetime"]):
+        hide_datetime=DEFAULT_PARAMS["hide_datetime"],
+        vertical=DEFAULT_PARAMS["vertical"]):
     """
     Countdown timer function.
 
@@ -451,13 +459,15 @@ def countdown_timer(
     :type hide_second: bool
     :param hide_datetime: hide date/time flag
     :type hide_datetime: bool
+    :param vertical: vertical mode flag
+    :type vertical: bool
     :return: None
     """
     face = get_face(face)
     tone = get_tone(tone)
-    timer_template = TIME_HMS_TEMPLATE_HORIZONTAL
+    timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
-        timer_template = TIME_HM_TEMPLATE_HORIZONTAL
+        timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
     while True:
         start = time.perf_counter()
         clear_screen()
