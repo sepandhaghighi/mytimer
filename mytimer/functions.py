@@ -473,9 +473,9 @@ def countdown_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        timer_params = [sign, timer_hour, timer_minute, timer_second]
+        timer_params = [sign, hour, minute, second]
         if hide_second:
-            timer_params = [sign, timer_hour, timer_minute]
+            timer_params = [sign, hour, minute]
         tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
