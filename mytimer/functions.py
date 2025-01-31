@@ -455,28 +455,18 @@ def countdown_timer(
     """
     face = get_face(face)
     tone = get_tone(tone)
+    timer_template = TIME_HMS_TEMPLATE_HORIZONTAL
+    if hide_second:
+        timer_template = TIME_HM_TEMPLATE_HORIZONTAL
     while True:
         start = time.perf_counter()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
+        timer_params = [sign, timer_hour, timer_minute, timer_second]
         if hide_second:
-            tprint(
-                TIME_HM_TEMPLATE_HORIZONTAL.format(
-                    sign,
-                    hour,
-                    minute),
-                font=face,
-                sep="\n" + " " * h_shift)
-        else:
-            tprint(
-                TIME_HMS_TEMPLATE_HORIZONTAL.format(
-                    sign,
-                    hour,
-                    minute,
-                    second),
-                font=face,
-                sep="\n" + " " * h_shift)
+            timer_params = [sign, timer_hour, timer_minute]
+        tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
         print(message)
