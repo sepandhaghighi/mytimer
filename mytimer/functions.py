@@ -16,7 +16,8 @@ from mytimer.params import NEXT_PROGRAM_MESSAGE, END_ROUND_MESSAGE
 from mytimer.params import KEEP_ON_MESSAGE, SET_ON_MESSAGE
 from mytimer.params import KEEP_ON_MAX
 from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
-from mytimer.params import TIME_HMS_TEMPLATE, TIME_HM_TEMPLATE
+from mytimer.params import TIME_HMS_TEMPLATE_HORIZONTAL, TIME_HM_TEMPLATE_HORIZONTAL
+from mytimer.params import TIME_HMS_TEMPLATE_VERTICAL, TIME_HM_TEMPLATE_VERTICAL
 from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
 from art import tprint
 
@@ -170,7 +171,8 @@ def input_handler(func):
             h_shift,
             sign,
             hide_second,
-            hide_datetime):
+            hide_datetime,
+            vertical):
         """
         Inner function.
 
@@ -200,6 +202,8 @@ def input_handler(func):
         :type hide_second: bool
         :param hide_datetime: hide date/time flag
         :type hide_datetime: bool
+        :param vertical: vertical mode flag
+        :type vertical: bool
         :return: None
         """
         message = message.strip()
@@ -232,7 +236,8 @@ def input_handler(func):
                 h_shift,
                 sign,
                 hide_second,
-                hide_datetime)
+                hide_datetime,
+                vertical)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -336,7 +341,8 @@ def countup_timer(
         h_shift=DEFAULT_PARAMS["h_shift"],
         sign=DEFAULT_PARAMS["sign"],
         hide_second=DEFAULT_PARAMS["hide_second"],
-        hide_datetime=DEFAULT_PARAMS["hide_datetime"]):
+        hide_datetime=DEFAULT_PARAMS["hide_datetime"],
+        vertical=DEFAULT_PARAMS["vertical"]):
     """
     Count-up timer function.
 
@@ -366,6 +372,8 @@ def countup_timer(
     :type hide_second: bool
     :param hide_datetime: hide date/time flag
     :type hide_datetime: bool
+    :param vertical: vertical mode flag
+    :type vertical: bool
     :return: None
     """
     timer_second = 0
@@ -373,28 +381,18 @@ def countup_timer(
     timer_hour = 0
     face = get_face(face)
     tone = get_tone(tone)
+    timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
+    if hide_second:
+        timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
     while True:
         start = time.perf_counter()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
+        timer_params = [sign, timer_hour, timer_minute, timer_second]
         if hide_second:
-            tprint(
-                TIME_HM_TEMPLATE.format(
-                    sign,
-                    timer_hour,
-                    timer_minute),
-                font=face,
-                sep="\n" + " " * h_shift)
-        else:
-            tprint(
-                TIME_HMS_TEMPLATE.format(
-                    sign,
-                    timer_hour,
-                    timer_minute,
-                    timer_second),
-                font=face,
-                sep="\n" + " " * h_shift)
+            timer_params = timer_params[:-1]
+        tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
         print(message)
@@ -430,7 +428,8 @@ def countdown_timer(
         h_shift=DEFAULT_PARAMS["h_shift"],
         sign=DEFAULT_PARAMS["sign"],
         hide_second=DEFAULT_PARAMS["hide_second"],
-        hide_datetime=DEFAULT_PARAMS["hide_datetime"]):
+        hide_datetime=DEFAULT_PARAMS["hide_datetime"],
+        vertical=DEFAULT_PARAMS["vertical"]):
     """
     Countdown timer function.
 
@@ -460,32 +459,24 @@ def countdown_timer(
     :type hide_second: bool
     :param hide_datetime: hide date/time flag
     :type hide_datetime: bool
+    :param vertical: vertical mode flag
+    :type vertical: bool
     :return: None
     """
     face = get_face(face)
     tone = get_tone(tone)
+    timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
+    if hide_second:
+        timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
     while True:
         start = time.perf_counter()
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
+        timer_params = [sign, hour, minute, second]
         if hide_second:
-            tprint(
-                TIME_HM_TEMPLATE.format(
-                    sign,
-                    hour,
-                    minute),
-                font=face,
-                sep="\n" + " " * h_shift)
-        else:
-            tprint(
-                TIME_HMS_TEMPLATE.format(
-                    sign,
-                    hour,
-                    minute,
-                    second),
-                font=face,
-                sep="\n" + " " * h_shift)
+            timer_params = timer_params[:-1]
+        tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift)
         print(message)
