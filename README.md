@@ -143,7 +143,7 @@ mytimer --minute=7 --second=30 --alarm --alarm-repeat=5
 mytimer --minute=7 --second=30 --alarm --tone=2
 ```
 * Use `--tone=-1` for random mode
-* Use `--tone-test` for test
+* Use `--test-tone` for test
 * [Tones List](https://github.com/sepandhaghighi/mytimer/blob/main/TONES.md)
 
 ### Face
