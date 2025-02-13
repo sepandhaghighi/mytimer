@@ -308,6 +308,22 @@ def play_sound(sound_path):
         print(SOUND_ERROR_MESSAGE)
 
 
+def play_alarm(tone, repeat):
+    """
+    Play alarm.
+
+    :param tone: alarm tone index
+    :type tone: int
+    :param repeat: alarm repeat
+    :type repeat: int
+    :return: None
+    """
+    tone = get_tone(tone)
+    sound_path = get_sound_path(tone)
+    for _ in range(repeat):
+        play_sound(sound_path)
+
+
 def print_date_time(h_shift):
     """
     Print date and time.
@@ -380,7 +396,6 @@ def countup_timer(
     timer_minute = 0
     timer_hour = 0
     face = get_face(face)
-    tone = get_tone(tone)
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
         timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
@@ -400,8 +415,7 @@ def countup_timer(
             print(" " * h_shift, end='')
             print("End!")
             if alarm:
-                for _ in range(alarm_repeat):
-                    play_sound(get_sound_path(tone))
+                play_alarm(tone, alarm_repeat)
             break
         timer_second += 1
         if timer_second == 60:
@@ -464,7 +478,6 @@ def countdown_timer(
     :return: None
     """
     face = get_face(face)
-    tone = get_tone(tone)
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
         timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
@@ -491,8 +504,7 @@ def countdown_timer(
             print(" " * h_shift, end='')
             print("End!")
             if alarm:
-                for _ in range(alarm_repeat):
-                    play_sound(get_sound_path(tone))
+                play_alarm(tone, alarm_repeat)
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
