@@ -324,6 +324,25 @@ def play_alarm(tone, repeat):
         play_sound(sound_path)
 
 
+def test_tone(tone, repeat):
+    """
+    Test tone.
+
+    :param tone: alarm tone index
+    :type tone: int
+    :param repeat: alarm repeat
+    :type repeat: int
+    :return: None
+    """
+    print("Tone: {tone}".format(tone=tone))
+    print("Repeat: {repeat}".format(repeat=repeat))
+    start = time.perf_counter()
+    play_alarm(tone, repeat)
+    end = time.perf_counter()
+    duration = round(end - start, 4)
+    print("Duration: {duration} s".format(duration=duration))
+
+
 def print_date_time(h_shift):
     """
     Print date and time.
@@ -644,8 +663,7 @@ def run_timer(args):
     elif args.programs_list:
         show_programs_list()
     elif args.test_tone:
-        print("Tone: {tone}".format(tone=params["tone"]))
-        play_alarm(params["tone"], params["alarm_repeat"])
+        test_tone(params["tone"], params["alarm_repeat"])
     else:
         timer_round = 1
         while timer_round <= args.repeat or args.repeat == -1:
