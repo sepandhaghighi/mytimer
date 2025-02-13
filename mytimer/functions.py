@@ -643,6 +643,9 @@ def run_timer(args):
         show_faces_list()
     elif args.programs_list:
         show_programs_list()
+    elif args.test_tone:
+        print("Tone: {tone}".format(tone=params["tone"]))
+        play_alarm(params["tone"], params["alarm_repeat"])
     else:
         timer_round = 1
         while timer_round <= args.repeat or args.repeat == -1:
