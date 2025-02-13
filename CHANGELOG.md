@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `--vertical` argument
+- `--test-tone` argument
 ### Changed
 - `README.md` updated
 - Test system modified
