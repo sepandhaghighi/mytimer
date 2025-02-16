@@ -51,6 +51,7 @@ def main():
     parser.add_argument('--alarm', help='alarm', nargs="?", const=1)
     parser.add_argument('--keep-on', help='keep-on', nargs="?", const=1)
     parser.add_argument('--set-on', help='set-on', nargs="?", const=1)
+    parser.add_argument('--test-tone', help='test tone', nargs="?", const=1)
     parser.add_argument('--faces-list', help='faces list', nargs="?", const=1)
     parser.add_argument('--version', help='version', nargs="?", const=1)
     parser.add_argument('--info', help='info', nargs="?", const=1)

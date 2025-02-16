@@ -308,6 +308,41 @@ def play_sound(sound_path):
         print(SOUND_ERROR_MESSAGE)
 
 
+def play_alarm(tone, repeat):
+    """
+    Play alarm.
+
+    :param tone: alarm tone index
+    :type tone: int
+    :param repeat: alarm repeat
+    :type repeat: int
+    :return: None
+    """
+    tone = get_tone(tone)
+    sound_path = get_sound_path(tone)
+    for _ in range(repeat):
+        play_sound(sound_path)
+
+
+def test_tone(tone, repeat):
+    """
+    Test tone.
+
+    :param tone: alarm tone index
+    :type tone: int
+    :param repeat: alarm repeat
+    :type repeat: int
+    :return: None
+    """
+    print("Tone: {tone}".format(tone=tone))
+    print("Repeat: {repeat}".format(repeat=repeat))
+    start = time.perf_counter()
+    play_alarm(tone, repeat)
+    end = time.perf_counter()
+    duration = round(end - start, 4)
+    print("Duration: {duration} s".format(duration=duration))
+
+
 def print_date_time(h_shift):
     """
     Print date and time.
@@ -380,7 +415,6 @@ def countup_timer(
     timer_minute = 0
     timer_hour = 0
     face = get_face(face)
-    tone = get_tone(tone)
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
         timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
@@ -400,8 +434,7 @@ def countup_timer(
             print(" " * h_shift, end='')
             print("End!")
             if alarm:
-                for _ in range(alarm_repeat):
-                    play_sound(get_sound_path(tone))
+                play_alarm(tone, alarm_repeat)
             break
         timer_second += 1
         if timer_second == 60:
@@ -464,7 +497,6 @@ def countdown_timer(
     :return: None
     """
     face = get_face(face)
-    tone = get_tone(tone)
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
         timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
@@ -491,8 +523,7 @@ def countdown_timer(
             print(" " * h_shift, end='')
             print("End!")
             if alarm:
-                for _ in range(alarm_repeat):
-                    play_sound(get_sound_path(tone))
+                play_alarm(tone, alarm_repeat)
             break
         end = time.perf_counter()
         time.sleep(max(0, 1 - (end - start)))
@@ -631,6 +662,8 @@ def run_timer(args):
         show_faces_list()
     elif args.programs_list:
         show_programs_list()
+    elif args.test_tone:
+        test_tone(params["tone"], params["alarm_repeat"])
     else:
         timer_round = 1
         while timer_round <= args.repeat or args.repeat == -1:
