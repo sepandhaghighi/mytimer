@@ -1,6 +1,6 @@
 # Tones List
 
-**Last Update: 2024-12-05**
+**Last Update: 2025-02-20**
 
 <table>
 	<tr align="center">
@@ -219,5 +219,33 @@
 		<td>344 KB</td>
 		<td>>=1.9</td>
 		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/30.wav">30.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>31</td>
+		<td>00:03</td>
+		<td>258 KB</td>
+		<td>>=2.1</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/31.wav">31.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>32</td>
+		<td>00:03</td>
+		<td>258 KB</td>
+		<td>>=2.1</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/32.wav">32.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>33</td>
+		<td>00:03</td>
+		<td>258 KB</td>
+		<td>>=2.1</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/33.wav">33.wav</a></td>
+	</tr>
+	<tr align="center">
+		<td>34</td>
+		<td>00:03</td>
+		<td>258 KB</td>
+		<td>>=2.1</td>
+		<td><a href="https://github.com/sepandhaghighi/mytimer/raw/main/mytimer/sounds/34.wav">34.wav</a></td>
 	</tr>
 </table>
