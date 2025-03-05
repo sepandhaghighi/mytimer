@@ -344,3 +344,5 @@ BREAKS_MAP = {
 FACES_LIST = [-1] + sorted(FACES_MAP)
 
 TONES_LIST = [-1] + sorted(TONES_MAP)
+
+DATE_SYSTEMS_LIST = ["gregorian", "jalali"]
