@@ -106,6 +106,7 @@ DEFAULT_PARAMS = {
     "alarm": 0,
     "hide_second": 0,
     "hide_datetime": 0,
+    "date_system": "gregorian",
     "vertical": 0,
     "alarm_repeat": 1,
     "face": 1,
