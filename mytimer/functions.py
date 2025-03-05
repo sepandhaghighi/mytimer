@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import datetime
+import jdatetime
 import random
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
@@ -172,7 +173,8 @@ def input_handler(func):
             sign,
             hide_second,
             hide_datetime,
-            vertical):
+            vertical,
+            date_system):
         """
         Inner function.
 
@@ -204,6 +206,8 @@ def input_handler(func):
         :type hide_datetime: bool
         :param vertical: vertical mode flag
         :type vertical: bool
+        :param date_system: date system
+        :type date_system: str
         :return: None
         """
         message = message.strip()
@@ -237,7 +241,8 @@ def input_handler(func):
                 sign,
                 hide_second,
                 hide_datetime,
-                vertical)
+                vertical,
+                date_system)
         else:
             print(INPUT_ERROR_MESSAGE)
             print(INPUT_EXAMPLE)
@@ -343,15 +348,20 @@ def test_tone(tone, repeat):
     print("Duration: {duration} s".format(duration=duration))
 
 
-def print_date_time(h_shift):
+def print_date_time(h_shift, date_system):
     """
     Print date and time.
 
     :param h_shift: horizontal shift
     :type h_shift: int
+    :param date_system: date system
+    :type date_system: str
     :return: None
     """
-    datetime_now = datetime.datetime.now()
+    datetime_lib = datetime
+    if date_system == "jalali":
+        datetime_lib = jdatetime
+    datetime_now = datetime_lib.datetime.now()
     current_time = datetime_now.strftime(CLOCK_FORMAT)
     current_date = datetime_now.strftime(DATE_FORMAT)
     print(" " * h_shift, end='')
@@ -377,7 +387,8 @@ def countup_timer(
         sign=DEFAULT_PARAMS["sign"],
         hide_second=DEFAULT_PARAMS["hide_second"],
         hide_datetime=DEFAULT_PARAMS["hide_datetime"],
-        vertical=DEFAULT_PARAMS["vertical"]):
+        vertical=DEFAULT_PARAMS["vertical"],
+        date_system=DEFAULT_PARAMS["date_system"]):
     """
     Count-up timer function.
 
@@ -409,6 +420,8 @@ def countup_timer(
     :type hide_datetime: bool
     :param vertical: vertical mode flag
     :type vertical: bool
+    :param date_system: date system
+    :type date_system: str
     :return: None
     """
     timer_second = 0
@@ -428,7 +441,7 @@ def countup_timer(
             timer_params = timer_params[:-1]
         tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
-            print_date_time(h_shift)
+            print_date_time(h_shift, date_system)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print(" " * h_shift, end='')
@@ -462,7 +475,8 @@ def countdown_timer(
         sign=DEFAULT_PARAMS["sign"],
         hide_second=DEFAULT_PARAMS["hide_second"],
         hide_datetime=DEFAULT_PARAMS["hide_datetime"],
-        vertical=DEFAULT_PARAMS["vertical"]):
+        vertical=DEFAULT_PARAMS["vertical"],
+        date_system=DEFAULT_PARAMS["date_system"]):
     """
     Countdown timer function.
 
@@ -494,6 +508,8 @@ def countdown_timer(
     :type hide_datetime: bool
     :param vertical: vertical mode flag
     :type vertical: bool
+    :param date_system: date system
+    :type date_system: str
     :return: None
     """
     face = get_face(face)
@@ -510,7 +526,7 @@ def countdown_timer(
             timer_params = timer_params[:-1]
         tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
-            print_date_time(h_shift)
+            print_date_time(h_shift, date_system)
         print(message)
         second -= 1
         if second == -1:
