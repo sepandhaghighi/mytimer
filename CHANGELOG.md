@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `--date-system` argument
+### Changed
+- `README.md` updated
+- Test system modified
+- `countdown_timer` and `countup_timer` functions updated
 ## [2.1] - 2025-02-28
 ### Added
 - 4 new tones
