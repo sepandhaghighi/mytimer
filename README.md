@@ -197,6 +197,16 @@ In this mode, the date/time will not be shown
 mytimer --minute=20 --hide-datetime
 ```
 
+### Date System
+
+ℹ️ Valid choices: [`gregorian`, `jalali`]
+
+ℹ️ The default date system is `gregorian`
+
+```console
+mytimer --minute=20 --date-system=jalali
+```
+
 ### Vertical Mode
 
 ```console

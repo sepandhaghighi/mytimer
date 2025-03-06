@@ -106,6 +106,7 @@ DEFAULT_PARAMS = {
     "alarm": 0,
     "hide_second": 0,
     "hide_datetime": 0,
+    "date_system": "gregorian",
     "vertical": 0,
     "alarm_repeat": 1,
     "face": 1,
@@ -344,3 +345,5 @@ BREAKS_MAP = {
 FACES_LIST = [-1] + sorted(FACES_MAP)
 
 TONES_LIST = [-1] + sorted(TONES_MAP)
+
+DATE_SYSTEMS_LIST = ["gregorian", "jalali"]

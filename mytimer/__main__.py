@@ -2,6 +2,7 @@
 """mytimer main."""
 from mytimer.params import FACES_LIST, PROGRAMS_MAP, TONES_LIST
 from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO, SIGNS_LIST
+from mytimer.params import DATE_SYSTEMS_LIST
 from mytimer.functions import run_timer
 import argparse
 
@@ -58,6 +59,7 @@ def main():
     parser.add_argument('--hide-second', help='hide second', nargs="?", const=1)
     parser.add_argument('--hide-datetime', help='hide datetime', nargs="?", const=1)
     parser.add_argument('--vertical', help='vertical mode', nargs="?", const=1)
+    parser.add_argument('--date-system', help='date system', type=str, choices=DATE_SYSTEMS_LIST, default="gregorian")
     parser.add_argument(
         '--programs-list',
         help='programs list',
