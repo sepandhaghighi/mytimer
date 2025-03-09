@@ -618,7 +618,7 @@ def update_set_on_params(params):
     :return: timer params as dict
     """
     if params["message"] == "":
-        params["message"] = SET_ON_MESSAGE.format(params["hour"], params["minute"], params["second"])
+        params["message"] = SET_ON_MESSAGE.format(hour=params["hour"], minute=params["minute"], second=params["second"])
     time_now = datetime.datetime.now()
     time_then = datetime.datetime(
         time_now.year,
