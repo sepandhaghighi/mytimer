@@ -436,7 +436,7 @@ def countup_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        timer_params = {"sign":sign, "hour":timer_hour, "minute":timer_minute, "second":timer_second}
+        timer_params = {"sign": sign, "hour": timer_hour, "minute": timer_minute, "second": timer_second}
         if hide_second:
             del timer_params["second"]
         tprint(timer_template.format(**timer_params), font=face, sep="\n" + " " * h_shift)
@@ -521,7 +521,7 @@ def countdown_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        timer_params = {"sign":sign, "hour":hour, "minute":minute, "second":second}
+        timer_params = {"sign": sign, "hour": hour, "minute": minute, "second": second}
         if hide_second:
             del timer_params["second"]
         tprint(timer_template.format(**timer_params), font=face, sep="\n" + " " * h_shift)
@@ -696,7 +696,8 @@ def run_timer(args):
                 two_step_timer(timer_func, params1=params, params2=break_params)
             else:
                 timer_func(**params)
-            end_round_message = END_ROUND_MESSAGE.format(round="{round}/{repeat}".format(round=timer_round, repeat=args.repeat))
+            end_round_message = END_ROUND_MESSAGE.format(
+                round="{round}/{repeat}".format(round=timer_round, repeat=args.repeat))
             if args.repeat == -1:
                 end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
             if timer_round < args.repeat or args.repeat == -1:
