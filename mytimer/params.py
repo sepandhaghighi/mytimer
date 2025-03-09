@@ -16,7 +16,7 @@ TIME_HM_TEMPLATE_VERTICAL = "{0}\n{1:02}\n{2:02}"
 FACES_LIST_EXAMPLE_MESSAGE = "12 : 34 : 56"
 INPUT_EXAMPLE = "Example: mytimer --hour=1 --minute=1 --second=1"
 TIME_ELEMENTS = ["minute", "second", "hour"]
-MESSAGE_TEMPLATE = "Message: {0}"
+MESSAGE_TEMPLATE = "Message: {message}"
 KEEP_ON_MESSAGE = " **Timeout!"
 SET_ON_MESSAGE = "Timer set for {0:02d}:{1:02d}:{2:02d}"
 DATE_FORMAT = "%A, %B %d, %Y"
