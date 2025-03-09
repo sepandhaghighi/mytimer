@@ -92,9 +92,9 @@ def show_programs_list():
     for i, program in enumerate(sorted(PROGRAMS_MAP), 1):
         print(
             PROGRAMS_LIST_TEMPLATE.format(
-                i,
-                program,
-                PROGRAMS_MAP[program]['message']))
+                index=i,
+                program=program,
+                message=PROGRAMS_MAP[program]['message']))
 
 
 def show_faces_list():
