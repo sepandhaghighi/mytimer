@@ -696,9 +696,9 @@ def run_timer(args):
                 two_step_timer(timer_func, params1=params, params2=break_params)
             else:
                 timer_func(**params)
-            end_round_message = END_ROUND_MESSAGE.format("{0}/{1}".format(timer_round, args.repeat))
+            end_round_message = END_ROUND_MESSAGE.format(round="{0}/{1}".format(timer_round, args.repeat))
             if args.repeat == -1:
-                end_round_message = END_ROUND_MESSAGE.format(timer_round)
+                end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
             if timer_round < args.repeat or args.repeat == -1:
                 print_message(
                     message=end_round_message,
