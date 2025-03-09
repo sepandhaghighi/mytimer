@@ -566,11 +566,11 @@ def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
         timer_func(**work_params)
         if index == 3:
             break
-        print_message(message=NEXT_PROGRAM_MESSAGE.format("Short break"), h_shift=h_shift, confirm=True)
+        print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Short break"), h_shift=h_shift, confirm=True)
         timer_func(**short_break_params)
         print_message(message=NEXT_PROGRAM_MESSAGE.format(
-            "Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
-    print_message(message=NEXT_PROGRAM_MESSAGE.format("Long break"), h_shift=h_shift, confirm=True)
+            next_program="Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Long break"), h_shift=h_shift, confirm=True)
     timer_func(**long_break_params)
 
 
@@ -588,7 +588,7 @@ def two_step_timer(timer_func, params1, params2):
     """
     h_shift = params1["h_shift"]
     timer_func(**params1)
-    print_message(message=NEXT_PROGRAM_MESSAGE.format("Break"), h_shift=h_shift, confirm=True)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Break"), h_shift=h_shift, confirm=True)
     timer_func(**params2)
 
 
