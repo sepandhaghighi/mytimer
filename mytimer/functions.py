@@ -562,14 +562,14 @@ def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
     h_shift = params["h_shift"]
     for index in range(4):
         work_params = params.copy()
-        work_params["message"] += " {0}/{1}".format(index + 1, 4)
+        work_params["message"] += " {round}/{repeat}".format(round=index + 1, repeat=4)
         timer_func(**work_params)
         if index == 3:
             break
         print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Short break"), h_shift=h_shift, confirm=True)
         timer_func(**short_break_params)
         print_message(message=NEXT_PROGRAM_MESSAGE.format(
-            next_program="Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
+            next_program="Work {round}/{repeat}".format(round=index + 2, repeat=4)), h_shift=h_shift, confirm=True)
     print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Long break"), h_shift=h_shift, confirm=True)
     timer_func(**long_break_params)
 
@@ -696,7 +696,7 @@ def run_timer(args):
                 two_step_timer(timer_func, params1=params, params2=break_params)
             else:
                 timer_func(**params)
-            end_round_message = END_ROUND_MESSAGE.format(round="{0}/{1}".format(timer_round, args.repeat))
+            end_round_message = END_ROUND_MESSAGE.format(round="{round}/{repeat}".format(round=timer_round, repeat=args.repeat))
             if args.repeat == -1:
                 end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
             if timer_round < args.repeat or args.repeat == -1:
