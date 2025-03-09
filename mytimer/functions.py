@@ -92,9 +92,9 @@ def show_programs_list():
     for i, program in enumerate(sorted(PROGRAMS_MAP), 1):
         print(
             PROGRAMS_LIST_TEMPLATE.format(
-                i,
-                program,
-                PROGRAMS_MAP[program]['message']))
+                index=i,
+                program=program,
+                message=PROGRAMS_MAP[program]['message']))
 
 
 def show_faces_list():
@@ -212,7 +212,7 @@ def input_handler(func):
         """
         message = message.strip()
         if len(message) > 0:
-            message = MESSAGE_TEMPLATE.format(message)
+            message = MESSAGE_TEMPLATE.format(message=message)
         if alarm_repeat < 1:
             alarm_repeat = DEFAULT_PARAMS["alarm_repeat"]
         if h_shift < 0:
@@ -436,10 +436,10 @@ def countup_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        timer_params = [sign, timer_hour, timer_minute, timer_second]
+        timer_params = {"sign": sign, "hour": timer_hour, "minute": timer_minute, "second": timer_second}
         if hide_second:
-            timer_params = timer_params[:-1]
-        tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
+            del timer_params["second"]
+        tprint(timer_template.format(**timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift, date_system)
         print(message)
@@ -521,10 +521,10 @@ def countdown_timer(
         clear_screen()
         print('\n' * v_shift, end='')
         print(" " * h_shift, end='')
-        timer_params = [sign, hour, minute, second]
+        timer_params = {"sign": sign, "hour": hour, "minute": minute, "second": second}
         if hide_second:
-            timer_params = timer_params[:-1]
-        tprint(timer_template.format(*timer_params), font=face, sep="\n" + " " * h_shift)
+            del timer_params["second"]
+        tprint(timer_template.format(**timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
             print_date_time(h_shift, date_system)
         print(message)
@@ -562,15 +562,15 @@ def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
     h_shift = params["h_shift"]
     for index in range(4):
         work_params = params.copy()
-        work_params["message"] += " {0}/{1}".format(index + 1, 4)
+        work_params["message"] += " {round}/{repeat}".format(round=index + 1, repeat=4)
         timer_func(**work_params)
         if index == 3:
             break
-        print_message(message=NEXT_PROGRAM_MESSAGE.format("Short break"), h_shift=h_shift, confirm=True)
+        print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Short break"), h_shift=h_shift, confirm=True)
         timer_func(**short_break_params)
         print_message(message=NEXT_PROGRAM_MESSAGE.format(
-            "Work {0}/{1}".format(index + 2, 4)), h_shift=h_shift, confirm=True)
-    print_message(message=NEXT_PROGRAM_MESSAGE.format("Long break"), h_shift=h_shift, confirm=True)
+            next_program="Work {round}/{repeat}".format(round=index + 2, repeat=4)), h_shift=h_shift, confirm=True)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Long break"), h_shift=h_shift, confirm=True)
     timer_func(**long_break_params)
 
 
@@ -588,7 +588,7 @@ def two_step_timer(timer_func, params1, params2):
     """
     h_shift = params1["h_shift"]
     timer_func(**params1)
-    print_message(message=NEXT_PROGRAM_MESSAGE.format("Break"), h_shift=h_shift, confirm=True)
+    print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Break"), h_shift=h_shift, confirm=True)
     timer_func(**params2)
 
 
@@ -618,7 +618,7 @@ def update_set_on_params(params):
     :return: timer params as dict
     """
     if params["message"] == "":
-        params["message"] = SET_ON_MESSAGE.format(params["hour"], params["minute"], params["second"])
+        params["message"] = SET_ON_MESSAGE.format(hour=params["hour"], minute=params["minute"], second=params["second"])
     time_now = datetime.datetime.now()
     time_then = datetime.datetime(
         time_now.year,
@@ -696,9 +696,10 @@ def run_timer(args):
                 two_step_timer(timer_func, params1=params, params2=break_params)
             else:
                 timer_func(**params)
-            end_round_message = END_ROUND_MESSAGE.format("{0}/{1}".format(timer_round, args.repeat))
+            end_round_message = END_ROUND_MESSAGE.format(
+                round="{round}/{repeat}".format(round=timer_round, repeat=args.repeat))
             if args.repeat == -1:
-                end_round_message = END_ROUND_MESSAGE.format(timer_round)
+                end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
             if timer_round < args.repeat or args.repeat == -1:
                 print_message(
                     message=end_round_message,
