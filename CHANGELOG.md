@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Test system modified
 - `countdown_timer` and `countup_timer` functions updated
 - String templates modified
+- Input case sensitivity bug fixed
 ## [2.1] - 2025-02-28
 ### Added
 - 4 new tones
