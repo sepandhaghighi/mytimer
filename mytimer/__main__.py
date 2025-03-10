@@ -32,7 +32,7 @@ def main():
     parser.add_argument(
         '--program',
         help='program',
-        type=str,
+        type=str.lower,
         choices=sorted(PROGRAMS_MAP))
     parser.add_argument(
         '--sign',
@@ -59,7 +59,7 @@ def main():
     parser.add_argument('--hide-second', help='hide second', nargs="?", const=1)
     parser.add_argument('--hide-datetime', help='hide datetime', nargs="?", const=1)
     parser.add_argument('--vertical', help='vertical mode', nargs="?", const=1)
-    parser.add_argument('--date-system', help='date system', type=str, choices=DATE_SYSTEMS_LIST, default="gregorian")
+    parser.add_argument('--date-system', help='date system', type=str.lower, choices=DATE_SYSTEMS_LIST, default="gregorian")
     parser.add_argument(
         '--programs-list',
         help='programs list',
