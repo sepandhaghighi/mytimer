@@ -50,7 +50,7 @@ jobs:
         mytimer --minute=0 --second=3 --countup --alarm --face=4
     - name: Run5
       run: |
-        mytimer --program=poached-egg
+        mytimer --program=poached-eGg
     - name: Run6
       run: |
         mytimer --minute=0 --second=3 --countup --alarm --face=4 --tone=6 --hide-datetime
@@ -65,7 +65,7 @@ jobs:
         mytimer --faces-list
     - name: Run10
       run: |
-        mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second --date-system=jalali
+        mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second --date-system=jalAli
     - name: Run11
       run: |
         mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second --vertical
