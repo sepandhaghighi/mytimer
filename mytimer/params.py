@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """mytimer params."""
 
-MY_TIMER_VERSION = "2.1"
+MY_TIMER_VERSION = "2.2"
 ADDITIONAL_INFO = "Additional information: Press `Ctrl+C` to exit."
 INPUT_ERROR_MESSAGE = "[Error] Wrong input"
 SOUND_ERROR_MESSAGE = "[Error] Unable to play sound"
