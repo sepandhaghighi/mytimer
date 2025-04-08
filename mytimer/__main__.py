@@ -7,7 +7,7 @@ from mytimer.functions import run_timer
 import argparse
 
 
-def main():
+def main() -> None:
     """
     CLI main function.
 

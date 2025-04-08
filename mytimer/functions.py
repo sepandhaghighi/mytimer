@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """mytimer functions."""
+from typing import Tuple, Dict, Any, Callable
 import os
 import sys
 import time
 import datetime
 import jdatetime
 import random
+import argparse
 from nava import play
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
@@ -23,19 +25,19 @@ from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
 from art import tprint
 
 
-def print_message(message, v_shift=0, h_shift=0, confirm=False):
+
+def print_message(
+        message: str,
+        v_shift: int = 0,
+        h_shift: int = 0,
+        confirm: bool = False) -> None:
     """
     Print message.
 
     :param message: message text
-    :type message: str
     :param v_shift: vertical shift
-    :type v_shift: int
     :param h_shift: horizontal shift
-    :type h_shift: int
     :param confirm: confirm flag
-    :type confirm: bool
-    :return: None
     """
     func = print
     if confirm:
@@ -44,27 +46,20 @@ def print_message(message, v_shift=0, h_shift=0, confirm=False):
     func(h_shift * " " + message)
 
 
-def mytimer_info():
-    """
-    Print mytimer details.
-
-    :return: None
-    """
+def mytimer_info() -> None:
+    """Print mytimer details."""
     tprint("MyTimer")
     tprint("V:" + MY_TIMER_VERSION)
     print(MY_TIMER_OVERVIEW)
     print(MY_TIMER_REPO)
 
 
-def load_program_params(program_name, is_break=False):
+def load_program_params(program_name: str, is_break: bool = False) -> Dict[str, Any]:
     """
     Load program/break params.
 
     :param program_name: program name
-    :type program_name: str
     :param is_break: break flag
-    :type is_break: bool
-    :return: program/break params as dict
     """
     program_params = dict()
     ref_map = PROGRAMS_MAP
@@ -82,12 +77,8 @@ def load_program_params(program_name, is_break=False):
     return program_params
 
 
-def show_programs_list():
-    """
-    Show programs list.
-
-    :return: None
-    """
+def show_programs_list() -> None:
+    """Show programs list."""
     print("Programs list:\n")
     for i, program in enumerate(sorted(PROGRAMS_MAP), 1):
         print(
@@ -97,12 +88,8 @@ def show_programs_list():
                 message=PROGRAMS_MAP[program]['message']))
 
 
-def show_faces_list():
-    """
-    Show faces list.
-
-    :return: None
-    """
+def show_faces_list() -> None:
+    """Show faces list."""
     print("Faces list:\n")
     for i in sorted(FACES_MAP):
         print('Face {}\n'.format(i))
@@ -110,13 +97,11 @@ def show_faces_list():
         print('=' * 80)
 
 
-def check_null_time(args):
+def check_null_time(args: argparse.Namespace) -> bool:
     """
     Check that all time elements are null or not.
 
     :param args: input arguments
-    :type args: argparse.Namespace
-    :return: result as bool
     """
     for item in TIME_ELEMENTS:
         if getattr(args, item) is not None:
@@ -124,17 +109,13 @@ def check_null_time(args):
     return True
 
 
-def load_params(args, program=None, is_break=False):
+def load_params(args: argparse.Namespace, program: str = None, is_break: bool = False) -> Dict[str, Any]:
     """
     Load params.
 
     :param args: input arguments
-    :type args: argparse.Namespace
     :param program: program name
-    :type program: str
     :param is_break: break flag
-    :type is_break: bool
-    :return: params as dict
     """
     params = DEFAULT_PARAMS.copy()
     if program is not None:
@@ -151,64 +132,46 @@ def load_params(args, program=None, is_break=False):
     return params
 
 
-def input_handler(func):
+def input_handler(func: Callable) -> Callable:
     """
     Input handler decorator for timer functions.
 
     :param func: input function
-    :type func: function
-    :return: inner function
     """
     def inner_function(
-            hour,
-            minute,
-            second,
-            alarm,
-            face,
-            message,
-            tone,
-            alarm_repeat,
-            v_shift,
-            h_shift,
-            sign,
-            hide_second,
-            hide_datetime,
-            vertical,
-            date_system):
+            hour: int,
+            minute: int,
+            second: int,
+            alarm: bool,
+            face: int,
+            message: str,
+            tone: int,
+            alarm_repeat: int,
+            v_shift: int,
+            h_shift: int,
+            sign: str,
+            hide_second: bool,
+            hide_datetime: bool,
+            vertical: bool,
+            date_system: str) -> None:
         """
         Inner function.
 
         :param hour: hour
-        :type hour: int
         :param minute: minute
-        :type minute: int
         :param second: second
-        :type second: int
         :param alarm: alarm flag
-        :type alarm: bool
         :param face: face index
-        :type face: int
         :param message: message
-        :type message: str
         :param tone: tone index
-        :type tone: int
         :param alarm_repeat: alarm repeat
-        :type alarm_repeat: int
         :param v_shift: vertical shift
-        :type v_shift: int
         :param h_shift: horizontal shift
-        :type h_shift: int
         :param sign: timer sign
-        :type sign: str
         :param hide_second: hide second flag
-        :type hide_second: bool
         :param hide_datetime: hide date/time flag
-        :type hide_datetime: bool
         :param vertical: vertical mode flag
-        :type vertical: bool
         :param date_system: date system
-        :type date_system: str
-        :return: None
         """
         message = message.strip()
         if len(message) > 0:
@@ -249,63 +212,51 @@ def input_handler(func):
     return inner_function
 
 
-def clear_screen():
-    """
-    Clear screen function.
-
-    :return: None
-    """
+def clear_screen() -> None:
+    """Clear screen function."""
     if sys.platform == "win32":
         os.system('cls')
     else:
         os.system('clear')
 
 
-def get_face(index):
+def get_face(index: int) -> str:
     """
     Return face name.
 
     :param index: face index
-    :type index: int
-    :return: face name as str
     """
     if index == -1:
         index = random.choice(sorted(FACES_MAP))
     return FACES_MAP[index]
 
 
-def get_tone(index):
+def get_tone(index: int) -> str:
     """
     Return tone file name.
 
     :param index: tone index
-    :type index: int
-    :return: tone file name as str
     """
     if index == -1:
         index = random.choice(sorted(TONES_MAP))
     return TONES_MAP[index]
 
 
-def get_sound_path(sound_name):
+def get_sound_path(sound_name: str) -> str:
     """
     Return sound path.
 
     :param sound_name: .wav sound name
-    :type sound_name: str
-    :return: direct path to sound
     """
     cd, _ = os.path.split(__file__)
     return os.path.join(cd, "sounds", sound_name)
 
 
-def play_sound(sound_path):
+def play_sound(sound_path: str) -> None:
     """
     Play sound.
 
     :param sound_path: sound path
-    :type sound_path: str
-    :return: None
     """
     try:
         play(sound_path)
@@ -313,15 +264,12 @@ def play_sound(sound_path):
         print(SOUND_ERROR_MESSAGE)
 
 
-def play_alarm(tone, repeat):
+def play_alarm(tone: int, repeat: int) -> None:
     """
     Play alarm.
 
     :param tone: alarm tone index
-    :type tone: int
     :param repeat: alarm repeat
-    :type repeat: int
-    :return: None
     """
     tone = get_tone(tone)
     sound_path = get_sound_path(tone)
@@ -329,15 +277,12 @@ def play_alarm(tone, repeat):
         play_sound(sound_path)
 
 
-def test_tone(tone, repeat):
+def test_tone(tone: int, repeat: int) -> None:
     """
     Test tone.
 
     :param tone: alarm tone index
-    :type tone: int
     :param repeat: alarm repeat
-    :type repeat: int
-    :return: None
     """
     print("Tone: {tone}".format(tone=tone))
     print("Repeat: {repeat}".format(repeat=repeat))
@@ -348,15 +293,12 @@ def test_tone(tone, repeat):
     print("Duration: {duration} s".format(duration=duration))
 
 
-def print_date_time(h_shift, date_system):
+def print_date_time(h_shift: int, date_system: str) -> None:
     """
     Print date and time.
 
     :param h_shift: horizontal shift
-    :type h_shift: int
     :param date_system: date system
-    :type date_system: str
-    :return: None
     """
     datetime_lib = datetime
     if date_system == "jalali":
@@ -374,55 +316,39 @@ def print_date_time(h_shift, date_system):
 
 @input_handler
 def countup_timer(
-        hour,
-        minute,
-        second,
-        alarm=DEFAULT_PARAMS["alarm"],
-        face=DEFAULT_PARAMS["face"],
-        message=DEFAULT_PARAMS["message"],
-        tone=DEFAULT_PARAMS["tone"],
-        alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
-        v_shift=DEFAULT_PARAMS["v_shift"],
-        h_shift=DEFAULT_PARAMS["h_shift"],
-        sign=DEFAULT_PARAMS["sign"],
-        hide_second=DEFAULT_PARAMS["hide_second"],
-        hide_datetime=DEFAULT_PARAMS["hide_datetime"],
-        vertical=DEFAULT_PARAMS["vertical"],
-        date_system=DEFAULT_PARAMS["date_system"]):
+        hour: int,
+        minute: int,
+        second: int,
+        alarm: bool = DEFAULT_PARAMS["alarm"],
+        face: int = DEFAULT_PARAMS["face"],
+        message: str = DEFAULT_PARAMS["message"],
+        tone: int = DEFAULT_PARAMS["tone"],
+        alarm_repeat: int = DEFAULT_PARAMS["alarm_repeat"],
+        v_shift: int = DEFAULT_PARAMS["v_shift"],
+        h_shift: int = DEFAULT_PARAMS["h_shift"],
+        sign: str = DEFAULT_PARAMS["sign"],
+        hide_second: bool = DEFAULT_PARAMS["hide_second"],
+        hide_datetime: bool = DEFAULT_PARAMS["hide_datetime"],
+        vertical: bool = DEFAULT_PARAMS["vertical"],
+        date_system: str = DEFAULT_PARAMS["date_system"]) -> None:
     """
     Count-up timer function.
 
     :param hour: hour
-    :type hour: int
     :param minute: minute
-    :type minute: int
     :param second: second
-    :type second: int
     :param alarm: alarm flag
-    :type alarm: bool
     :param face: face index
-    :type face: int
     :param message: message
-    :type message: str
     :param tone: tone index
-    :type tone: int
     :param alarm_repeat: alarm repeat
-    :type alarm_repeat: int
     :param v_shift: vertical shift
-    :type v_shift: int
     :param h_shift: horizontal shift
-    :type h_shift: int
     :param sign: timer sign
-    :type sign: str
     :param hide_second: hide second flag
-    :type hide_second: bool
     :param hide_datetime: hide date/time flag
-    :type hide_datetime: bool
     :param vertical: vertical mode flag
-    :type vertical: bool
     :param date_system: date system
-    :type date_system: str
-    :return: None
     """
     timer_second = 0
     timer_minute = 0
@@ -462,55 +388,39 @@ def countup_timer(
 
 @input_handler
 def countdown_timer(
-        hour,
-        minute,
-        second,
-        alarm=DEFAULT_PARAMS["alarm"],
-        face=DEFAULT_PARAMS["face"],
-        message=DEFAULT_PARAMS["message"],
-        tone=DEFAULT_PARAMS["tone"],
-        alarm_repeat=DEFAULT_PARAMS["alarm_repeat"],
-        v_shift=DEFAULT_PARAMS["v_shift"],
-        h_shift=DEFAULT_PARAMS["h_shift"],
-        sign=DEFAULT_PARAMS["sign"],
-        hide_second=DEFAULT_PARAMS["hide_second"],
-        hide_datetime=DEFAULT_PARAMS["hide_datetime"],
-        vertical=DEFAULT_PARAMS["vertical"],
-        date_system=DEFAULT_PARAMS["date_system"]):
+        hour: int,
+        minute: int,
+        second: int,
+        alarm: bool = DEFAULT_PARAMS["alarm"],
+        face: int = DEFAULT_PARAMS["face"],
+        message: str = DEFAULT_PARAMS["message"],
+        tone: int = DEFAULT_PARAMS["tone"],
+        alarm_repeat: int = DEFAULT_PARAMS["alarm_repeat"],
+        v_shift: int = DEFAULT_PARAMS["v_shift"],
+        h_shift: int = DEFAULT_PARAMS["h_shift"],
+        sign: str = DEFAULT_PARAMS["sign"],
+        hide_second: bool = DEFAULT_PARAMS["hide_second"],
+        hide_datetime: bool = DEFAULT_PARAMS["hide_datetime"],
+        vertical: bool = DEFAULT_PARAMS["vertical"],
+        date_system: str = DEFAULT_PARAMS["date_system"]) -> None:
     """
     Countdown timer function.
 
     :param hour: hour
-    :type hour: int
     :param minute: minute
-    :type minute: int
     :param second: second
-    :type second: int
     :param alarm: alarm flag
-    :type alarm: bool
     :param face: face index
-    :type face: int
     :param message: message
-    :type message: str
     :param tone: tone index
-    :type tone: int
     :param alarm_repeat: alarm repeat
-    :type alarm_repeat: int
     :param v_shift: vertical shift
-    :type v_shift: int
     :param h_shift: horizontal shift
-    :type h_shift: int
     :param sign: timer sign
-    :type sign: str
     :param hide_second: hide second flag
-    :type hide_second: bool
     :param hide_datetime: hide date/time flag
-    :type hide_datetime: bool
     :param vertical: vertical mode flag
-    :type vertical: bool
     :param date_system: date system
-    :type date_system: str
-    :return: None
     """
     face = get_face(face)
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
@@ -545,19 +455,18 @@ def countdown_timer(
         time.sleep(max(0, 1 - (end - start)))
 
 
-def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
+def pomodoro_timer(
+        timer_func: Callable,
+        params: Dict[str, Any],
+        long_break_params: Dict[str, Any],
+        short_break_params: Dict[str, Any]) -> None:
     """
     Pomodoro timer function.
 
     :param timer_func: timer function
-    :type timer_func: function
     :param params: program params
-    :type params: dict
     :param long_break_params: long break params
-    :type long_break_params: dict
     :param short_break_params: short break params
-    :type short_break_params: dict
-    :return: None
     """
     h_shift = params["h_shift"]
     for index in range(4):
@@ -574,17 +483,13 @@ def pomodoro_timer(timer_func, params, long_break_params, short_break_params):
     timer_func(**long_break_params)
 
 
-def two_step_timer(timer_func, params1, params2):
+def two_step_timer(timer_func: Callable, params1: Dict[str, Any], params2: Dict[str, Any]) -> None:
     """
     Two step timer function.
 
     :param timer_func: timer function
-    :type timer_func: function
     :param params1: program-1 params
-    :type params1: dict
     :param params2: program-2 params
-    :type params2: dict
-    :return: None
     """
     h_shift = params1["h_shift"]
     timer_func(**params1)
@@ -592,13 +497,11 @@ def two_step_timer(timer_func, params1, params2):
     timer_func(**params2)
 
 
-def keep_on_timer(params):
+def keep_on_timer(params: Dict[str, Any]) -> None:
     """
     Keep-on timer.
 
     :param params: timer params
-    :type params: dict
-    :return: None
     """
     params["hour"] = KEEP_ON_MAX
     params["message"] += KEEP_ON_MESSAGE
@@ -609,13 +512,11 @@ def keep_on_timer(params):
     countup_timer(**params)
 
 
-def update_set_on_params(params):
+def update_set_on_params(params: Dict[str, Any]) -> Dict[str, Any]:
     """
     Update set-on mode params.
 
     :param params: timer params
-    :type params: dict
-    :return: timer params as dict
     """
     if params["message"] == "":
         params["message"] = SET_ON_MESSAGE.format(hour=params["hour"], minute=params["minute"], second=params["second"])
@@ -636,15 +537,12 @@ def update_set_on_params(params):
     return params
 
 
-def select_timer_func(args, params):
+def select_timer_func(args: argparse.Namespace, params: Dict[str, Any]) -> Tuple[Callable, Dict[str, Any]]:
     """
-    Select timer function.
+    Select timer function and parameters.
 
     :param args: input arguments
-    :type args: argparse.Namespace
     :param params: timer params
-    :type params: dict
-    :return: timer function, timer params
     """
     timer_func = countdown_timer
     if args.countup:
@@ -658,13 +556,11 @@ def select_timer_func(args, params):
     return timer_func, params
 
 
-def run_timer(args):
+def run_timer(args: argparse.Namespace) -> None:
     """
     Run timer.
 
     :param args: input arguments
-    :type args: argparse.Namespace
-    :return: None
     """
     params = load_params(args)
     timer_func, params = select_timer_func(args, params)
