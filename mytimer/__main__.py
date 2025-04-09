@@ -8,11 +8,7 @@ import argparse
 
 
 def main() -> None:
-    """
-    CLI main function.
-
-    :return: None
-    """
+    """CLI main function."""
     parser = argparse.ArgumentParser()
     parser.epilog = ADDITIONAL_INFO
     parser.add_argument('--minute', help='minute', type=int)
