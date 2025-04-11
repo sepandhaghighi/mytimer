@@ -7,12 +7,8 @@ from mytimer.functions import run_timer
 import argparse
 
 
-def main():
-    """
-    CLI main function.
-
-    :return: None
-    """
+def main() -> None:
+    """CLI main function."""
     parser = argparse.ArgumentParser()
     parser.epilog = ADDITIONAL_INFO
     parser.add_argument('--minute', help='minute', type=int)
