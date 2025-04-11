@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Changed
 - Python typing features added to all modules
+- Test system modified
+- `Python 3.6` support dropped
 ## [2.2] - 2025-03-13
 ### Added
 - `--date-system` argument
