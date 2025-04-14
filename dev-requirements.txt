@@ -1,5 +1,5 @@
 nava==0.7
-art==6.4
+art==6.5
 jdatetime==5.2.0
 setuptools>=40.8.0
 vulture>=1.0
