@@ -1,6 +1,6 @@
 # Programs List
 
-**Last Update: 2025-01-25**
+**Last Update: 2025-05-21**
 
 ⚠️ By default, the **alarm** is **active** for all programs
 
@@ -130,6 +130,12 @@
 		<td><code>work</code></td>
 		<td>00:25:00</td>
 		<td>>=0.9</td>
+	</tr>
+	<tr align="center">
+		<td>Eye break</td>
+		<td><code>eye-break</code></td>
+		<td>00:02:00</td>
+		<td>>=2.3</td>
 	</tr>
 	<tr align="center">
 		<td>Short break</td>
