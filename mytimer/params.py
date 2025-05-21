@@ -277,6 +277,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Time to work (40 mins)",
     },
+    "eye-break": {
+        "hour": 0,
+        "minute": 2,
+        "second": 0,
+        "message": "Eye break (2 mins)",
+    },
     "short-break": {
         "hour": 0,
         "minute": 5,
