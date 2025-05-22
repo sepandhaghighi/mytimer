@@ -307,6 +307,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Long break (30 mins)",
     },
+    "power-nap": {
+        "hour": 0,
+        "minute": 20,
+        "second": 0,
+        "message": "Power nap (20 mins)",
+    },
     "noodle": {
         "hour": 0,
         "minute": 3,
