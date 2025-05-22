@@ -1,6 +1,6 @@
 # Programs List
 
-**Last Update: 2025-05-21**
+**Last Update: 2025-05-22**
 
 ⚠️ By default, the **alarm** is **active** for all programs
 
@@ -160,6 +160,12 @@
 		<td><code>long-break</code></td>
 		<td>00:30:00</td>
 		<td>>=0.9</td>
+	</tr>
+	<tr align="center">
+		<td>Power nap</td>
+		<td><code>power-nap</code></td>
+		<td>00:20:00</td>
+		<td>>=2.3</td>
 	</tr>
 	<tr align="center">
 		<td>Meditation</td>
