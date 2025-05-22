@@ -25,7 +25,6 @@ from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
 from art import tprint
 
 
-
 def print_message(
         message: str,
         v_shift: int = 0,
