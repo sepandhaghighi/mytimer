@@ -292,21 +292,21 @@ def test_tone(tone: int, repeat: int) -> None:
     print("Duration: {duration} s".format(duration=duration))
 
 
-def print_date_time(h_shift: int, date_system: str) -> None:
+def print_date_time(start_datetime: datetime.datetime, current_datetime: datetime.datetime, h_shift: int) -> None:
     """
     Print date and time.
 
-    :param h_shift: horizontal shift
+    :param start_datetime: start date and time
+    :param current_datetime: current date and time
     :param date_system: date system
     """
-    datetime_lib = datetime
-    if date_system == "jalali":
-        datetime_lib = jdatetime
-    datetime_now = datetime_lib.datetime.now()
-    current_time = datetime_now.strftime(CLOCK_FORMAT)
-    current_date = datetime_now.strftime(DATE_FORMAT)
+    current_time = current_datetime.strftime(CLOCK_FORMAT)
+    current_date = current_datetime.strftime(DATE_FORMAT)
+    start_time = start_datetime.strftime(CLOCK_FORMAT)
     print(" " * h_shift, end='')
-    print(current_time)
+    print("Start Time  : {start_time}".format(start_time=start_time))
+    print(" " * h_shift, end='')
+    print("Current Time: {current_time}".format(current_time=current_time))
     print(" " * h_shift, end='')
     print(current_date)
     print("")
@@ -356,6 +356,10 @@ def countup_timer(
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
         timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
+    datetime_lib = datetime
+    if date_system == "jalali":
+        datetime_lib = jdatetime
+    start_datetime = datetime_lib.datetime.now()
     while True:
         start = time.perf_counter()
         clear_screen()
@@ -366,7 +370,8 @@ def countup_timer(
             del timer_params["second"]
         tprint(timer_template.format(**timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
-            print_date_time(h_shift, date_system)
+            current_datetime = datetime_lib.datetime.now()
+            print_date_time(start_datetime, current_datetime, h_shift)
         print(message)
         if timer_hour == hour and timer_minute == minute and timer_second == second:
             print(" " * h_shift, end='')
@@ -425,6 +430,10 @@ def countdown_timer(
     timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
     if hide_second:
         timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
+    datetime_lib = datetime
+    if date_system == "jalali":
+        datetime_lib = jdatetime
+    start_datetime = datetime_lib.datetime.now()
     while True:
         start = time.perf_counter()
         clear_screen()
@@ -435,7 +444,8 @@ def countdown_timer(
             del timer_params["second"]
         tprint(timer_template.format(**timer_params), font=face, sep="\n" + " " * h_shift)
         if not hide_datetime:
-            print_date_time(h_shift, date_system)
+            current_datetime = datetime_lib.datetime.now()
+            print_date_time(start_datetime, current_datetime, h_shift)
         print(message)
         second -= 1
         if second == -1:
