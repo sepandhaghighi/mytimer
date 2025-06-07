@@ -292,7 +292,8 @@ def test_tone(tone: int, repeat: int) -> None:
     print("Duration: {duration} s".format(duration=duration))
 
 
-def print_date_time(start_datetime: Union[datetime.datetime, jdatetime.datetime] , current_datetime: Union[datetime.datetime, jdatetime.datetime], h_shift: int) -> None:
+def print_date_time(start_datetime: Union[datetime.datetime, jdatetime.datetime],
+                    current_datetime: Union[datetime.datetime, jdatetime.datetime], h_shift: int) -> None:
     """
     Print date and time.
 
