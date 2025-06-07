@@ -9,8 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - 2 new programs
 	1. `eye-break`
 	2. `power-nap`
+- Start time
 ### Changed
 - Python typing features added to all modules
+- `print_date_time` function modified
 - Test system modified
 - `Python 3.6` support dropped
 ## [2.2] - 2025-03-13
