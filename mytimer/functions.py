@@ -299,7 +299,7 @@ def print_date_time(start_datetime: Union[datetime.datetime, jdatetime.datetime]
 
     :param start_datetime: start date and time
     :param current_datetime: current date and time
-    :param date_system: date system
+    :param h_shift: horizontal shift
     """
     current_time = current_datetime.strftime(CLOCK_FORMAT)
     current_date = current_datetime.strftime(DATE_FORMAT)
