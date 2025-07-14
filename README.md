@@ -216,7 +216,7 @@ mytimer --minute=5 --vertical
 
 ⚠️ Local time
 
-In this mode, the timer sets on the given time. For example, here we set a timer for `15:05`.
+In this mode, the timer sets on the given time. For example, here we set a timer for `15:05`
 
 ```console
 mytimer --hour=15 --minute=5 --set-on
@@ -312,6 +312,6 @@ GALPOLPISRHIYHLQER2TLJRGUSZH52RYDK6C3HIU4PSMNAV65Q36EGNL
 zil1knmz8zj88cf0exr2ry7nav9elehxfcgqu3c5e5
 <h4>Coffeete</h4>
 <a href="http://www.coffeete.ir/opensource">
-<img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
+<img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;">
 </a>
 
