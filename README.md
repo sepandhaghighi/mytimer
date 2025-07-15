@@ -46,8 +46,7 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 	<tr> 
 		<td align="center">Code Quality</td>
 		<td align="center"><a href="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer"><img src="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer/badge" alt="CodeFactor" /></a></td>
-		<td align="center"><a href="https://www.codacy.com/gh/sepandhaghighi/mytimer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sepandhaghighi/mytimer&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1bf28500431a498998ac79891cd79cda"/></a></td>
-		<td align="center"><a href="https://codebeat.co/projects/github-com-sepandhaghighi-mytimer-main"><img alt="codebeat badge" src="https://codebeat.co/badges/ae1c0ac1-9890-4149-b260-b1f3174ef520" /></a></td>
+		<td><a href="https://app.codacy.com/gh/sepandhaghighi/mytimer/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/1bf28500431a498998ac79891cd79cda"/></a></td>
 	</tr>
 </table>
 
@@ -217,7 +216,7 @@ mytimer --minute=5 --vertical
 
 ⚠️ Local time
 
-In this mode, the timer sets on the given time. For example, here we set a timer for `15:05`.
+In this mode, the timer sets on the given time. For example, here we set a timer for `15:05`:
 
 ```console
 mytimer --hour=15 --minute=5 --set-on
@@ -313,6 +312,6 @@ GALPOLPISRHIYHLQER2TLJRGUSZH52RYDK6C3HIU4PSMNAV65Q36EGNL
 zil1knmz8zj88cf0exr2ry7nav9elehxfcgqu3c5e5
 <h4>Coffeete</h4>
 <a href="http://www.coffeete.ir/opensource">
-<img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;" />
+<img src="http://www.coffeete.ir/images/buttons/lemonchiffon.png" style="width:260px;">
 </a>
 
