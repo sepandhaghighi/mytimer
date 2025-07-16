@@ -86,6 +86,7 @@ body:
       label: MyTimer version
       description: Which version of MyTimer are you using?
       options:
+        - MyTimer 2.3
         - MyTimer 2.2
         - MyTimer 2.1
         - MyTimer 2.0
