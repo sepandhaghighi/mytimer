@@ -61,16 +61,16 @@ def load_program_params(program_name: str, is_break: bool = False) -> Dict[str, 
     :param is_break: break flag
     """
     program_params = dict()
-    ref_map = PROGRAMS_MAP
-    ref_defaults = PROGRAMS_DEFAULTS
+    reference_map = PROGRAMS_MAP
+    reference_defaults = PROGRAMS_DEFAULTS
     if is_break:
-        ref_map = BREAKS_MAP
-        ref_defaults = BREAKS_DEFAULTS
+        reference_map = BREAKS_MAP
+        reference_defaults = BREAKS_DEFAULTS
     for item in DEFAULT_PARAMS:
-        if item in ref_map[program_name]:
-            program_params[item] = ref_map[program_name][item]
-        elif item in ref_defaults:
-            program_params[item] = ref_defaults[item]
+        if item in reference_map[program_name]:
+            program_params[item] = reference_map[program_name][item]
+        elif item in reference_defaults:
+            program_params[item] = reference_defaults[item]
         else:
             program_params[item] = DEFAULT_PARAMS[item]
     return program_params
