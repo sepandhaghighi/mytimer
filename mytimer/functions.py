@@ -466,14 +466,14 @@ def countdown_timer(
 
 
 def pomodoro_timer(
-        timer_func: Callable,
+        timer_function: Callable,
         params: Dict[str, Any],
         long_break_params: Dict[str, Any],
         short_break_params: Dict[str, Any]) -> None:
     """
     Pomodoro timer function.
 
-    :param timer_func: timer function
+    :param timer_function: timer function
     :param params: program params
     :param long_break_params: long break params
     :param short_break_params: short break params
@@ -482,29 +482,29 @@ def pomodoro_timer(
     for index in range(4):
         work_params = params.copy()
         work_params["message"] += " {round}/{repeat}".format(round=index + 1, repeat=4)
-        timer_func(**work_params)
+        timer_function(**work_params)
         if index == 3:
             break
         print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Short break"), h_shift=h_shift, confirm=True)
-        timer_func(**short_break_params)
+        timer_function(**short_break_params)
         print_message(message=NEXT_PROGRAM_MESSAGE.format(
             next_program="Work {round}/{repeat}".format(round=index + 2, repeat=4)), h_shift=h_shift, confirm=True)
     print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Long break"), h_shift=h_shift, confirm=True)
-    timer_func(**long_break_params)
+    timer_function(**long_break_params)
 
 
-def two_step_timer(timer_func: Callable, params1: Dict[str, Any], params2: Dict[str, Any]) -> None:
+def two_step_timer(timer_function: Callable, params1: Dict[str, Any], params2: Dict[str, Any]) -> None:
     """
     Two step timer function.
 
-    :param timer_func: timer function
+    :param timer_function: timer function
     :param params1: program-1 params
     :param params2: program-2 params
     """
     h_shift = params1["h_shift"]
-    timer_func(**params1)
+    timer_function(**params1)
     print_message(message=NEXT_PROGRAM_MESSAGE.format(next_program="Break"), h_shift=h_shift, confirm=True)
-    timer_func(**params2)
+    timer_function(**params2)
 
 
 def keep_on_timer(params: Dict[str, Any]) -> None:
@@ -547,23 +547,23 @@ def update_set_on_params(params: Dict[str, Any]) -> Dict[str, Any]:
     return params
 
 
-def select_timer_func(args: argparse.Namespace, params: Dict[str, Any]) -> Tuple[Callable, Dict[str, Any]]:
+def select_timer_function(args: argparse.Namespace, params: Dict[str, Any]) -> Tuple[Callable, Dict[str, Any]]:
     """
     Select timer function and parameters.
 
     :param args: input arguments
     :param params: timer params
     """
-    timer_func = countdown_timer
+    timer_function = countdown_timer
     if args.countup:
-        timer_func = countup_timer
+        timer_function = countup_timer
     if args.countdown:
-        timer_func = countdown_timer
+        timer_function = countdown_timer
     else:
         if check_null_time(args) and not args.program:
             params["hour"] = KEEP_ON_MAX
-            timer_func = countup_timer
-    return timer_func, params
+            timer_function = countup_timer
+    return timer_function, params
 
 
 def run_timer(args: argparse.Namespace) -> None:
@@ -573,7 +573,7 @@ def run_timer(args: argparse.Namespace) -> None:
     :param args: input arguments
     """
     params = load_params(args)
-    timer_func, params = select_timer_func(args, params)
+    timer_function, params = select_timer_function(args, params)
     if args.set_on:
         params = update_set_on_params(params)
     if args.version:
@@ -593,15 +593,15 @@ def run_timer(args: argparse.Namespace) -> None:
                 short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
                 long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
                 pomodoro_timer(
-                    timer_func,
+                    timer_function,
                     params=params,
                     long_break_params=long_break_params,
                     short_break_params=short_break_params)
             elif args.program in ["52-17", "112-26", "animedoro"]:
                 break_params = load_params(args, is_break=True)
-                two_step_timer(timer_func, params1=params, params2=break_params)
+                two_step_timer(timer_function, params1=params, params2=break_params)
             else:
-                timer_func(**params)
+                timer_function(**params)
             end_round_message = END_ROUND_MESSAGE.format(
                 round="{round}/{repeat}".format(round=timer_round, repeat=args.repeat))
             if args.repeat == -1:
