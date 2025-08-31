@@ -16,6 +16,8 @@ on:
 
 env:
   TERM: xterm
+  TEST_PYTHON_VERSION: 3.9
+  TEST_OS: 'windows-2022'
 
 jobs:
   build:
@@ -79,18 +81,18 @@ jobs:
     - name: Version check
       run: |
         python otherfiles/version_check.py
-      if: matrix.python-version == 3.8
+      if: matrix.python-version == env.TEST_PYTHON_VERSION
     - name: Other tests
       run: |
         python -m vulture mytimer/ setup.py --min-confidence 65 --exclude=__init__.py --sort-by-size
         python -m bandit -r mytimer -s B404,B603,B605,B607,B311
         python -m pydocstyle --match-dir=mytimer -v
-      if: matrix.python-version == 3.9
+      if: matrix.python-version == env.TEST_PYTHON_VERSION
     - name: Accuracy (Windows)
       run: |
         Measure-Command {mytimer --minute=0 --second=40}
-      if: matrix.os == 'windows-2022'
+      if: matrix.os == env.TEST_OS
     - name: Accuracy (Ubuntu / macOS)
       run: |
         time mytimer --minute=0 --second=40
-      if: matrix.os != 'windows-2022'
+      if: matrix.os != env.TEST_OS
