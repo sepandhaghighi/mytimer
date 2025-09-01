@@ -45,8 +45,8 @@ def print_message(
     func(h_shift * " " + message)
 
 
-def mytimer_info() -> None:
-    """Print mytimer details."""
+def print_mytimer_info() -> None:
+    """Print mytimer info."""
     tprint("MyTimer")
     tprint("V:" + MY_TIMER_VERSION)
     print(MY_TIMER_OVERVIEW)
@@ -579,7 +579,7 @@ def run_timer(args: argparse.Namespace) -> None:
     if args.version:
         print(MY_TIMER_VERSION)
     elif args.info:
-        mytimer_info()
+        print_mytimer_info()
     elif args.faces_list:
         show_faces_list()
     elif args.programs_list:
