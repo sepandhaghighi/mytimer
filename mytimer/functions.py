@@ -38,11 +38,11 @@ def print_message(
     :param h_shift: horizontal shift
     :param confirm: confirm flag
     """
-    func = print
+    function = print
     if confirm:
-        func = input
+        function = input
     print('\n' * v_shift, end='')
-    func(h_shift * " " + message)
+    function(h_shift * " " + message)
 
 
 def print_mytimer_info() -> None:
@@ -131,11 +131,11 @@ def load_params(args: argparse.Namespace, program: str = None, is_break: bool = 
     return params
 
 
-def input_handler(func: Callable) -> Callable:
+def input_handler(function: Callable) -> Callable:
     """
     Input handler decorator for timer functions.
 
-    :param func: input function
+    :param function: input function
     """
     def inner_function(
             hour: int,
@@ -189,7 +189,7 @@ def input_handler(func: Callable) -> Callable:
             if minute >= 60:
                 hour += minute // 60
                 minute %= 60
-            func(
+            function(
                 hour,
                 minute,
                 second,
