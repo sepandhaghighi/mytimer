@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `select_timer_func` function renamed to `select_timer_function`
 - `mytimer_info` function renamed to `print_mytimer_info`
 - `run_timer` function modified
+- `Python 3.14` added to `test.yml`
 - Test system modified
 ## [2.3] - 2025-07-17
 ### Added
