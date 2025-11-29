@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer functions."""
-from typing import Tuple, Dict, Any, Callable, Union
+from typing import Tuple, Dict, Any, Callable, Union, Optional
 import os
 import sys
 import time
@@ -239,7 +239,7 @@ def set_color(color: Optional[str]) -> None:
     """
     if color:
         color = color.strip().upper()
-        print(getattr(Fore, name, Fore.RESET))
+        print(getattr(Fore, color, Fore.RESET))
 
 
 def get_tone(index: int) -> str:
