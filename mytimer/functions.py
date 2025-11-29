@@ -239,7 +239,7 @@ def set_color(color: Optional[str]) -> None:
     """
     if color:
         color = color.strip().upper()
-        print(getattr(Fore, color, Fore.RESET))
+        print(getattr(Fore, color, ""), end="")
 
 
 def get_tone(index: int) -> str:
