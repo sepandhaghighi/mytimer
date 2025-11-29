@@ -1,3 +1,4 @@
 art>=5.3
 jdatetime>=3.8.2
 nava>=0.4
+colorama==0.4.5
