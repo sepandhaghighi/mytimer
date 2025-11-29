@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `--color` argument
 ### Changed
 - `load_program_params` function modified
 - `pomodoro_timer` function modified
@@ -13,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `mytimer_info` function renamed to `print_mytimer_info`
 - `run_timer` function modified
 - `Python 3.14` added to `test.yml`
+- `README.md` updated
 - Test system modified
 ## [2.3] - 2025-07-17
 ### Added
