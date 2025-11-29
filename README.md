@@ -237,6 +237,16 @@ mytimer --program=black-tea
 mytimer --minute=7 --second=30 --message="Test message"
 ```
 
+### Color
+
+ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
+
+ℹ️ The default color is `white`
+
+```console
+mytimer --minute=7 --second=30 --color="red"
+```
+
 ## Screen Record
 
 <div align="center">
