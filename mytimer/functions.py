@@ -9,6 +9,7 @@ import jdatetime
 import random
 import argparse
 from nava import play
+from colorama import Fore
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
@@ -228,6 +229,17 @@ def get_face(index: int) -> str:
     if index == -1:
         index = random.choice(sorted(FACES_MAP))
     return FACES_MAP[index]
+
+
+def set_color(color: str) -> None:
+    """
+    Set text color.
+
+    :param color: color name
+    """
+    if color:
+        color = color.strip().upper()
+        print(getattr(Fore, color, ""), end="")
 
 
 def get_tone(index: int) -> str:
@@ -572,6 +584,7 @@ def run_timer(args: argparse.Namespace) -> None:
 
     :param args: input arguments
     """
+    set_color(color=args.color)
     params = load_params(args)
     timer_function, params = select_timer_function(args, params)
     if args.set_on:

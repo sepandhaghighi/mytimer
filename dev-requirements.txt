@@ -1,6 +1,7 @@
 nava==0.7
 art==6.5
 jdatetime==5.2.0
+colorama==0.4.5
 setuptools>=40.8.0
 vulture>=1.0
 bandit>=1.5.1
