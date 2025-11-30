@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """mytimer functions."""
-from typing import Tuple, Dict, Any, Callable, Union, Optional
+from typing import Tuple, Dict, Any, Callable, Union
 import os
 import sys
 import time
@@ -231,7 +231,7 @@ def get_face(index: int) -> str:
     return FACES_MAP[index]
 
 
-def set_color(color: Optional[str]) -> None:
+def set_color(color: str) -> None:
     """
     Set text color.
 
