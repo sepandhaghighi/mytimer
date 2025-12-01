@@ -247,6 +247,16 @@ mytimer --minute=7 --second=30 --message="Test message"
 mytimer --minute=7 --second=30 --color="red"
 ```
 
+### Background Color
+
+ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
+
+ℹ️ The default background color is `black`
+
+```console
+mytimer --minute=7 --second=30 --bg-color="blue"
+```
+
 ## Screen Record
 
 <div align="center">
