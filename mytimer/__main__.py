@@ -22,7 +22,12 @@ def main() -> None:
         choices=FACES_LIST)
     parser.add_argument(
         '--color',
-        help='color',
+        help='text color',
+        type=str.lower,
+        choices=COLORS_LIST)
+    parser.add_argument(
+        '--bg-color',
+        help='background color',
         type=str.lower,
         choices=COLORS_LIST)
     parser.add_argument(
