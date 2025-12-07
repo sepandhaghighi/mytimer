@@ -370,3 +370,9 @@ COLORS_LIST = [
     "cyan",
     "white",
 ]
+
+INTENSITY_LIST = [
+    "normal",
+    "bright",
+    "dim",
+]

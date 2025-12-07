@@ -608,6 +608,7 @@ def run_timer(args: argparse.Namespace) -> None:
     """
     set_color(color=args.color)
     set_bg_color(bg_color=args.bg_color)
+    set_intensity(intensity=args.intensity)
     params = load_params(args)
     timer_function, params = select_timer_function(args, params)
     if args.set_on:
