@@ -2,7 +2,7 @@
 """mytimer main."""
 from mytimer.params import FACES_LIST, PROGRAMS_MAP, TONES_LIST
 from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO, SIGNS_LIST
-from mytimer.params import DATE_SYSTEMS_LIST, COLORS_LIST
+from mytimer.params import DATE_SYSTEMS_LIST, COLORS_LIST, INTENSITY_LIST
 from mytimer.functions import run_timer
 import argparse
 
@@ -30,6 +30,11 @@ def main() -> None:
         help='background color',
         type=str.lower,
         choices=COLORS_LIST)
+    parser.add_argument(
+        '--intensity',
+        help='text intensity',
+        type=str.lower,
+        choices=INTENSITY_LIST)
     parser.add_argument(
         '--tone',
         help='alarm tone',

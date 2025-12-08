@@ -9,7 +9,7 @@ import jdatetime
 import random
 import argparse
 from nava import play
-from colorama import Fore, Back
+from colorama import Fore, Back, Style
 from mytimer.params import INPUT_ERROR_MESSAGE, SOUND_ERROR_MESSAGE
 from mytimer.params import INPUT_EXAMPLE, TIME_ELEMENTS, MESSAGE_TEMPLATE
 from mytimer.params import FACES_MAP, PROGRAMS_MAP, BREAKS_MAP, TONES_MAP
@@ -251,6 +251,17 @@ def set_bg_color(bg_color: str) -> None:
     if bg_color:
         bg_color = bg_color.strip().upper()
         print(getattr(Back, bg_color, ""), end="")
+
+
+def set_intensity(intensity: str) -> None:
+    """
+    Set text intensity.
+
+    :param intensity: intensity name
+    """
+    if intensity:
+        intensity = intensity.strip().upper()
+        print(getattr(Style, intensity, ""), end="")
 
 
 def get_tone(index: int) -> str:
@@ -597,6 +608,7 @@ def run_timer(args: argparse.Namespace) -> None:
     """
     set_color(color=args.color)
     set_bg_color(bg_color=args.bg_color)
+    set_intensity(intensity=args.intensity)
     params = load_params(args)
     timer_function, params = select_timer_function(args, params)
     if args.set_on:

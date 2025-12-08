@@ -257,6 +257,16 @@ mytimer --minute=7 --second=30 --color="red"
 mytimer --minute=7 --second=30 --bg-color="blue"
 ```
 
+### Intensity
+
+ℹ️ Valid choices: [`normal`, `bright`, `dim`]
+
+ℹ️ The default intensity is `normal`
+
+```console
+mytimer --minute=7 --second=30 --intensity="bright"
+```
+
 ## Screen Record
 
 <div align="center">
