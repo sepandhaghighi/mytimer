@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `README.md` updated
 - Test system modified
+- Background color bug fixed
 ## [2.4] - 2025-12-04
 ### Added
 - `--color` argument
