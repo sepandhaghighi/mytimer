@@ -250,7 +250,7 @@ def set_bg_color(bg_color: str) -> None:
     """
     if bg_color:
         bg_color = bg_color.strip().upper()
-        print(getattr(Back, bg_color, ""), end="")
+        print(getattr(Back, bg_color, ""))
 
 
 def set_intensity(intensity: str) -> None:
