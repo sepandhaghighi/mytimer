@@ -239,6 +239,8 @@ mytimer --minute=7 --second=30 --message="Test message"
 
 ### Color
 
+⚠️ This mode may not be supported on all systems
+
 ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
 
 ℹ️ The default color is `white`
@@ -249,6 +251,8 @@ mytimer --minute=7 --second=30 --color="red"
 
 ### Background Color
 
+⚠️ This mode may not be supported on all systems
+
 ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
 
 ℹ️ The default background color is `black`
@@ -258,6 +262,8 @@ mytimer --minute=7 --second=30 --bg-color="blue"
 ```
 
 ### Intensity
+
+⚠️ This mode may not be supported on all systems
 
 ℹ️ Valid choices: [`normal`, `bright`, `dim`]
 
