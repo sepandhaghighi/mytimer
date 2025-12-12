@@ -45,8 +45,8 @@ The main objective of <strong>MyTimer</strong> is to offer a minimalistic and di
 <table>
 	<tr> 
 		<td align="center">Code Quality</td>
-		<td align="center"><a href="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer"><img src="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer/badge" alt="CodeFactor" /></a></td>
-		<td><a href="https://app.codacy.com/gh/sepandhaghighi/mytimer/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/1bf28500431a498998ac79891cd79cda"/></a></td>
+		<td align="center"><a href="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer"><img src="https://www.codefactor.io/repository/github/sepandhaghighi/mytimer/badge" alt="CodeFactor"></a></td>
+		<td><a href="https://app.codacy.com/gh/sepandhaghighi/mytimer/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade"><img src="https://app.codacy.com/project/badge/Grade/1bf28500431a498998ac79891cd79cda"></a></td>
 	</tr>
 </table>
 
@@ -239,6 +239,8 @@ mytimer --minute=7 --second=30 --message="Test message"
 
 ### Color
 
+⚠️ This mode may not be supported on all systems
+
 ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
 
 ℹ️ The default color is `white`
@@ -249,6 +251,8 @@ mytimer --minute=7 --second=30 --color="red"
 
 ### Background Color
 
+⚠️ This mode may not be supported on all systems
+
 ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
 
 ℹ️ The default background color is `black`
@@ -258,6 +262,8 @@ mytimer --minute=7 --second=30 --bg-color="blue"
 ```
 
 ### Intensity
+
+⚠️ This mode may not be supported on all systems
 
 ℹ️ Valid choices: [`normal`, `bright`, `dim`]
 
