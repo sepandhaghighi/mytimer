@@ -239,6 +239,8 @@ def set_color(color: str) -> None:
     """
     if color:
         color = color.strip().upper()
+        if color.startswith("LIGHT"):
+            color += "_EX"
         print(getattr(Fore, color, ""), end="")
 
 
@@ -250,6 +252,8 @@ def set_bg_color(bg_color: str) -> None:
     """
     if bg_color:
         bg_color = bg_color.strip().upper()
+        if bg_color.startswith("LIGHT"):
+            bg_color += "_EX"
         print(getattr(Back, bg_color, ""))
 
 
