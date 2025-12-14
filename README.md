@@ -241,7 +241,7 @@ mytimer --minute=7 --second=30 --message="Test message"
 
 ⚠️ This mode may not be supported on all systems
 
-ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
+ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `lightblack`, `lightred`, `lightgreen`, `lightyellow`, `lightblue`, `lightmagenta`, `lightcyan`, `lightwhite`]
 
 ℹ️ The default color is `white`
 
@@ -253,7 +253,7 @@ mytimer --minute=7 --second=30 --color="red"
 
 ⚠️ This mode may not be supported on all systems
 
-ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`]
+ℹ️ Valid choices: [`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `lightblack`, `lightred`, `lightgreen`, `lightyellow`, `lightblue`, `lightmagenta`, `lightcyan`, `lightwhite`]
 
 ℹ️ The default background color is `black`
 

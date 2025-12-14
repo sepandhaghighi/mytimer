@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Added
 - `--intensity` argument
+- Light colors
 ### Changed
 - `README.md` updated
 - Test system modified
 - Background color bug fixed
+- `set_color` function modified
+- `set_bg_color` function modified
 ## [2.4] - 2025-12-04
 ### Added
 - `--color` argument

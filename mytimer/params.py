@@ -369,6 +369,14 @@ COLORS_LIST = [
     "magenta",
     "cyan",
     "white",
+    "lightblack",
+    "lightred",
+    "lightgreen",
+    "lightyellow",
+    "lightblue",
+    "lightmagenta",
+    "lightcyan",
+    "lightwhite",
 ]
 
 INTENSITY_LIST = [
