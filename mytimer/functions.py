@@ -607,7 +607,7 @@ def select_timer_function(args: argparse.Namespace, params: Dict[str, Any]) -> T
     return timer_function, params
 
 
-def handle_args() -> None:
+def handle_args() -> argparse.Namespace:
     """Handle CLI arguments."""
     parser = argparse.ArgumentParser()
     parser.epilog = ADDITIONAL_INFO
