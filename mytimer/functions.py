@@ -23,8 +23,8 @@ from mytimer.params import MY_TIMER_OVERVIEW, MY_TIMER_REPO
 from mytimer.params import TIME_HMS_TEMPLATE_HORIZONTAL, TIME_HM_TEMPLATE_HORIZONTAL
 from mytimer.params import TIME_HMS_TEMPLATE_VERTICAL, TIME_HM_TEMPLATE_VERTICAL
 from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
-from mytimer.params import FACES_LIST, PROGRAMS_MAP, TONES_LIST
-from mytimer.params import EXIT_MESSAGE, ADDITIONAL_INFO, SIGNS_LIST
+from mytimer.params import FACES_LIST, TONES_LIST
+from mytimer.params import ADDITIONAL_INFO, SIGNS_LIST
 from mytimer.params import DATE_SYSTEMS_LIST, COLORS_LIST, INTENSITY_LIST
 from art import tprint
 
