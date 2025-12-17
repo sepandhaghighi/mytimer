@@ -685,11 +685,15 @@ def handle_args() -> argparse.Namespace:
     return args
 
 
-def run_timer(timer_function: Callable, params: dict, repeat: int, program: str, keep_on: bool) -> None:
+def run_timer(timer_function: Callable, params: Dict[str, dict], repeat: int, program: str, keep_on: bool) -> None:
     """
     Run timer.
 
-    :param args: input arguments
+    :param timer_function: timer function
+    :param params: timer and breaks params
+    :param repeat: number of repeats
+    :param program: program name
+    :param keep_on: keep-on flag
     """
     timer_round = 1
     while timer_round <= repeat or repeat == -1:
