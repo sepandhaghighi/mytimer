@@ -30,7 +30,7 @@ def main() -> None:
         test_tone(params["tone"], params["alarm_repeat"])
     else:
         params_dict = {"timer": params}
-        if program == "pomodoro":
+        if args.program == "pomodoro":
             params_dict["short_break"] = load_params(args, program="pomodoro-short-break", is_break=True)
             params_dict["long_break"] = load_params(args, program="pomodoro-long-break", is_break=True)
         elif args.program in ["52-17", "112-26", "animedoro"]:
