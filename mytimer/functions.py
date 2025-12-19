@@ -685,54 +685,37 @@ def handle_args() -> argparse.Namespace:
     return args
 
 
-def run_timer(args: argparse.Namespace) -> None:
+def run_timer(timer_function: Callable, params: Dict[str, dict], repeat: int, program: str, keep_on: bool) -> None:
     """
     Run timer.
 
-    :param args: input arguments
+    :param timer_function: timer function
+    :param params: timer and breaks params
+    :param repeat: number of repeats
+    :param program: program name
+    :param keep_on: keep-on flag
     """
-    set_color(color=args.color)
-    set_bg_color(bg_color=args.bg_color)
-    set_intensity(intensity=args.intensity)
-    params = load_params(args)
-    timer_function, params = select_timer_function(args, params)
-    if args.set_on:
-        params = update_set_on_params(params)
-    if args.version:
-        print(MY_TIMER_VERSION)
-    elif args.info:
-        print_mytimer_info()
-    elif args.faces_list:
-        show_faces_list()
-    elif args.programs_list:
-        show_programs_list()
-    elif args.test_tone:
-        test_tone(params["tone"], params["alarm_repeat"])
-    else:
-        timer_round = 1
-        while timer_round <= args.repeat or args.repeat == -1:
-            if args.program == "pomodoro":
-                short_break_params = load_params(args, program="pomodoro-short-break", is_break=True)
-                long_break_params = load_params(args, program="pomodoro-long-break", is_break=True)
-                pomodoro_timer(
-                    timer_function,
-                    params=params,
-                    long_break_params=long_break_params,
-                    short_break_params=short_break_params)
-            elif args.program in ["52-17", "112-26", "animedoro"]:
-                break_params = load_params(args, is_break=True)
-                two_step_timer(timer_function, params1=params, params2=break_params)
-            else:
-                timer_function(**params)
-            end_round_message = END_ROUND_MESSAGE.format(
-                round="{round}/{repeat}".format(round=timer_round, repeat=args.repeat))
-            if args.repeat == -1:
-                end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
-            if timer_round < args.repeat or args.repeat == -1:
-                print_message(
-                    message=end_round_message,
-                    h_shift=params["h_shift"],
-                    confirm=True)
-            timer_round += 1
-        if args.keep_on:
-            keep_on_timer(params)
+    timer_round = 1
+    while timer_round <= repeat or repeat == -1:
+        if program == "pomodoro":
+            pomodoro_timer(
+                timer_function,
+                params=params["timer"],
+                long_break_params=params["long_break"],
+                short_break_params=params["short_break"])
+        elif program in ["52-17", "112-26", "animedoro"]:
+            two_step_timer(timer_function, params1=params["timer"], params2=params["break"])
+        else:
+            timer_function(**params["timer"])
+        end_round_message = END_ROUND_MESSAGE.format(
+            round="{round}/{repeat}".format(round=timer_round, repeat=repeat))
+        if repeat == -1:
+            end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
+        if timer_round < repeat or repeat == -1:
+            print_message(
+                message=end_round_message,
+                h_shift=params["timer"]["h_shift"],
+                confirm=True)
+        timer_round += 1
+    if keep_on:
+        keep_on_timer(params["timer"])
