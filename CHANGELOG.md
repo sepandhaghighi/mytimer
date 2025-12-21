@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `set_bg_color` function modified
 - Arguments moved to `handle_args` function
 - `main` function moved to `functions.py`
+- `--set-on` flag bug fixed
 ## [2.4] - 2025-12-04
 ### Added
 - `--color` argument
