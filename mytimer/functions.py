@@ -729,7 +729,7 @@ def main() -> None:
     set_intensity(intensity=args.intensity)
     params = load_params(args)
     timer_function, params = select_timer_function(args, params)
-    if args.set_on:
+    if args.set_on and not args.program:
         params = update_set_on_params(params)
     if args.version:
         print(MY_TIMER_VERSION)
