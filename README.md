@@ -279,7 +279,8 @@ mytimer --minute=7 --second=30 --intensity="bright"
 
 <img src="https://github.com/sepandhaghighi/mytimer/raw/main/otherfiles/help.gif">
 
-<video src="https://github.com/sepandhaghighi/mytimer/raw/main/otherfiles/help.webm" width="100%" controls autoplay muted loop></video>
+[![MyTimer Screen Record](https://raw.githubusercontent.com/yourusername/yourrepository/main/assets/thumbnail.jpg)](https://raw.githubusercontent.com/sepandhaghighi/mytimer/raw/main/otherfiles/help.webm)
+
 
 </div>
 
