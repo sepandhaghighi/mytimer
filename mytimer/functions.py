@@ -751,12 +751,9 @@ def main() -> None:
             params_dict["long_break"] = load_params(args, program="pomodoro-long-break", is_break=True)
         elif args.program in ["52-17", "112-26", "animedoro"]:
             params_dict["break"] = load_params(args, is_break=True)
-        try:
-            run_timer(
-                timer_function=timer_function,
-                params=params_dict,
-                repeat=args.repeat,
-                program=args.program,
-                keep_on=args.keep_on)
-        except (KeyboardInterrupt, EOFError):
-            print(EXIT_MESSAGE)
+        run_timer(
+            timer_function=timer_function,
+            params=params_dict,
+            repeat=args.repeat,
+            program=args.program,
+            keep_on=args.keep_on)
