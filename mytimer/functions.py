@@ -695,30 +695,33 @@ def run_timer(timer_function: Callable, params: Dict[str, dict], repeat: int, pr
     :param program: program name
     :param keep_on: keep-on flag
     """
-    timer_round = 1
-    while timer_round <= repeat or repeat == -1:
-        if program == "pomodoro":
-            pomodoro_timer(
-                timer_function,
-                params=params["timer"],
-                long_break_params=params["long_break"],
-                short_break_params=params["short_break"])
-        elif program in ["52-17", "112-26", "animedoro"]:
-            two_step_timer(timer_function, params1=params["timer"], params2=params["break"])
-        else:
-            timer_function(**params["timer"])
-        end_round_message = END_ROUND_MESSAGE.format(
-            round="{round}/{repeat}".format(round=timer_round, repeat=repeat))
-        if repeat == -1:
-            end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
-        if timer_round < repeat or repeat == -1:
-            print_message(
-                message=end_round_message,
-                h_shift=params["timer"]["h_shift"],
-                confirm=True)
-        timer_round += 1
-    if keep_on:
-        keep_on_timer(params["timer"])
+    try:
+        timer_round = 1
+        while timer_round <= repeat or repeat == -1:
+            if program == "pomodoro":
+                pomodoro_timer(
+                    timer_function,
+                    params=params["timer"],
+                    long_break_params=params["long_break"],
+                    short_break_params=params["short_break"])
+            elif program in ["52-17", "112-26", "animedoro"]:
+                two_step_timer(timer_function, params1=params["timer"], params2=params["break"])
+            else:
+                timer_function(**params["timer"])
+            end_round_message = END_ROUND_MESSAGE.format(
+                round="{round}/{repeat}".format(round=timer_round, repeat=repeat))
+            if repeat == -1:
+                end_round_message = END_ROUND_MESSAGE.format(round=timer_round)
+            if timer_round < repeat or repeat == -1:
+                print_message(
+                    message=end_round_message,
+                    h_shift=params["timer"]["h_shift"],
+                    confirm=True)
+            timer_round += 1
+        if keep_on:
+            keep_on_timer(params["timer"])
+    except (KeyboardInterrupt, EOFError):
+        print(EXIT_MESSAGE)
 
 
 def main() -> None:
