@@ -628,12 +628,12 @@ def handle_args() -> argparse.Namespace:
         '--color',
         help='text color',
         type=str.lower,
-        choices=COLORS_LIST)
+        choices=COLORS_LIST + ["random"])
     parser.add_argument(
         '--bg-color',
         help='background color',
         type=str.lower,
-        choices=COLORS_LIST)
+        choices=COLORS_LIST + ["random"])
     parser.add_argument(
         '--intensity',
         help='text intensity',
