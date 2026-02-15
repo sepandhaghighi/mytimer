@@ -242,6 +242,8 @@ def set_color(color: str) -> None:
     """
     if color:
         color = color.strip().upper()
+        if color == "RANDOM":
+            color = random.choice(COLORS_LIST).upper()
         if color.startswith("LIGHT"):
             color += "_EX"
         print(getattr(Fore, color, ""), end="")
