@@ -257,6 +257,8 @@ def set_bg_color(bg_color: str) -> None:
     """
     if bg_color:
         bg_color = bg_color.strip().upper()
+        if bg_color == "RANDOM":
+            bg_color = random.choice(COLORS_LIST).upper()
         if bg_color.startswith("LIGHT"):
             bg_color += "_EX"
         print(getattr(Back, bg_color, ""))
