@@ -242,6 +242,8 @@ def set_color(color: str) -> None:
     """
     if color:
         color = color.strip().upper()
+        if color == "RANDOM":
+            color = random.choice(COLORS_LIST).upper()
         if color.startswith("LIGHT"):
             color += "_EX"
         print(getattr(Fore, color, ""), end="")
@@ -255,6 +257,8 @@ def set_bg_color(bg_color: str) -> None:
     """
     if bg_color:
         bg_color = bg_color.strip().upper()
+        if bg_color == "RANDOM":
+            bg_color = random.choice(COLORS_LIST).upper()
         if bg_color.startswith("LIGHT"):
             bg_color += "_EX"
         print(getattr(Back, bg_color, ""))
@@ -624,12 +628,12 @@ def handle_args() -> argparse.Namespace:
         '--color',
         help='text color',
         type=str.lower,
-        choices=COLORS_LIST)
+        choices=COLORS_LIST + ["random"])
     parser.add_argument(
         '--bg-color',
         help='background color',
         type=str.lower,
-        choices=COLORS_LIST)
+        choices=COLORS_LIST + ["random"])
     parser.add_argument(
         '--intensity',
         help='text intensity',
