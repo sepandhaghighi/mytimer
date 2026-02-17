@@ -265,7 +265,7 @@ mytimer --minute=7 --second=30 --bg-color="blue"
 
 ⚠️ This mode may not be supported on all systems
 
-ℹ️ Valid choices: [`normal`, `bright`, `dim`]
+ℹ️ Valid choices: [`normal`, `bright`, `dim`, `random`]
 
 ℹ️ The default intensity is `normal`
 
