@@ -76,7 +76,7 @@ jobs:
         mytimer --minute=0 --second=3 --countdown --h-shift=10 --v-shift=12 --hide-second --vertical --color="red" --bg-color="blue" --intensity="dim"
     - name: Run13
       run: |
-        mytimer --minute=0 --second=3 --countdown --color="random" --bg-color="random"
+        mytimer --minute=0 --second=3 --countdown --color="random" --bg-color="random" --intensity="random"
     - name: Run14
       run: |
         mytimer --info

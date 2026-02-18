@@ -272,6 +272,8 @@ def set_intensity(intensity: str) -> None:
     """
     if intensity:
         intensity = intensity.strip().upper()
+        if intensity == "RANDOM":
+            intensity = random.choice(INTENSITY_LIST).upper()
         print(getattr(Style, intensity, ""), end="")
 
 
@@ -638,7 +640,7 @@ def handle_args() -> argparse.Namespace:
         '--intensity',
         help='text intensity',
         type=str.lower,
-        choices=INTENSITY_LIST)
+        choices=INTENSITY_LIST + ["random"])
     parser.add_argument(
         '--tone',
         help='alarm tone',
