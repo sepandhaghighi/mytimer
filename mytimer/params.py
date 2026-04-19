@@ -318,7 +318,13 @@ PROGRAMS_MAP = {
         "minute": 3,
         "second": 0,
         "message": "Instant noodle (3 mins)",
-    }
+    },
+    "pizza": {
+        "hour": 0,
+        "minute": 12,
+        "second": 0,
+        "message": "Pizza baking (12 mins)",
+    },
 }
 
 BREAKS_MAP = {
