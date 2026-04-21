@@ -325,6 +325,12 @@ PROGRAMS_MAP = {
         "second": 0,
         "message": "Pizza baking (12 mins)",
     },
+    "pancake": {
+        "hour": 0,
+        "minute": 1,
+        "second": 30,
+        "message": "Pancake (1.5 mins per side)",
+    },
 }
 
 BREAKS_MAP = {
