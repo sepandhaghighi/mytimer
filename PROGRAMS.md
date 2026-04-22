@@ -1,6 +1,6 @@
 # Programs List
 
-**Last Update: 2026-04-19**
+**Last Update: 2026-04-21**
 
 ⚠️ By default, the **alarm** is **active** for all programs
 
@@ -183,6 +183,12 @@
 		<td>Pizza baking</td>
 		<td><code>pizza</code></td>
 		<td>00:12:00</td>
+		<td>>=2.6</td>
+	</tr>
+	<tr align="center">
+		<td>Pancake</td>
+		<td><code>pancake</code></td>
+		<td>00:01:30</td>
 		<td>>=2.6</td>
 	</tr>
 	<tr align="center">

@@ -6,8 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 ### Added
-- 1 new program
+- 2 new programs
 	1. `pizza`
+	2. `pancake`
 - Color random mode
 - Background-color random mode
 - Intensity random mode
