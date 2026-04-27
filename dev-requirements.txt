@@ -3,6 +3,6 @@ art==6.5
 jdatetime==5.2.0
 colorama==0.4.6
 setuptools>=40.8.0
-vulture>=1.0
+vulture>=2.16
 bandit>=1.5.1
 pydocstyle>=3.0.0
