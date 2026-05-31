@@ -2,6 +2,8 @@ version: 2
 updates:
 - package-ecosystem: pip
   directory: "/"
+  exclude-paths:
+      - "requirements.txt"
   schedule:
     interval: weekly
     time: "01:30"
