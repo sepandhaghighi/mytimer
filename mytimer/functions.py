@@ -234,6 +234,18 @@ def get_face(index: int) -> str:
     return FACES_MAP[index]
 
 
+def get_timer_template(vertical: bool, hide_second: bool) -> str:
+    """
+    Return timer template.
+
+    :param hide_second: hide second flag
+    :param vertical: vertical mode flag
+    """
+    if vertical:
+        return TIME_HM_TEMPLATE_VERTICAL if hide_second else TIME_HMS_TEMPLATE_VERTICAL
+    return TIME_HM_TEMPLATE_HORIZONTAL if hide_second else TIME_HMS_TEMPLATE_HORIZONTAL
+
+
 def set_color(color: str) -> None:
     """
     Set text color.
