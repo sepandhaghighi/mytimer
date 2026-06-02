@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- `countdown_timer` function modified
+- `countup_timer` function modified
 ## [2.6] - 2026-04-23
 ### Added
 - 2 new programs
