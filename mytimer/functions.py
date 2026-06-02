@@ -413,9 +413,7 @@ def countup_timer(
     timer_minute = 0
     timer_hour = 0
     face = get_face(face)
-    timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
-    if hide_second:
-        timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
+    timer_template = get_timer_template(vertical, hide_second)
     datetime_lib = datetime
     if date_system == "jalali":
         datetime_lib = jdatetime
@@ -487,9 +485,7 @@ def countdown_timer(
     :param date_system: date system
     """
     face = get_face(face)
-    timer_template = TIME_HMS_TEMPLATE_VERTICAL if vertical else TIME_HMS_TEMPLATE_HORIZONTAL
-    if hide_second:
-        timer_template = TIME_HM_TEMPLATE_VERTICAL if vertical else TIME_HM_TEMPLATE_HORIZONTAL
+    timer_template = get_timer_template(vertical, hide_second)
     datetime_lib = datetime
     if date_system == "jalali":
         datetime_lib = jdatetime
