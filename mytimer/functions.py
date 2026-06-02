@@ -238,8 +238,8 @@ def get_timer_template(vertical: bool, hide_second: bool) -> str:
     """
     Return timer template.
 
-    :param hide_second: hide second flag
     :param vertical: vertical mode flag
+    :param hide_second: hide second flag
     """
     if vertical:
         return TIME_HM_TEMPLATE_VERTICAL if hide_second else TIME_HMS_TEMPLATE_VERTICAL
