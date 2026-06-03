@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
 from typing import List
-try:
-    from setuptools import setup, find_namespace_packages
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup, find_namespace_packages
 
 
 def get_requires() -> List[str]:
