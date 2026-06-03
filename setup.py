@@ -2,7 +2,7 @@
 """Setup module."""
 from typing import List
 try:
-    from setuptools import setup
+    from setuptools import setup, find_namespace_packages
 except ImportError:
     from distutils.core import setup
 
@@ -29,7 +29,7 @@ def read_description() -> str:
 
 setup(
     name='mytimer',
-    packages=['mytimer'],
+    packages=find_namespace_packages(include=["mytimer*"]),
     version='2.6',
     description='A Geeky Timer for Terminal Enthusiasts',
     long_description=read_description(),
