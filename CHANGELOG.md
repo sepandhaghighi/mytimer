@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - `countdown_timer` function modified
 - `countup_timer` function modified
+- `setuptools` deprecation warning fixed
 ## [2.6] - 2026-04-23
 ### Added
 - 2 new programs
