@@ -1,14 +1,6 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
-from typing import List
 from setuptools import setup, find_namespace_packages
-
-
-def get_requires() -> List[str]:
-    """Read requirements.txt."""
-    requirements = open("requirements.txt", "r").read()
-    return list(filter(lambda x: x != "", requirements.split()))
-
 
 def read_description() -> str:
     """Read README.md and CHANGELOG.md."""
@@ -26,7 +18,7 @@ def read_description() -> str:
 
 setup(
     name='mytimer',
-    packages=find_namespace_packages(include=["mytimer*"]),
+    packages=find_namespace_packages(include=['mytimer*']),
     version='2.6',
     description='A Geeky Timer for Terminal Enthusiasts',
     long_description=read_description(),
@@ -36,11 +28,16 @@ setup(
     author_email='me@sepand.tech',
     url='https://github.com/sepandhaghighi/mytimer',
     download_url='https://github.com/sepandhaghighi/mytimer/tarball/v2.6',
-    keywords="timer time clock terminal stopwatch cli geek",
+    keywords='timer time clock terminal stopwatch cli geek',
     project_urls={
         'Source': 'https://github.com/sepandhaghighi/mytimer'
     },
-    install_requires=get_requires(),
+    install_requires=[
+        'art>=5.3',
+        'jdatetime>=3.8.2',
+        'nava>=0.4',
+        'colorama>=0.4.5'
+    ],
     python_requires='>=3.7',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
