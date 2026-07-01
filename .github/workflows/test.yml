@@ -80,10 +80,9 @@ jobs:
     - name: Run14
       run: |
         mytimer --info
-    - name: Install dev-requirements
+    - name: Dev requirements installation
       run: |
-        python otherfiles/requirements-splitter.py
-        pip install --upgrade --upgrade-strategy=only-if-needed -r test-requirements.txt
+        pip install --upgrade --upgrade-strategy=only-if-needed -r requirements-dev.txt
     - name: Version check
       run: |
         python otherfiles/version_check.py
