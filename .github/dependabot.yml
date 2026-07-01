@@ -3,7 +3,8 @@ updates:
 - package-ecosystem: pip
   directory: "/"
   exclude-paths:
-      - "requirements.txt"
+      - "requirements-dev.txt"
+      - "setup.py"
   schedule:
     interval: weekly
     time: "01:30"
