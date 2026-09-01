@@ -414,9 +414,7 @@ def countup_timer(
     timer_hour = 0
     face = get_face(face)
     timer_template = get_timer_template(vertical, hide_second)
-    datetime_lib = datetime
-    if date_system == "jalali":
-        datetime_lib = jdatetime
+    datetime_lib = jdatetime if date_system == "jalali" else datetime
     start_datetime = datetime_lib.datetime.now()
     while True:
         start = time.perf_counter()
@@ -486,9 +484,7 @@ def countdown_timer(
     """
     face = get_face(face)
     timer_template = get_timer_template(vertical, hide_second)
-    datetime_lib = datetime
-    if date_system == "jalali":
-        datetime_lib = jdatetime
+    datetime_lib = jdatetime if date_system == "jalali" else datetime
     start_datetime = datetime_lib.datetime.now()
     while True:
         start = time.perf_counter()
