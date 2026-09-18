@@ -186,6 +186,7 @@ In this mode, the timer seconds counter will not be shown
 
 ```console
 mytimer --minute=6 --hide-second
+mytimer --minute=6 --no-second
 ```
 
 ### Hide Date/Time
