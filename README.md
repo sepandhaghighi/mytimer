@@ -195,6 +195,7 @@ In this mode, the date/time will not be shown
 
 ```console
 mytimer --minute=20 --hide-datetime
+mytimer --minute=20 --no-datetime
 ```
 
 ### Date System
