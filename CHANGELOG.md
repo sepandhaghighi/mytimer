@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `countdown_timer` function modified
 - `countup_timer` function modified
 - `setuptools` deprecation warning fixed
+- CLI arguments modified
 - Dependencies structure modified
 - `README.md` updated
 - Test system modified
