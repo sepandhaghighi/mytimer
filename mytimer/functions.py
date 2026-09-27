@@ -26,6 +26,7 @@ from mytimer.params import CLOCK_FORMAT, DATE_FORMAT
 from mytimer.params import FACES_LIST, TONES_LIST
 from mytimer.params import ADDITIONAL_INFO, SIGNS_LIST
 from mytimer.params import DATE_SYSTEMS_LIST, COLORS_LIST, INTENSITY_LIST
+from mytimer.params import TWO_STEP_PROGRAMS, POMODORO_PROGRAM
 from art import tprint
 
 
@@ -700,13 +701,13 @@ def run_timer(timer_function: Callable, params: Dict[str, dict], repeat: int, pr
     try:
         timer_round = 1
         while timer_round <= repeat or repeat == -1:
-            if program == "pomodoro":
+            if program == POMODORO_PROGRAM:
                 pomodoro_timer(
                     timer_function,
                     params=params["timer"],
                     long_break_params=params["long_break"],
                     short_break_params=params["short_break"])
-            elif program in ["52-17", "112-26", "animedoro"]:
+            elif program in TWO_STEP_PROGRAMS:
                 two_step_timer(timer_function, params1=params["timer"], params2=params["break"])
             else:
                 timer_function(**params["timer"])
@@ -748,10 +749,10 @@ def main() -> None:
         test_tone(params["tone"], params["alarm_repeat"])
     else:
         params_dict = {"timer": params}
-        if args.program == "pomodoro":
+        if args.program == POMODORO_PROGRAM:
             params_dict["short_break"] = load_params(args, program="pomodoro-short-break", is_break=True)
             params_dict["long_break"] = load_params(args, program="pomodoro-long-break", is_break=True)
-        elif args.program in ["52-17", "112-26", "animedoro"]:
+        elif args.program in TWO_STEP_PROGRAMS:
             params_dict["break"] = load_params(args, is_break=True)
         run_timer(
             timer_function=timer_function,

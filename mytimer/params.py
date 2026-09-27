@@ -396,3 +396,6 @@ INTENSITY_LIST = [
     "bright",
     "dim",
 ]
+
+TWO_STEP_PROGRAMS = ["52-17", "112-26", "animedoro"]
+POMODORO_PROGRAM = "pomodoro"
