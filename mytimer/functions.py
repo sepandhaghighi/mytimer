@@ -667,7 +667,7 @@ def handle_args() -> argparse.Namespace:
     parser.add_argument('--repeat', help='number of repeats', type=int, default=1)
     parser.add_argument('--countdown', help='countdown timer', action='store_true')
     parser.add_argument('--countup', help='countup timer', action='store_true')
-    parser.add_argument('--alarm', help='alarm', action='store_true')
+    parser.add_argument('--alarm', help='alarm', action='store_true', default=None)
     parser.add_argument('--keep-on', help='keep-on', action='store_true')
     parser.add_argument('--set-on', help='set-on', action='store_true')
     parser.add_argument('--test-tone', help='test tone', action='store_true')
