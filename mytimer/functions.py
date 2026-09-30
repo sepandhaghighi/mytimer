@@ -675,7 +675,7 @@ def handle_args() -> argparse.Namespace:
     parser.add_argument('--version', help='version', action='store_true')
     parser.add_argument('--info', help='info', action='store_true')
     parser.add_argument('--no-second', '--hide-second', dest='hide_second', help='hide second', action='store_true', default=None)
-    parser.add_argument('--no-datetime', '--hide-datetime', dest='hide_datetime', help='hide datetime', action='store_true')
+    parser.add_argument('--no-datetime', '--hide-datetime', dest='hide_datetime', help='hide datetime', action='store_true', default=None)
     parser.add_argument('--vertical', help='vertical mode', action='store_true')
     parser.add_argument(
         '--date-system',
