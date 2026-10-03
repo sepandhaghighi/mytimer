@@ -12,12 +12,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `countdown_timer` function modified
 - `countup_timer` function modified
 - `run_timer` function modified
+- `print_mytimer_info` function modified
 - `main` function modified
 - `setuptools` deprecation warning fixed
 - CLI arguments modified
 - Dependencies structure modified
 - `README.md` updated
 - Test system modified
+- `Python 3.7` support dropped
 ## [2.6] - 2026-04-23
 ### Added
 - 2 new programs
