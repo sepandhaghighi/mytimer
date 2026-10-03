@@ -27,7 +27,8 @@ from mytimer.params import FACES_LIST, TONES_LIST
 from mytimer.params import ADDITIONAL_INFO, SIGNS_LIST
 from mytimer.params import DATE_SYSTEMS_LIST, COLORS_LIST, INTENSITY_LIST
 from mytimer.params import TWO_STEP_PROGRAMS, POMODORO_PROGRAM
-from art import tprint
+from art import tprint, text2art
+from typio import type_print, TypeMode
 
 
 def print_message(
@@ -52,10 +53,10 @@ def print_message(
 
 def print_mytimer_info() -> None:
     """Print mytimer info."""
-    tprint("MyTimer")
-    tprint("V:" + MY_TIMER_VERSION)
-    print(MY_TIMER_OVERVIEW)
-    print(MY_TIMER_REPO)
+    type_print(text2art("MyTimer"), mode=TypeMode.LINE, delay=0.1)
+    type_print(text2art("V:" + MY_TIMER_VERSION), mode=TypeMode.LINE, delay=0.1)
+    type_print(MY_TIMER_OVERVIEW, mode=TypeMode.CHAR, delay=0.07)
+    type_print(MY_TIMER_REPO, mode=TypeMode.CHAR, delay=0.07)
 
 
 def load_program_params(program_name: str, is_break: bool = False) -> Dict[str, Any]:
