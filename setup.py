@@ -36,7 +36,8 @@ setup(
         'art>=5.3',
         'jdatetime>=3.8.2',
         'nava>=0.4',
-        'colorama>=0.4.5'
+        'colorama>=0.4.5',
+        'typio>=0.4'
     ],
     python_requires='>=3.7',
     classifiers=[
