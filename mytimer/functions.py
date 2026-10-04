@@ -55,8 +55,8 @@ def print_mytimer_info() -> None:
     """Print mytimer info."""
     type_print(text2art("MyTimer"), mode=TypeMode.LINE, delay=0.1)
     type_print(text2art("V:" + MY_TIMER_VERSION), mode=TypeMode.LINE, delay=0.1)
-    type_print(MY_TIMER_OVERVIEW, mode=TypeMode.CHAR, delay=0.07)
-    type_print(MY_TIMER_REPO, mode=TypeMode.CHAR, delay=0.07)
+    type_print(MY_TIMER_OVERVIEW, mode=TypeMode.CHAR, delay=0.05)
+    type_print(MY_TIMER_REPO, mode=TypeMode.CHAR, delay=0.05)
 
 
 def load_program_params(program_name: str, is_break: bool = False) -> Dict[str, Any]:
