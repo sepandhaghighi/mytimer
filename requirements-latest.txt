@@ -2,4 +2,4 @@ nava==0.9
 art==6.5
 jdatetime==6.1.0
 colorama==0.4.6
-typio==1.2
+typio==1.3
