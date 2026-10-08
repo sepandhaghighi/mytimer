@@ -19,7 +19,7 @@ def read_description() -> str:
 setup(
     name='mytimer',
     packages=find_namespace_packages(include=['mytimer*']),
-    version='2.6',
+    version='2.7',
     description='A Geeky Timer for Terminal Enthusiasts',
     long_description=read_description(),
     long_description_content_type='text/markdown',
@@ -27,7 +27,7 @@ setup(
     author='Sepand Haghighi',
     author_email='me@sepand.tech',
     url='https://github.com/sepandhaghighi/mytimer',
-    download_url='https://github.com/sepandhaghighi/mytimer/tarball/v2.6',
+    download_url='https://github.com/sepandhaghighi/mytimer/tarball/v2.7',
     keywords='timer time clock terminal stopwatch cli geek',
     project_urls={
         'Source': 'https://github.com/sepandhaghighi/mytimer'
