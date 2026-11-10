@@ -581,6 +581,10 @@ def update_set_on_params(params: Dict[str, Any]) -> Dict[str, Any]:
 
     :param params: timer params
     """
+    if not (0 <= params["hour"] <= 23 and 0 <= params["minute"] <= 59 and 0 <= params["second"] <= 59):
+        print(INPUT_ERROR_MESSAGE)
+        print(INPUT_EXAMPLE)
+        sys.exit(1)
     if params["message"] == "":
         params["message"] = SET_ON_MESSAGE.format(hour=params["hour"], minute=params["minute"], second=params["second"])
     time_now = datetime.datetime.now()
